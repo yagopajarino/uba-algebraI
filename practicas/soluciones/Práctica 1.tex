@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{amsfonts}
 \usepackage{enumitem}
+\usepackage{amsmath}
 
 \decimalpoint
 \hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue}
@@ -61,7 +62,7 @@
 \end{enumerate}
 
 \subsection{Ejercicio 3}
-Rdo.: Sean A y B conjuntos. $ A \subseteq B \iff \forall x \in A \rightarrow x \in B$
+Rdo.: Sean A y B conjuntos. $ A \subseteq B \iff \forall x \in A \implies x \in B$
 \begin{enumerate}[label=(\alph*)]
     \item $A \subseteq B$
     \item $A \not \subseteq B$ pues $3 \not \in B$
@@ -111,11 +112,11 @@ Rdo. conjunto de partes: Sea A un conjunto, el conjunto de partes de A, $P(A)$ e
 Quiero probar un $(\iff)$ por lo que debo verificar la doble inclusión.
 
 \begin{enumerate}[label=(\alph*)]
-    \item $A \subseteq B \rightarrow P(A) \subseteq P(B)$ 
-            Sea x tal que $x \in P(A) \rightarrow (\forall y \in x): y \in A$.\\
-            Pero $A \subseteq B \rightarrow y \in B$.
-            Por lo tanto $(\forall x \in P(A)): x \in P(B) \rightarrow P(A) \subseteq P(B)$
-    \item $P(A) \subseteq P(B) \rightarrow A \subseteq B$ 
+    \item $A \subseteq B \implies P(A) \subseteq P(B)$ 
+            Sea x tal que $x \in P(A) \implies (\forall y \in x): y \in A$.\\
+            Pero $A \subseteq B \implies y \in B$.
+            Por lo tanto $(\forall x \in P(A)): x \in P(B) \implies P(A) \subseteq P(B)$
+    \item $P(A) \subseteq P(B) \implies A \subseteq B$ 
             Por definición del conjunto de partes, $A \in P(A)$ por lo tanto se que $A \in P(B)$ \\
             Además $B \in P(B)$ y es el elemento con más elementos de $P(B)$, así $A \subseteq B$ como se quiería probar.
 \end{enumerate}
@@ -145,7 +146,7 @@ Calculadora de tablas de verdad. \href{https://calculadorasonline.com/generador-
     \item Es verdadera pues el conjunto de los $\mathbb{N}$ es infinito y por lo tanto existe $m = n+1$ que hace verdadera la proposición.
     \item Es falsa pues no existe un natural $n$ tal que $1 > n$.
     \item Es verdadera pues $f(x) = x^2$ es una función estrictamente creciente en el intervalo $[0, \infty]$ y dado que $f(3) = 9 > 4$ podemos afirmar que la preposición es verdadera.
-    \item Es verdadera pues sea $c \in \mathbb{C} \rightarrow c = a+b.i$ con $a,b \in \mathbb{R}$ y por lo tanto $(\forall r \in \mathbb{R}): (r + 0.i) \in \mathbb{C} $
+    \item Es verdadera pues sea $c \in \mathbb{C} \implies c = a+b.i$ con $a,b \in \mathbb{R}$ y por lo tanto $(\forall r \in \mathbb{R}): (r + 0.i) \in \mathbb{C} $
 \end{enumerate}
 
 \subsection{Ejercicio 13}
@@ -181,12 +182,12 @@ Pruebo la doble implicación.
     \item TODO
     \item TODO
     \item \begin{enumerate}
-        \item $(A \cup B) \times C \rightarrow (A \times C) \cup (B \times C)$\\
+        \item $(A \cup B) \times C \implies (A \times C) \cup (B \times C)$\\
                 $(x, y) \in (A\cup B) \times C \iff (x \in (A\cup B) \wedge y \in C) \iff ((x \in A \vee x \in B) \wedge y \in C)$\\
                 $\iff (x,y) \in (A\times C) \cup (B \times C)$
-        \item $(A \times C) \cup (B \times C) \rightarrow (A \cup B) \times C$\\
-                $(x,y) \in (A \times C) \cup (B \times C) \iff ((x \in A \vee x \in B) \wedge y\in C) \rightarrow (x\in (A \cup B) \wedge y \in C)$\\
-                $\rightarrow (x, y) \in (A \cup B) \times C$ 
+        \item $(A \times C) \cup (B \times C) \implies (A \cup B) \times C$\\
+                $(x,y) \in (A \times C) \cup (B \times C) \iff ((x \in A \vee x \in B) \wedge y\in C) \implies (x\in (A \cup B) \wedge y \in C)$\\
+                $\implies (x, y) \in (A \cup B) \times C$ 
     \item TODO
     \end{enumerate}
 \end{enumerate}
@@ -245,8 +246,8 @@ $R \subseteq A \times B \iff \forall (X,y) \in R : (x \in A \wedge y \in B)$
 
 \subsection{Ejercicio 23}
 \begin{enumerate}[label=(\alph*)]
-    \item Una relación es simétrica sii $(a,b) \rightarrow (b,a) \in \mathbb{R}$ \\
-        Una relación es antisimétrica sii $((a,b) \in \mathbb{R} \wedge (b,a) \in \mathbb{R}) \rightarrow a = b$ \\
+    \item Una relación es simétrica sii $(a,b) \implies (b,a) \in \mathbb{R}$ \\
+        Una relación es antisimétrica sii $((a,b) \in \mathbb{R} \wedge (b,a) \in \mathbb{R}) \implies a = b$ \\
         Luego, las relaciones en $A$ simétricas y antisimétricas son de la forma: \\
         $R = \{ (a,b) \in A^2 / a = b \}$
     \item R también es de orden y equivalencia, pues es reflexiva y transitiva.
@@ -276,7 +277,7 @@ Así, $R$ es \textbf{reflexiva}.
 
 \underline{Simetría}
 
-$R$ es simétrica $\iff ARA \rightarrow BRA$.\\
+$R$ es simétrica $\iff ARA \implies BRA$.\\
 Por definición, $ARB \iff (A \triangle B) \cap \{ 1,2,3 \} = \emptyset$ \\
 Por definición de la diferencia simétrica, $(A \triangle B) = (B \triangle A)$ \\
 Por lo tanto, $(A \triangle B) \cap \{ 1,2,3 \} = (B \triangle A) \cap \{ 1,2,3 \}$
@@ -286,7 +287,7 @@ Así, $R$ es \textbf{simétrica}.
 
 \underline{Transitividad}
 
-$R$ es transitiva $\iff (ARB \wedge BRC \rightarrow ARC)$.\\
+$R$ es transitiva $\iff (ARB \wedge BRC \implies ARC)$.\\
 Por definición, \\$ARB \iff (A \triangle B) \cap \{ 1,2,3 \} = \emptyset$ \\
                   $BRC \iff (B \triangle C) \cap \{ 1,2,3 \} = \emptyset$ \\
                   $ARC \iff (A \triangle C) \cap \{ 1,2,3 \} = \emptyset$
@@ -307,7 +308,7 @@ Dado que $R$ es refelexiva, simétrica y transitiva, queda demostrado que $R$ es
 
 \underline{Antisimétria}
 
-$R$ es antisimétrica $\iff (ARB \wedge BRA \rightarrow B=A)$.
+$R$ es antisimétrica $\iff (ARB \wedge BRA \implies B=A)$.
 
 Contraejemplo: $A = \{ 4 \}$; $B = \emptyset$
 
@@ -343,7 +344,7 @@ Así, $R$ es \textbf{reflexiva}.
 
 \underline{Simetría}
 
-$R$ es simétrica $\iff (\forall x, y \in A): xRy \rightarrow yRx$
+$R$ es simétrica $\iff (\forall x, y \in A): xRy \implies yRx$
 
 Por definición, 
 \begin{align*}
@@ -357,7 +358,7 @@ Así, $R$ es \textbf{simétrica}.
 
 \underline{Transitividad}
 
-$R$ es transitiva $\iff (\forall x, y, z \in A): (xRy \wedge yRz) \rightarrow xRz$
+$R$ es transitiva $\iff (\forall x, y, z \in A): (xRy \wedge yRz) \implies xRz$
 
 Por definición,
 \begin{align*}
@@ -406,7 +407,7 @@ Rdo. función: Una relación $R \subseteq A\times B$ es una función de A en B s
 
 \underline{Inyectiva}
 
-Por definición, f es inyectiva $\iff \forall x, y \in \mathbb{R}: f(x) = f(y) \rightarrow x = y$
+Por definición, f es inyectiva $\iff \forall x, y \in \mathbb{R}: f(x) = f(y) \implies x = y$
 
 Contraejemplo: $x = 1; y=-1$
 
@@ -431,7 +432,7 @@ $Im(f) = \mathbb{R}_{\geq -5}$
 
 \underline{Inyectiva}
 
-Por definición, f es inyectiva $\iff \forall a,b,c,d \in \mathbb{R}: f(a,b) = f(c,d) \rightarrow (a,b) = (c,d)$
+Por definición, f es inyectiva $\iff \forall a,b,c,d \in \mathbb{R}: f(a,b) = f(c,d) \implies (a,b) = (c,d)$
 
 Contraejemplo: $(1,3), (2,2)$
 
@@ -448,12 +449,107 @@ Por definición, f es sobreyectiva $\iff Im(f) = \mathbb{R}$
 
 Sea $n \in \mathbb{R}$ quiero ver que $\exists (x,y) \in \mathbb{R}^2: f(x,y) = n$
 
-Luego $n = x+y \iff y = n-x \rightarrow y \in \mathbb{R}$
+Luego $n = x+y \iff y = n-x \implies y \in \mathbb{R}$
 
 Así, f es \textbf{sobreyectiva}.
 
 \subsubsection{Inciso 3}
 
+\underline{Inyectiva}
 
+Por definición, f es inyectiva $\iff \forall a,b,c,d,e,f \in \mathbb{R}: f(a,b,c) = f(d,e,f) \implies (a,b,c) = (d,e,f)$
+
+Por definición de f,
+\begin{align*}
+    f(a,b,c) = f(d,e,f) &\iff (a+b, 2.c) = (d+e, 2.f)\\
+    &\iff (a+b = d+e) \wedge (2.c = 2.f)
+\end{align*}
+
+Contraejemplo: $(a,b) = (1,3); (d,e) = (2,2)$
+
+$(a+b = d+e) \implies (4=4)$ pero $(1,3) \neq (2,2)$
+
+Así, f NO es \textbf{inyectiva}.
+
+\underline{Sobreyectiva}
+
+Por definición, f es sobreyectiva $\iff Im(f) = \mathbb{R}^2 \iff (\forall (x,y) \in \mathbb{R}^2): \exists (a,b,c) \in \mathbb{R}^3 / f(a,b,c) = (x,y)$
+
+$f(a,b,c) = (a+b, 2.c) = (x,y) \iff (x = a+b \wedge y = 2.c$)
+
+Así, f es \textbf{sobreyectiva}.
+
+\subsubsection{Inciso 4}
+TODO
+
+\subsubsection{Inciso 5}
+TODO
+
+\subsubsection{Inciso 6}
+TODO
+
+\subsection{Ejercicio 31}
+
+\subsubsection{Inciso 1}
+
+\begin{enumerate}[label=(\alph*)]
+    \item $(f \circ g)(3,4) = f(g(3,4)) = f(15) = 46$
+    \item $(f \circ g)(2,5) = f(g(2,5)) = f(12) = 72$
+    \item $(f \circ g)(3,2) = f(g(3,2)) = f(9) = 28$
+\end{enumerate}
+
+\subsubsection{Inciso 2}
+
+Busco $f(g(n)) = 13 \implies f(\sqrt{n}) = 13$. Hay dos casos
+
+\begin{enumerate}
+    \item $\sqrt{n} \leq 7 \implies f(\sqrt{n}) = n = 13 \iff n = 13$
+    \item $\sqrt{n} > 7 \implies f(\sqrt{n}) = 2. \sqrt{n} - 1 = 13 \iff \sqrt{n} = 7$. Abs pues $\sqrt{n} > 7$
+\end{enumerate}
+
+Luego $f(g(n)) = 13 \iff n = 13$
+\\
+
+Busco $f(g(m)) = 15 \implies f(\sqrt{m}) = 15$. Hay dos casos
+
+\begin{enumerate}
+    \item $\sqrt{m} \leq 7 \implies f(\sqrt{m}) = m = 15 \iff m = 15$
+    \item $\sqrt{n} > 7 \implies f(\sqrt{m}) = 2. \sqrt{m} - 1 = 15 \iff \sqrt{n} = 8$
+\end{enumerate}
+
+Luego $f(g(m)) = 15 \iff m \in \{ -64, 15, 64 \}$
+
+\subsection{Ejercicio 32}
+
+\begin{enumerate}
+    \item \begin{enumerate}
+        \item $(f \circ g) = f(g(x)) = f(x+3) = 2(x+3)^2 -18 = 2(x^2 +6x +9) -18 = 2x^2 +12x = 2x(x+6)$
+        \item $(g \circ f) = g(f(x)) = g(2x^2 - 18) = (2x^2 - 18) +3 = 2x^2 -15$
+    \end{enumerate}
+    \item \begin{enumerate}
+        \item $(f \circ g) = f(g(x)) = f(4x) = 4x-2$
+        \item $(g \circ f) = g(f(x)) = \begin{cases}
+            4(n-2) & n \bmod 4 = 4 \\
+            4(n+1) & \text{en otro caso}
+        \end{cases}$
+    \item $(f \circ g) = f(g(x)) = f(\sqrt{x}) = (\sqrt{x} +5, 3x)$
+    \item $(g \circ f) $ no se puede calcular pues $f: \mathbb{R} \rightarrow \mathbb{R} \times \mathbb{R}$ y $g: \mathbb{N} \rightarrow \mathbb{R}$
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{Ejercicio 33}
+
+$f(x) = \begin{cases}
+    \frac{x}{3} & x \bmod 3 = 0 \\
+    1 & \text{en otro caso}
+\end{cases}$
+
+$g(x) = 3x$
+
+\subsection{Ejercicio 34}
+TODO
+
+\subsection{Ejercicio 35}
+TODO
 
 \end{document}
