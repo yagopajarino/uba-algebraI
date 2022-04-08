@@ -12,7 +12,8 @@ Universidad de Buenos Aires
 
 ## Prácticas
 
-* [Práctica <numero>]() | [solución]()
+* [Práctica 1](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia1.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/soluciones/Pr%C3%A1ctica%201.pdf)
+
 
 ## Parciales
 
@@ -21,3 +22,7 @@ Universidad de Buenos Aires
 ## Finales
   
 * [Final <fecha> ]() | [solución]()
+  
+## Contribución
+
+Para consultas de ejercicios o para agregar los que falten, abrir un [issue](https://github.com/yagopajarino/uba-algebraI/issues).
