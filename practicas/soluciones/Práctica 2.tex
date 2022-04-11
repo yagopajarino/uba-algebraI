@@ -20,7 +20,7 @@
 
 \begin{document}
 
-\titulo{Práctica 1}
+\titulo{Práctica 2}
 \fecha{2do cuatrimestre 2021}
 \materia{Álgebra I}
 \integrante{Yago Pajariño}{546/21}{ypajarino@dc.uba.ar}
@@ -37,5 +37,191 @@
 \section{Práctica 2}
 
 \subsection{Ejercicio 1}
+
+\begin{enumerate}
+    \item \begin{enumerate}[label=(\alph*)]
+        \item $\sum_{i=1}^{100}i$
+        \item $\sum_{i=1}^{10}i^2$
+        \item $\sum_{i=1}^{12}(-1)^i . i^2$
+        \item $\sum_{i=1 \wedge \text{i impar}}^{21}i^2$
+        \item $\sum_{i=0}^{n}2i+1$
+        \item $\sum_{i=1}^{n}i.n$
+    \end{enumerate}
+    \item \begin{enumerate}[label=(\alph*)]
+        \item $\frac{100!}{4!}$
+        \item $\prod_{i=1}^{10}2^i$
+        \item $\prod_{i=1}^{n}i.n$
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{Ejercicio 2}
+\begin{enumerate}[label=(\alph*)]
+    \item $2+4$ ; $2(n-6)+ 2(n-5)$
+    \item $\frac{1}{n(n+1)} + \frac{1}{(n+1)(n+2)}$ ; $\frac{1}{(2n-1).2n} + \frac{1}{2n.(2n+1)}$
+    \item $\frac{n+1}{2} + \frac{n+2}{4}$ ; $\frac{n+n-1}{2.(n-1)} + \frac{2n}{2n}$
+    \item $n + \frac{n}{2}$ ; $\frac{n}{n^2-1} + \frac{n}{n^2}$
+    \item $-(n+1) . (n+2)$ ; $\frac{n+n-1}{2(n-1)-3} . \frac{2n}{2n-3}$
+\end{enumerate}
+
+\subsection{Ejercicio 3}
+\begin{enumerate}[label=(\alph*)]
+    \item \begin{align*}
+        \sum_{i=1}^{n}(4i+1) &= \sum_{i=1}^{n}4i + \sum_{i=1}^{n} 1 \\
+        &= 4 . \sum_{i=1}^{n}i + n \\
+        &= 4 . \frac{n.(n+1)}{2} + n \\
+        &= 2 . n(n+1) + n \\
+        &= 2n^2 + 3n
+    \end{align*}
+    \item \begin{align*}
+        \sum_{i=6}^{n}2(i-5) &= 2\sum_{i=6}^{n}(i-5)\\
+        &= 2\left( \sum_{i=6}^{n}i -\sum_{i=6}^{n}5 \right) \\
+        &= 2\left( \left(\sum_{i=1}^{n}i - \sum_{i=1}^{5}i\right) -\left(\sum_{i=1}^{n}5 - \sum_{i=1}^{5}5\right) \right) \\
+        &= 2\left( \left(\frac{n(n+1)}{2} - 15 \right) -\left(5n - 25 \right)\right) \\
+        &= 2\left( \left(\frac{n(n+1) - 30}{2} \right) - 5(n+5)\right) \\
+        &= n(n+1) - 30 - 10(n+5) \\ 
+        &= n^2 + n - 30 - 10n-50 \\
+        &= n^2 - 9n-80 \\
+    \end{align*}
+\end{enumerate}
+
+\subsection{Ejercicio 4}
+\begin{enumerate}[label=(\alph*)]
+    \item $\sum_{i=0}^{n}2^i = n^{n+1}-1$
+    \item $\sum_{i=1}^{n}q^i = \begin{cases}
+        \frac{q^{n+1}-2}{q-1} & q \neq 1 \\
+        n & q = 1 \\
+    \end{cases}$
+    \item $\sum_{i=1}^{n}q^{2i} = \sum_{i=1}^{n}(q^2)^i =  \begin{cases}
+        \frac{(q^2)^{n+1}-1}{q^2-1} & q \neq 1 \\
+        n+1 & q = 1 \\
+    \end{cases}$
+    \item $\sum_{i=n}^{2n}q^{i} = \sum_{i=0}^{2n}q^{i} - \sum_{i=0}^{n-1}q^{i} = \begin{cases}
+        \frac{q^{2n+1} - q^n}{q-1} & q \neq 1 \\
+        n+1 & q =1
+    \end{cases}$
+\end{enumerate}
+
+\subsection{Ejercicio 5}
+Usando la suma aritmética:
+\begin{align*}
+    \sum_{i=1}^{n}(2i-1) &= \sum_{i=1}^{n}2i - \sum_{i=1}^{n}1 \\
+    &= 2.\frac{n(n+1)}{2} - n \\
+    &= n^2 + n - n \\
+    &= n^2\\
+\end{align*}
+
+Usando el principio de inducción:
+
+Defino el predicado $p(n): \sum_{i=1}^{n}(2i-1) = n^2; \forall n \in \mathbb{N}$
+
+\underline{Caso base n = 1}
+
+$\sum_{i=1}^{1}(2i-1) = 2 - 1 = 1$
+
+$n^2 = 1^2 = 1$
+
+Luego el caso base es verdadero.
+
+\underline{Paso inductivo}
+
+Quiero probar que para $k \geq 1$, $p(k) \implies p(k+1)$
+
+HI: $\sum_{i=1}^{k}(2i-1) = k^2$
+
+QpQ: $\sum_{i=1}^{k+1}(2i-1) = (k+1)^2$
+
+Pero,
+
+\begin{align*}
+    \sum_{i=1}^{k+1}(2i-1) &= \sum_{i=1}^{k}(2i-1) + 2(k+1)-1 \\
+    &= k^2 + 2(k+1)-1 \\
+    &= k^2 + 2k+1 \\
+    &= (k+1)^2
+\end{align*}
+
+Luego el paso inductivo es verdadero. Por lo tanto $p(n)$ es verdadero, $\forall n \in \mathbb{N}$
+
+\subsection{Ejercicio 6}
+
+\subsubsection{Pregunta i}
+
+\underline{Prueba por inducción:}
+
+Defino el predicado $p(n) : \sum_{i=1}^{n}i^2 = \frac{n(n+1)(2n+1)}{6}$
+
+\textbf{Caso base n = 1}
+
+$\sum_{i=1}^{1}i^2 = 1^2 = 1$
+
+$\frac{n(n+1)(2n+1)}{6} = \frac{1.2.3}{6} = \frac{6}{6} = 1$
+
+Luego el caso base $p(1)$ es verdadero.
+
+\textbf{Paso inductivo}
+
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $\sum_{i=1}^{k}i^2 =  \frac{k(k+1)(2k+1)}{6}$
+
+QpQ: $\sum_{i=1}^{k+1}i^2 =  \frac{(k+1)(k+2)(2(k+1)+1)}{6} =  \frac{(k+1)(k+2)(2k+3)}{6}$
+
+Pero,
+
+\begin{align*}
+    \sum_{i=1}^{k+1}i^2 &= \sum_{i=1}^{k}i^2 + (k+1)^2 \\
+    &= \frac{k(k+1)(2k+1)}{6} + (k+1)^2 \\
+\end{align*}
+
+Entonces necesito probar que, 
+
+\begin{align*}
+    \frac{k(k+1)(2k+1)}{6} + (k+1)^2 &= \frac{(k+1)(k+2)(2k+3)}{6} \\
+    \iff \frac{k(k+1)(2k+1) + 6(k+1)^2}{6} &= \frac{(k+1)(k+2)(2k+3)}{6} \\
+    \iff k(2k+1) + 6(k+1) &= (k+2)(2k+3) \\
+    \iff 2k^2+k + 6k+6 &= 2k^2+3k+4k+6 \\
+    \iff 2k^2+7k+6 &= 2k^2+7k+6 \\
+\end{align*}
+
+Luego $\sum_{i=1}^{k+1}i^2 =  \frac{(k+1)(k+2)(2k+3)}{6}$ como se quería probar, el paso inductivo el verdadero.
+
+Por lo tanto, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
+
+\subsubsection{Pregunta ii}
+
+Defino el predicado $p(n) : \sum_{i=1}^{n}i^3 = \frac{n^2(n+1)^2}{4}$
+
+\textbf{Caso base n = 1}
+
+$\sum_{i=1}^{n}i^3 = 1^3 = 1$
+
+$\frac{n^2(n+1)^2}{4} = \frac{4}{4} = 1$
+
+Luego el caso base $p(1)$ es verdadero.
+
+\textbf{Paso inductivo}
+
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $\sum_{i=1}^{k}i^3 = \frac{k^2(k+1)^2}{4}$
+
+QpQ: $\sum_{i=1}^{k+1}i^3 = \frac{(k+1)^2(k+2)^2}{4}$
+
+Pero,
+\begin{align*}
+    \sum_{i=1}^{k+1}i^3 &= \sum_{i=1}^{k}i^3 + (k+1)^3 \\
+    &= \frac{k^2(k+1)^2}{4} + (k+1)^3 \\
+    &= \frac{k^2(k+1)^2 + 4(k+1)^3}{4}
+\end{align*}
+
+Luego debo probar, 
+\begin{align*}
+    \frac{k^2(k+1)^2 + 4(k+1)^3}{4} &= \frac{(k+1)^2(k+2)^2}{4} \\
+    \iff k^2 + 4(k+1) &= k^2 + 4k + 4 \\
+    \iff k^2 + 4k + 4 &= k^2 + 4k + 4 \\
+\end{align*}
+
+Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
+
+Por lo tanto, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
 
 \end{document}
