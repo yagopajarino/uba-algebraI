@@ -12,7 +12,7 @@
 \setlength{\parindent}{0em}
 \setlength{\parskip}{0.5em}
 \setcounter{tocdepth}{2} % profundidad de indice
-\setcounter{section}{0} % nro de section
+\setcounter{section}{1} % nro de section
 \renewcommand{\thesubsubsection}{\thesubsection.\Alph{subsubsection}}
 \graphicspath{ {images/} }
 
@@ -223,5 +223,344 @@ Luego debo probar,
 Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
 
 Por lo tanto, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
+
+\subsection{Ejercicio 7}
+
+\subsubsection{Pregunta i}
+
+\underline{Prueba por inducción:}
+
+Defino el predicado $p(n) : \sum_{i=1}^{n}(-1)^{i+1}.i^2= \frac{(-1)^{n+1}.n(n+1)}{2}$
+
+\textbf{Caso base n = 1}
+
+$ \sum_{i=1}^{1}(-1)^{i+1}.i^2 = (-1)^2.1^2=1$
+
+$\frac{(-1)^{1+1}.1(1+1)}{2} = \frac{(-1)^2.1(2)}{2} = 1$
+
+Luego el caso base $p(1)$ es verdadero.
+
+\textbf{Paso inductivo}
+
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $\sum_{i=1}^{k}(-1)^{i+1}.i^2 = \frac{(-1)^{k+1}.k(k+1)}{2}$
+
+QpQ: $\sum_{i=1}^{k+1}(-1)^{i+1}.i^2 = \frac{(-1)^{k+2}.(k+1)(k+2)}{2}$
+
+Pero,
+\begin{align*}
+    \sum_{i=1}^{k+1}(-1)^{i+1}.i^2 &= \sum_{i=1}^{k}(-1)^{i+1}.i^2 + (-1)^{k+2}.(k+1)^2 \\
+    &= \frac{(-1)^{k+1}.k(k+1)}{2} + (-1)^{k+2}.(k+1)^2 \\
+    &= \frac{(-1)^{k+1}.k(k+1) + 2.(-1)^{k+2}.(k+1)^2}{2}
+\end{align*}
+
+Luego debo probar, 
+\begin{align*}
+    \frac{(-1)^{k+1}.k(k+1) + 2.(-1)^{k+2}.(k+1)^2}{2} &= \frac{(-1)^{k+2}.(k+1)(k+2)}{2} \\
+    (-1)^{k+1}.k(k+1) + 2.(-1)^{k+2}.(k+1)^2 &= (-1)^{k+2}.(k+1)(k+2) \\
+    (-1)^{k+1}.k + 2.(-1)^{k+2}.(k+1) &= (-1)^{k+2}.(k+2) \\
+    -k + 2.(k+1) &= k+2 \\
+    k+2 &= k+2 \\
+\end{align*}
+
+Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
+
+Por lo tanto, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
+
+\subsubsection{Pregunta ii}
+
+\underline{Prueba por inducción:}
+
+Defino el predicado $p(n) : \sum_{i=1}^{n}(2i+1).3^{i-1}= n.3^n$
+
+\textbf{Caso base n = 1}
+
+$\sum_{i=1}^{1}(2i+1).3^{i-1} = 3$
+
+$n.3^n = 3$
+
+Luego el caso base $p(1)$ es verdadero.
+
+\textbf{Paso inductivo}
+
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $\sum_{i=1}^{k}(2i+1).3^{i-1} = k.3^k$
+
+QpQ: $\sum_{i=1}^{k+1}(2i+1).3^{i-1} = (k+1).3^{k+1}$
+
+Pero,
+\begin{align*}
+    \sum_{i=1}^{k+1}(2i+1).3^{i-1} &= \sum_{i=1}^{k}(2i+1).3^{i-1} + \left( 2(k+1) + 1 \right).3^k \\
+    &= k.3^k + (2k+2+1).3^k \\
+    &= 3^k.(k+2k+3) \\
+    &= 3^k.(3k+3) \\
+    &= 3^k.3(k+1) \\
+    &= (k+1)3^{k+1} \\
+\end{align*}
+
+Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
+
+Por lo tanto, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
+
+\subsubsection{Pregunta iii}
+
+\underline{Prueba por inducción:}
+
+Defino el predicado $p(n) : \sum_{i=1}^{n}\frac{i.2^i}{(i+1)(i+2)}= \frac{2^{n+1}}{n+2}-1$
+
+\textbf{Caso base n = 1}
+
+$ \sum_{i=1}^{1}\frac{i.2^i}{(i+1)(i+2)} = \frac{2^1}{2.3} = \frac{1}{3} $
+
+$\frac{2^{1+1}}{1+2}-1 = \frac{2^2}{3} -1 = \frac{4}{3} - 1 = \frac{1}{3} $
+
+Luego el caso base $p(1)$ es verdadero.
+
+\textbf{Paso inductivo}
+
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $\sum_{i=1}^{k}\frac{i.2^i}{(i+1)(i+2)} = \frac{2^{k+1}}{k+2}-1$
+
+QpQ: $\sum_{i=1}^{k+1}\frac{i.2^i}{(i+1)(i+2)} = \frac{2^{k+2}}{k+3}-1$
+
+Pero,
+\begin{align*}
+    \sum_{i=1}^{k+1}\frac{i.2^i}{(i+1)(i+2)} &= \sum_{i=1}^{k}\frac{i.2^i}{(i+1)(i+2)} + \frac{(k+1).2^{k+1}}{(k+2)(k+3)} \\
+    &= \frac{2^{k+1}}{k+2}-1 + \frac{(k+1).2^{k+1}}{(k+2)(k+3)} \\
+\end{align*}
+
+Luego debo probar,
+\begin{align*}
+    \frac{2^{k+1}}{k+2}-1 + \frac{(k+1).2^{k+1}}{(k+2)(k+3)} &= \frac{2^{k+2}}{k+3}-1 \\
+    \frac{(k+3)2^{k+1}}{k+2} + \frac{(k+1).2^{k+1}}{k+2} &= 2^{k+2} \\
+    \frac{(k+3)2^{k+1} + (k+1).2^{k+1}}{k+2} &= 2^{k+2} \\
+    2^{k+1} \left( k+3 + k+1 \right) &= 2^{k+2} . (k+2) \\
+    2k+4 = 2k+4
+\end{align*}
+
+Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
+
+Por lo tanto, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
+
+\subsubsection{Pregunta iv}
+
+\underline{Prueba por inducción:}
+
+Defino el predicado $p(n) : \prod_{i=1}^{n}\left(1+a^{2^{i-1}}\right)= \frac{1-a^{2^n}}{1-a}$
+
+\textbf{Caso base n = 1}
+
+$\prod_{i=1}^{1}\left(1+a^{2^{i-1}}\right) = 1+a$
+
+$\frac{1-a^{2^1}}{1-a} = \frac{1-a^2}{1-a} = \frac{(1-a)(1+a)}{1-a} = 1+a$
+
+Luego el caso base $p(1)$ es verdadero.
+
+\textbf{Paso inductivo}
+
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $\prod_{i=1}^{k}\left(1+a^{2^{i-1}}\right)= \frac{1-a^{2^k}}{1-a}$
+
+QpQ: $\prod_{i=1}^{k+1}\left(1+a^{2^{i-1}}\right)= \frac{1-a^{2^{k+1}}}{1-a}$
+
+Pero,
+\begin{align*}
+    \prod_{i=1}^{k+1}\left(1+a^{2^{i-1}}\right) &= \prod_{i=1}^{k}\left(1+a^{2^{i-1}}\right) . (1+a^{2^k}) \\
+    &= \frac{1-a^{2^k}}{1-a} . (1+a^{2^k}) \\
+    &= \frac{\left(1-a^{2^k}\right).\left(1+a^{2^k}\right)}{1-a} \\
+    &= \frac{1-a^{2^{k+1}}}{1-a} \\
+\end{align*}
+
+Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
+
+Por lo tanto, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
+
+\subsection{Ejercicio 8}
+
+Prueba por inducción.
+
+Defino el predicado $p(n) : a^n - b^n = (a-b).\sum_{i=1}^{n}a^{i-1}.b^{n-i}$
+
+\textbf{Caso base n = 1}
+
+$ a^1 - b^1 = a-b$
+
+$ (a-b).\sum_{i=1}^{1}a^{i-1}.b^{1-i} = (a-b).1 = a-b$
+
+Luego el caso base $p(1)$ es verdadero.
+
+\textbf{Paso inductivo}
+
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $a^k - b^k = (a-b).\sum_{i=1}^{k}a^{i-1}.b^{k-i}$
+
+QpQ: $a^{k+1} - b^{k+1} = (a-b).\sum_{i=1}^{k+1}a^{i-1}.b^{k+1-i}$
+
+Pero,
+
+TODO
+\subsection{Ejercicio 9}
+
+\subsubsection{Pregunta i}
+
+Defino $p(n) : \sum_{i=1}^{n}a_{i+1}-a_i = a_{n+1} - a_1$
+
+\textbf{Caso base n = 1}
+
+$\sum_{i=1}^{1}a_{i+1}-a_i = a_2 - a_1$
+
+Luego el caso base $p(1)$ es verdadero.
+
+\textbf{Paso inductivo}
+
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $\sum_{i=1}^{k}a_{i+1}-a_i = a_{k+1} - a_1$
+
+QpQ: $\sum_{i=1}^{k+1}a_{i+1}-a_i = a_{k+2} - a_1$
+
+Pero,
+\begin{align*}
+    \sum_{i=1}^{k+1}a_{i+1}-a_i &= \sum_{i=1}^{k}a_{i+1}-a_i + a_{k+2} - a_{k+1} \\
+    &= a_{k+1} - a_1 + a_{k+2} - a_{k+1} \\
+    &= - a_1 + a_{k+2} \\
+    &= a_{k+2} - a_1 \\
+\end{align*}
+Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
+
+Por lo tanto, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
+
+\subsubsection{Pregunta ii}
+
+Luego de probar con los casos $n \in \{ 1,2,3 \}$ conjeturo y defino el predicado $p(n): \sum_{i=1}^{n}\frac{1}{i(i+1)} = \frac{n}{n+1}$
+
+Prueba por inducción:
+
+\textbf{Caso base n = 1}
+
+$\sum_{i=1}^{1}\frac{1}{i(i+1)} = \frac{1}{2}$
+
+$ \frac{1}{1+1} = \frac{1}{2} $
+
+Luego el caso base $p(1)$ es verdadero.
+
+\textbf{Paso inductivo}
+
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $\sum_{i=1}^{k}\frac{1}{i(i+1)} = \frac{k}{k+1}$
+
+QpQ: $\sum_{i=1}^{k+1}\frac{1}{i(i+1)} = \frac{k+1}{k+2}$
+
+Pero,
+\begin{align*}
+    \sum_{i=1}^{k+1}\frac{1}{i(i+1)} &= \sum_{i=1}^{k}\frac{1}{i(i+1)} + \frac{1}{(k+1)(k+2)} \\
+    &= \frac{k}{k+1} + \frac{1}{(k+1)(k+2)} \\
+    &= \frac{(k+2)k + 1}{(k+1)(k+2)}
+\end{align*}
+
+Luego alcanza probar que:
+\begin{align*}
+    \frac{(k+2)k + 1}{(k+1)(k+2)} &= \frac{k+1}{k+2} \\
+    \frac{k^2 + 2k + 1}{(k+1)(k+2)} &= \frac{k+1}{k+2} \\
+    \frac{(k+1)^2}{(k+1)(k+2)} &= \frac{k+1}{k+2} \\
+    \frac{k+1}{k+2} &= \frac{k+1}{k+2} \\
+\end{align*}
+Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
+
+Por lo tanto, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
+
+\subsubsection{Pregunta iii}
+
+Luego de probar con los casos $n \in \{ 1,2,3,4 \}$ conjeturo y defino el predicado $p(n): \sum_{i=1}^{n}\frac{1}{(2i-1)(2i+1)} = \frac{n}{2n+1}$
+
+Prueba por inducción:
+
+\textbf{Caso base n = 1}
+
+$ \sum_{i=1}^{1}\frac{1}{(2i-1)(2i+1)} = \frac{1}{2+1} = \frac{1}{3}$
+
+$ \frac{1}{2.1+1} = \frac{1}{3}$
+
+Luego el caso base $p(1)$ es verdadero.
+
+\textbf{Paso inductivo}
+
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $\sum_{i=1}^{k}\frac{1}{(2i-1)(2i+1)} = \frac{k}{2k+1}$
+
+QpQ: $\sum_{i=1}^{k+1}\frac{1}{(2i-1)(2i+1)} = \frac{k+1}{2(k+1)+1}$
+
+Pero,
+\begin{align*}
+    \sum_{i=1}^{k+1}\frac{1}{(2i-1)(2i+1)} &= \sum_{i=1}^{k}\frac{1}{(2i-1)(2i+1)} + \frac{1}{(2(k+1)-1)(2(k+1)-1)} \\
+    &= \frac{k}{2k+1} + \frac{1}{(2k+1)(2k+3)} \\
+\end{align*}
+
+Luego alcanza probar que,
+\begin{align*}
+    \frac{k}{2k+1} + \frac{1}{(2k+1)(2k+3)} &= \frac{k+1}{2(k+1)+1} \\
+    \frac{(2k+3).k + 1}{(2k+1)(2k+3)} &= \frac{k+1}{2k+3} \\
+    (2k+3).k + 1 &= (k+1)(2k+1) \\
+    2k^2 + 3k + 1 &= 2k^2 + k + 2k +1 \\
+    2k^2 + 3k + 1 &= 2k^2 + 3k +1 \\
+\end{align*}
+
+Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
+
+Por lo tanto, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
+
+\subsection{Ejercicio 10}
+
+\subsubsection{Pregunta i}
+
+Defino $ p(n): 3^n + 5^n \geq 2^{n+2}$
+
+\textbf{Caso base n = 1}
+
+$3^1 + 5^1 = 3 + 5 = 8$
+
+$2^{1+2} = 2^3 = 8$
+
+Como $ 8 \geq 8 $ el caso base $p(1)$ es verdadero.
+
+\textbf{Paso inductivo}
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $ 3^k + 5^k \geq 2^{k+2}$
+
+QpQ: $ 3^{k+1} + 5^{k+1} \geq 2^{k+3}$
+
+Pero,
+\begin{align*}
+    3^{k+1} + 5^{k+1} &= 3.3^k + 5.5^k \\ 
+    &= 3.3^k + 3.5^k + 2.5^k \\
+    &= 3.(3^k + 5^k) + 2.5^k \\
+\end{align*}
+
+Por hipótesis inductiva:
+\begin{align*}
+    3.(3^k + 5^k) + 2.5^k &\geq 3.2^{k+2} + 2.5^k \\
+\end{align*}
+
+Luego alcanza con probar que,
+\begin{align*}
+    3.2^{k+2} + 2.5^k &\geq 2^{k+3} \\
+    3.2^{k+2} + 2.5^k - 2.2^{k+2} &\geq 0 \\
+    2^{k+2} + 2.5^k &\geq 0 \\
+\end{align*}
+
+Pero $k \geq 1 \implies (2^{k+2} \geq 8 \wedge 2.5^k \geq 10)$ y en particular $2^{k+2} + 2.5^k \geq 0 $ como se quería probar.
+
+Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
+
+Por lo tanto, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
+
 
 \end{document}
