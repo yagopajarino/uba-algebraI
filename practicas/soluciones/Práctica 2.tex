@@ -562,5 +562,261 @@ Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
 
 Por lo tanto, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
 
+\subsubsection{Pregunta ii}
+
+Defino $ p(n): 3^n \geq n^3$
+
+\textbf{Caso base n = 1}
+
+$ 3^1 = 3 $
+
+$ 1^3 = 1 $
+
+Como $ 3 \geq 1 $ el caso base $p(1)$ es verdadero.
+
+\textbf{Paso inductivo}
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $ 3^k \geq k^3$
+
+QpQ: $ 3^{k+1} \geq (k+1)^3$
+
+Pero,
+\begin{align*}
+    3^{k+1} &= 3^k . 3 \\
+    \iff 3^{k+1} &> 3k^3 \\
+\end{align*}
+
+Luego alcanza probar que,
+\begin{align*}
+    3k^3 &\geq k^3 + 3k^2 + 3k + 1 \\
+    3k^3 - k^3 - 3k^2 - 3k &\geq 1 \\
+    k(2k^2 - 3k -3) &\geq 1 \\
+\end{align*}
+
+Pero esto se cumple unicamente para los $k \geq 3$ por lo tanto $p(k) \implies p(k+1); \forall k \geq 3$
+
+Hay que ver aparte los casos $k \in \{ 2,3 \}$
+
+$p(2): 3^2 \geq 2^3 \iff 9 \geq 8$ es verdadero.
+
+$p(3): 3^3 \geq 3^3 \iff 27 \geq 27$ es verdadero.
+
+Así, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
+
+\subsubsection{Pregunta iii}
+
+Defino $ p(n): \sum_{i=1}^{n}\frac{n+i}{i+1} \leq 1+n(n-1)$
+
+\textbf{Caso base n = 1}
+
+$ \sum_{i=1}^{1}\frac{1+i}{i+1} = \frac{2}{2} = 1 $
+
+$ 1+1(1-1) = 1 $
+
+Como $ 1 \leq 1 $ el caso base $p(1)$ es verdadero.
+
+\textbf{Paso inductivo}
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $\sum_{i=1}^{k}\frac{k+i}{i+1} \leq 1+k(k-1)$
+
+QpQ: $ \sum_{i=1}^{k+1}\frac{k+1+i}{i+1} \leq 1+(k+1)k = 1+k^2 + k$
+
+Pero,
+\begin{align*}
+    \sum_{i=1}^{k+1}\frac{k+1+i}{i+1} &= \sum_{i=1}^{k+1}\frac{k+i}{i+1} + \sum_{i=1}^{k+1}\frac{1}{i+1} \\
+    &= \sum_{i=1}^{k}\frac{k+i}{i+1} + \frac{2k+1}{k+2} + \sum_{i=1}^{k+1}\frac{1}{i+1} \\
+    &\leq 1+k(k-1) + \frac{2k+1}{k+2} + \frac{k+1}{2} \\
+\end{align*}
+
+Luego alcanza probar que,
+\begin{align*}
+    1+k(k-1) + \frac{2k+1}{k+2} + \frac{k+1}{2} &\leq 1+k^2 + k \\
+    - k + \frac{2k+1}{k+2} + \frac{k+1}{2} &\leq k \\
+    \frac{2k+1}{k+2} + \frac{k+1}{2} &\leq 2k \\
+    \frac{2(2k+1) + (k+2)(k+1)}{2(k+2)} &\leq 2k \\
+    \frac{4k+2 + k^2+2k+k+2}{2k+4} &\leq 2k \\
+    k^2 + 7k + 4 &\leq (2k+4)2k \\
+    k^2 + 7k + 4 &\leq 4k^2 + 8k \\
+    4 &\leq 3k^2 + k\\
+\end{align*}
+
+Que es verdadero $\forall k \geq 1$
+
+Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
+
+Así, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
+
+\subsubsection{Pregunta iv}
+
+Defino $ p(n): \sum_{i=n}^{2n}\frac{i}{2^i} \leq n$
+
+\textbf{Caso base n = 1}
+
+$ \sum_{i=1}^{2}\frac{i}{2^i} = \frac{1}{2} + \frac{2}{4} = 1 $
+
+Como $ 1 \leq 1 $ el caso base $p(1)$ es verdadero.
+
+\textbf{Paso inductivo}
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $\sum_{i=k}^{2k}\frac{i}{2^i} \leq k$
+
+QpQ: $ \sum_{i=k+1}^{2(k+1)}\frac{i}{2^i} \leq k+1$
+
+Pero,
+\begin{align*}
+    \sum_{i=k+1}^{2k+2}\frac{i}{2^i} &= \sum_{i=k}^{2k}\frac{i}{2^i} + \frac{2k+1}{2^{2k+1}}+ \frac{2k+2}{2^{2k+2}} - \frac{k}{2^k} \\
+    &\leq k + \frac{2k+1}{2^{2k+1}}+ \frac{2k+2}{2^{2k+2}} - \frac{k}{2^k} \\
+\end{align*}
+
+Luego alcanza probar que,
+\begin{align*}
+    k + \frac{2k+1}{2^{2k+1}}+ \frac{2k+2}{2^{2k+2}} - \frac{k}{2^k} &\leq k+1 \\
+    \frac{2k+1}{2^{2k+1}}+ \frac{2(k+1)}{2.2^{2k+1}} - \frac{k}{2^k} &\leq 1 \\
+    \frac{3k+2}{2^{2k+1}} - \frac{k.2^{k+1}}{2^k.2^{k+1}} &\leq 1 \\
+    \frac{3k+2}{2^{2k+1}} - \frac{k.2^{k+1}}{2^{2k+1}} &\leq 1 \\
+    \frac{3k+2 - k.2^{k+1}}{2^{2k+1}} &\leq 1 \\
+    3k+2 - k.2^{k+1} &\leq 2^{2k+1} \\
+    3k+2 &\leq 2^{2k+1} + k.2^{k+1}\\
+    3k+2 &\leq 2^k.2^k.2 + k.2^k.2\\
+    3k+2 &\leq 2^k.2^k.2 + k.2^k.2^k.2\\
+    3k+2 &\leq 2^{2k+2}(1+k)\\
+    3k+2 &\leq 2^{2k+2}(3k+2)\\
+    1 &\leq 2^{2k+2}\\
+\end{align*}
+
+Que es verdadero $\forall k \geq 1$
+
+Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
+
+Así, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
+
+\subsection{Ejercicio 11}
+
+Defino $ p(n): \prod_{i=1}^{n}(1+a_i)\geq 1+\sum_{i=1}^{n}a_i $
+
+\textbf{Caso base n = 1}
+
+$ \prod_{i=1}^{1}(1+a_i) = 1 + a_i $
+
+$ 1+\sum_{i=1}^{1}a_i = 1+a_i $
+
+Como $ 1 + a_i \geq 1 + a_i $ el caso base $p(1)$ es verdadero.
+
+\textbf{Paso inductivo}
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $\prod_{i=1}^{k}(1+a_i) \geq 1+\sum_{i=1}^{k}a_i$
+
+QpQ: $ \prod_{i=1}^{k+1}(1+a_i) \geq 1+\sum_{i=1}^{k+1}a_i$
+
+Pero,
+\begin{align*}
+    \prod_{i=1}^{k+1}(1+a_i) &= \prod_{i=1}^{k}(1+a_i) + 1+a_{k+1} \\
+    &\geq 1+\sum_{i=1}^{k}a_i + 1+a_{k+1} \\
+    &\geq 2+\sum_{i=1}^{k+1}a_i \\
+\end{align*}
+
+Luego alcanza probar que,
+\begin{align*}
+    2+\sum_{i=1}^{k+1}a_i &\geq 1+\sum_{i=1}^{k+1}a_i \\
+    2 &\geq 1 \\
+\end{align*}
+
+Que es verdadero $\forall k \geq 1$
+
+Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
+
+Así, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
+
+\subsection{Ejercicio 12}
+
+\subsubsection{Pregunta i}
+
+Defino $ p(n): n! \geq 3^{n-1}; \forall n \geq 5 $
+
+\textbf{Caso base n = 5}
+
+$ 5! = 120 $
+
+$ 3^{5-1} = 3^4 = 81$
+
+Como $ 120 \geq 81 $ el caso base $p(5)$ es verdadero.
+
+\textbf{Paso inductivo}
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $k! \geq 3^{k-1}$
+
+QpQ: $ (k+1)! \geq 3^{k}$
+
+Pero,
+\begin{align*}
+    (k+1)! &= (k+1) \cdot k! \\
+    &\geq (k+1) \cdot 3^{k-1} \\
+\end{align*}
+
+Luego alcanza probar que,
+\begin{align*}
+    (k+1) \cdot 3^{k-1} &\geq 3^{k} \\
+    \frac{(k+1)\cdot 3^k}{3} &\geq 3^{k} \\
+    k+1 &\geq 3 \\
+\end{align*}
+
+Que es verdadero $\forall k \geq 5$
+
+Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
+
+Así, $p(n)$ es verdadero, $\forall n \in \mathbb{N}_{\geq 5}$.
+
+\subsubsection{Pregunta ii}
+
+Defino $ p(n): 3^n - 2^n \geq n^3; \forall n \geq 4 $
+
+\textbf{Caso base n = 4}
+
+$3^4 - 2^4 = 65$
+
+$ 4^3 = 64$
+
+Como $ 65 \geq 64 $ el caso base $p(4)$ es verdadero.
+
+\textbf{Paso inductivo}
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $3^k - 2^k \geq k^3$
+
+QpQ: $ 3^{k+1} - 2^{k+1} \geq (k+1)^3$
+
+Pero,
+\begin{align*}
+    3^{k+1} - 2^{k+1} &= 3.3^k - 2.2^k \\
+    &= 2.3^k + 3^k - 2.2^k \\
+    &= 2.(3^k - 2^k) + 3^k \\
+    &\geq 2.k^3 + 3^k \\
+\end{align*}
+
+Luego alcanza probar que,
+\begin{align*}
+    2k^3 + 3^k &\geq (k+1)^3 \\
+    2k^3 + 3^k &\geq k^3 + 3k^2 + 3k + 1 \\
+    2k^3 + 3^k - k^3 - 3k^2 - 3k &\geq 1 \\
+    k^3 + 3^k - 3k^2 - 3k &\geq 1 \\
+    k(k^2 + 3^{k-1} - 3k -3) &\geq 1 \\
+\end{align*}
+
+Ahora pruebo que,
+\begin{align*}
+    k^2 + 3^{k-1} - 3k -3 &\geq 1 \\
+    k(k + 3^{k-2} - 3) &\geq 4 \\
+\end{align*}
+
+Que es verdadero, $\forall k \geq 4$.
+
+Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
+
+Así, $p(n)$ es verdadero, $\forall n \in \mathbb{N}_{\geq 4}$.
 
 \end{document}
