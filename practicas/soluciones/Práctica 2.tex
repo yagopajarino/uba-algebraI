@@ -531,6 +531,7 @@ $2^{1+2} = 2^3 = 8$
 Como $ 8 \geq 8 $ el caso base $p(1)$ es verdadero.
 
 \textbf{Paso inductivo}
+
 Para todo $k \geq 1: p(k) \implies (k+1)$
 
 HI: $ 3^k + 5^k \geq 2^{k+2}$
@@ -575,6 +576,7 @@ $ 1^3 = 1 $
 Como $ 3 \geq 1 $ el caso base $p(1)$ es verdadero.
 
 \textbf{Paso inductivo}
+
 Para todo $k \geq 1: p(k) \implies (k+1)$
 
 HI: $ 3^k \geq k^3$
@@ -617,6 +619,7 @@ $ 1+1(1-1) = 1 $
 Como $ 1 \leq 1 $ el caso base $p(1)$ es verdadero.
 
 \textbf{Paso inductivo}
+
 Para todo $k \geq 1: p(k) \implies (k+1)$
 
 HI: $\sum_{i=1}^{k}\frac{k+i}{i+1} \leq 1+k(k-1)$
@@ -659,6 +662,7 @@ $ \sum_{i=1}^{2}\frac{i}{2^i} = \frac{1}{2} + \frac{2}{4} = 1 $
 Como $ 1 \leq 1 $ el caso base $p(1)$ es verdadero.
 
 \textbf{Paso inductivo}
+
 Para todo $k \geq 1: p(k) \implies (k+1)$
 
 HI: $\sum_{i=k}^{2k}\frac{i}{2^i} \leq k$
@@ -706,6 +710,7 @@ $ 1+\sum_{i=1}^{1}a_i = 1+a_i $
 Como $ 1 + a_i \geq 1 + a_i $ el caso base $p(1)$ es verdadero.
 
 \textbf{Paso inductivo}
+
 Para todo $k \geq 1: p(k) \implies (k+1)$
 
 HI: $\prod_{i=1}^{k}(1+a_i) \geq 1+\sum_{i=1}^{k}a_i$
@@ -746,6 +751,7 @@ $ 3^{5-1} = 3^4 = 81$
 Como $ 120 \geq 81 $ el caso base $p(5)$ es verdadero.
 
 \textbf{Paso inductivo}
+
 Para todo $k \geq 1: p(k) \implies (k+1)$
 
 HI: $k! \geq 3^{k-1}$
@@ -784,6 +790,7 @@ $ 4^3 = 64$
 Como $ 65 \geq 64 $ el caso base $p(4)$ es verdadero.
 
 \textbf{Paso inductivo}
+
 Para todo $k \geq 1: p(k) \implies (k+1)$
 
 HI: $3^k - 2^k \geq k^3$
@@ -818,5 +825,255 @@ Que es verdadero, $\forall k \geq 4$.
 Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
 
 Así, $p(n)$ es verdadero, $\forall n \in \mathbb{N}_{\geq 4}$.
+
+\subsection{Ejercicio 13}
+
+Defino $ p(n): n^2 +1 < 2^n$
+
+\begin{enumerate}
+    \item[] $ n= 1 \implies p(1): 1^2 + 1<2^1 \iff 2<2 \implies p(1)$ es falso.
+    \item[] $ n= 2 \implies p(2): 2^2 + 1<2^2 \iff 5<4 \implies p(2)$ es falso.  
+    \item[] $ n= 3 \implies p(3): 3^2 + 1<2^3 \iff 10<8 \implies p(3)$ es falso.
+    \item[] $ n= 4 \implies p(4): 4^2 + 1<2^4 \iff 17<16 \implies p(4)$ es falso. 
+    \item[] $ n= 5 \implies p(5): 5^2 + 1<2^5 \iff 26<32 \implies p(5)$ es verdadero. 
+\end{enumerate}
+
+Luego tomo el caso base en $ n = 5 $ y ya se que $p(5)$ es verdadero.
+
+\textbf{Paso inductivo}
+
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $k^2 +1 < 2^k$
+
+QpQ: $ (k+1)^2 +1 < 2^{k+1}$
+
+Pero,
+\begin{align*}
+    (k+1)^2 +1 &= k^2 + 2k + 1 + 1 \\
+    &< 2^k + 2k + 1 \\
+\end{align*}
+
+Queda probar que,
+\begin{align*}
+    2^k + 2k + 1 &\leq 2^{k+1} \\
+    2^k + 2k + 1 &\leq 2.2^k \\
+    2k + 1 &\leq 2^k\\
+    0 &\leq 2^k  - 2k - 1\\
+\end{align*}
+
+Que es verdadero $\forall k \geq 5$
+
+Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
+
+Así, $p(n)$ es verdadero, $\forall n \in \mathbb{N}_{\geq 5}$.
+
+\subsection{Ejercicio 14}
+
+TODO
+
+\subsection{Ejercicio 15}
+
+\subsubsection{Pregunta i}
+
+Defino $ p(n): a_n = 2^n.n! $
+
+\textbf{Caso base n = 1}
+
+$ a_1 = 2 $ por definición. 
+
+$ a_1 = 2^1.1! = 2 $
+
+Luego $ p(1) $ es verdadero.
+
+\textbf{Paso inductivo}
+
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $ a_k = 2^k.k!$
+
+QpQ: $ a_{k+1} = 2^{k+1}.(k+1)!$
+
+Pero,
+\begin{align*}
+    a_{k+1} &= 2k . a_k + 2^{k+1}.k! \\
+    &= 2k . 2^k.k! + 2^{k+1}.k! \\
+    &= 2^{k+1}.k!.k + 2^{k+1}.k! \\
+\end{align*}
+
+Luego alcanza probar que,
+\begin{align*}
+    2^{k+1}.k!.k + 2^{k+1}.k! &= 2^{k+1}.(k+1)! \\
+    2^{k+1}\cdot k!(k+1) &= 2^{k+1}.(k+1)! \\
+    2^{k+1}\cdot k!\cdot (k+1) &= 2^{k+1}\cdot (k+1)\cdot k! \\
+\end{align*}
+
+Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
+
+Así, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
+
+\subsubsection{Pregunta ii}
+
+Defino $ p(n): a_n = n^2\cdot (n-1) $
+
+\textbf{Caso base n = 1}
+
+Por definición $a_1 = 0$
+
+$ 1^2\cdot (1-1) = 0 $
+
+Luego $ p(1) $ es verdadero.
+
+\textbf{Paso inductivo}
+
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $ a_k = k^2\cdot (k-1)$
+
+QpQ: $ a_{k+1} = (k+1)^2\cdot k$
+
+Pero,
+\begin{align*}
+    a_{k+1} &= a_k + k(3k+1) \\
+    &= k^2\cdot (k-1) + k(3k+1) \\
+    &= k^3 - k^2 + 3k^2+k \\
+    &= k^3 +2k^2+k \\
+    &= k(k^2 + 2k + 1)\\
+    &= k\cdot (k+1)^2\\
+\end{align*}
+
+Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
+
+Así, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
+
+\subsection{Ejercicio 16}
+
+\subsubsection{Pregunta i}
+
+Luego de probar con $ n \in \{ 1,2,3,4 \} $ conjeturo y defino $ p(n): a_n = n^2 $
+
+\textbf{Caso base n = 1}
+
+Por definicion $ a_1 = 1$
+
+$ 1^2 = 1$
+
+Luego $ p(1) $ es verdadero.
+
+\textbf{Paso inductivo}
+
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $ a_k = k^2$
+
+QpQ: $ a_{k+1} = (k+1)^2$
+
+Pero,
+\begin{align*}
+    a_{k+1} &= (1+\sqrt[]{a_k})^2 \\
+    &= (1+\sqrt[]{k^2})^2 \\
+    &= (1+k)^2 \\
+\end{align*}
+
+Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
+
+Así, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
+
+\subsubsection{Pregunta ii}
+
+Luego de probar con $ n \in \{ 1,2,3,4 \} $ conjeturo y defino $ p(n): a_n = 3^n $
+
+\textbf{Caso base n = 1}
+
+Por definicion $ a_1 = 3$
+
+$ 3^1 = 3$
+
+Luego $ p(1) $ es verdadero.
+
+\textbf{Paso inductivo}
+
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $ a_k = 3^k$
+
+QpQ: $ a_{k+1} = 3^{k+1}$
+
+Pero,
+\begin{align*}
+    a_{k+1} &= 2\cdot a_k + 3^k \\
+    &= 2\cdot 3^k + 3^k \\
+    &= 3^k\cdot (2+1) \\
+    &= 3^{k+1} \\
+\end{align*}
+
+Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
+
+Así, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
+
+\subsubsection{Pregunta iii}
+
+Luego de probar con $ n \in \{ 1,2,3,4,5,6 \} $ conjeturo y defino $ p(n): a_n = (n-1)! $
+
+\textbf{Caso base n = 1}
+
+Por definicion $ a_1 = 1$
+
+$ (1-1)! = 0! = 1$ (Por definición de 0!)
+
+Luego $ p(1) $ es verdadero.
+
+\textbf{Paso inductivo}
+
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $ a_k = (k-1)!$
+
+QpQ: $ a_{k+1} = k!$
+
+Pero,
+\begin{align*}
+    a_{k+1} &= k\cdot a_k \\
+    &= k\cdot (k-1)! \\
+    &= k! \\
+\end{align*}
+
+Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
+
+Así, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
+
+\subsubsection{Pregunta iv}
+
+Luego de probar con $ n \in \{ 1,2,3 \} $ conjeturo y defino $ p(n): a_n = \frac{n+1}{n} $
+
+\textbf{Caso base n = 1}
+
+Por definicion $ a_1 = 2$
+
+$ \frac{1+1}{1} = 2 $
+
+Luego $ p(1) $ es verdadero.
+
+\textbf{Paso inductivo}
+
+Para todo $k \geq 1: p(k) \implies (k+1)$
+
+HI: $ a_k = \frac{k+1}{k}$
+
+QpQ: $ a_{k+1} = \frac{k+2}{k+1}$
+
+Pero,
+\begin{align*}
+    a_{k+1} &= 2-\frac{1}{a_k} \\ 
+    &= 2-\frac{1}{\frac{k+1}{k}} \\ 
+    &= 2-\frac{k}{k+1} \\
+    &= \frac{2(k+1)-k}{k+1} \\
+    &= \frac{2k+2-k}{k+1} \\
+    &= \frac{k+2}{k+1} \\
+\end{align*}
+
+Luego $p(k) \implies p(k+1); \forall k \geq 1$, como se quería probar.
+
+Así, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
 
 \end{document}
