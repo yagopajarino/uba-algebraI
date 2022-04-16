@@ -1,0 +1,155 @@
+\input{macrosAlgebra}
+\usepackage{caratula}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+\decimalpoint
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.5em}
+\setcounter{tocdepth}{2} % profundidad de indice
+\setcounter{section}{2} % nro de section
+\renewcommand{\thesubsubsection}{\thesubsection.\Alph{subsubsection}}
+\graphicspath{ {images/} }
+
+% End latex config
+
+\begin{document}
+
+\titulo{Práctica 3}
+\fecha{2do cuatrimestre 2021}
+\materia{Álgebra I}
+\integrante{Yago Pajariño}{546/21}{ypajarino@dc.uba.ar}
+
+%Carátula
+\maketitle
+\newpage
+
+%Indice
+\tableofcontents
+\newpage
+
+% Aca empieza lo propio del documento
+\section{Práctica 3}
+
+\subsection{Ejercicio 1}
+
+Por enunciado, $ A= \{ n \in V: n \geq 132 \} $
+
+Y también, $ A^c = \{ n \in V: n < 132 \} $
+
+Se que dado un elemento cualquiera, $ x \in V \iff (x \in \mathbb{N} \wedge x \bmod 15 = 0)$
+
+Por lo tanto, $ A^c = \{ n \in V: (n < 132 \wedge n \bmod 15 = 0) \} $
+
+Así, $ \#A^c = \lfloor \frac{132}{15} \rfloor = 8 $
+
+Por extensión, $ A^c = \{ 15,30,45,60,75,90,105,120 \} $
+
+\subsection{Ejercicio 2}
+
+Defino el conjunto universal $ V = \{ n \in \mathbb{N}: n \leq 1000 \} $
+
+Defino el conjunto $ T = \{ n \in \mathbb{N}: n \bmod 3 = 0 \} $
+
+Defino el conjunto $ C = \{ n \in \mathbb{N}: n \bmod 5 = 0 \} $
+
+Luego busco $ \#(T^c \cup C^c) = \#(T \cup C)^c $
+
+Entonces $ (T \cup C) = \{ n \in \mathbb{N}: n \bmod 15 = 0 \} $ pues 3 y 5 son primos.
+
+Por lo tanto $ \#(T \cup C) = \lfloor \frac{1000}{15} \rfloor = 66$
+
+Y así, $ \#(T \cup C)^c = 1000 - 66 = 934 $
+
+\subsection{Ejercicio 3}
+
+$ \#(A \cup B \cup C) = \#A + \#B+ \#C - \#(A \cap B) - \#(A \cap C) - \#(B \cap C) + \#(A \cap B \cap C) $
+
+\subsection{Ejercicio 4}
+\subsubsection{Pregunta i}
+
+Datos del enunciado:
+\begin{enumerate}
+    \item $ \#V = 150 $
+    \item $ \#A = 83 $
+    \item $ \#B = 67 $
+    \item $ \#(A \cap B) = 45 $
+\end{enumerate}
+
+Luego,
+\begin{align*}
+    \#(A \cup B)^c &= \#V - \#(A\cup B) \\
+    &= \#V - (\#A + \#B - \#(A \cap B)) \\
+    &= 150 - (83 + 67 - 45) \\
+    &= 45 \\
+\end{align*}
+
+\subsubsection{Pregunta ii}
+TODO
+
+\subsection{Ejercicio 5}
+
+Datos del enunciado:
+\begin{enumerate}
+    \item Rutas BSAS - Ros = 3
+    \item Rutas Ros - SF = 4
+    \item Rutas SF - Req = 4
+\end{enumerate}
+
+Por lo tanto hay $ 3 \cdot 4 \cdot 2 = 24 $ formas de ir de Buenos Aires a Reconquista pasando por Rosario y Santa Fe.
+
+\subsection{Ejercicio 6}
+\subsubsection{Pregunta i}
+Hay $ 8 \cdot 9\cdot 9\cdot 9 = 5832 $ números.
+
+\subsubsection{Pregunta ii}
+Calculando por el complemento:
+
+Hay $ 9 \cdot 10\cdot 10\cdot 10 = 9000 $ números de cuatro cifras.
+
+En el inciso anterior se calculó la cantidad de números que no tienen cierto dígito (calculado por 5, vale para 7).
+
+Luego habrá $ 9000 - 5832 = 3168 $ números.
+
+\subsection{Ejercicio 7}
+Puede distribuirlos en $ 3^{17} $ formas.
+
+\subsection{Ejercicio 8}
+
+Defino $ A = \{ materias \}$, se que $ \#A = 5 $
+
+Luego las posibles elecciones están dadas por $ \#P(A) = 2^5 = 32 $
+
+Si tiene que cursar al menos dos materias, no puede elegir las opciones de cursar ninguna materia o una sola materia.
+
+Así tiene $ 32 - 5 - 1 = 26 $ formas de cursar al menos dos materias.
+
+\subsection{Ejercicio 9}
+
+Se que A es de la forma $ A = \{ a_1, a_2, ... , a_n \} $
+
+$R$ es una relación en $ A \times A \iff R \subseteq A \times A $: si $R$ es un subconjunto del producto cartesiano $ A \times A $
+
+Luego la cantidad de relaciones en A será: $ \# P(A \times A) = 2^{n^2}$
+
+\begin{enumerate}
+    \item Reflexivas: $ 2^{n^2-2} $
+    \item Simétricas: $ 2^{\sum_{k =1}^{n}k} = 2^{\frac{n(n+1)}{2}} $
+    \item Simétricas: $ 2^{\sum_{k =1}^{n-1}k} = 2^{\frac{n(n-1)}{2}} $
+\end{enumerate}
+
+\subsection{Ejercicio 10}
+\begin{enumerate}
+    \item $ \#\{ f \in F / \text{f es función}\} = 12^5 $
+    \item $ \#\{ f \in F / 10 \not \in \text{Im(f)} \} = 11^5 $
+    \item $ \#\{ f \in F / 10 \in \text{Im(f)} \} = 12^5 - 11^5 $
+    \item $ \#\{ f \in F / f(1) \in \{ 2,4,6 \} \} = 3 \cdot 12^4 $
+\end{enumerate}
+
+
+\end{document}
