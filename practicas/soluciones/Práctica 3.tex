@@ -151,5 +151,166 @@ Luego la cantidad de relaciones en A será: $ \# P(A \times A) = 2^{n^2}$
     \item $ \#\{ f \in F / f(1) \in \{ 2,4,6 \} \} = 3 \cdot 12^4 $
 \end{enumerate}
 
+\subsection{Ejercicio 11}
+
+\begin{enumerate}
+    \item $7! = 5040$ funciones.
+    \item $3! \cdot 4! = 144$ funciones.
+\end{enumerate}
+
+\subsection{Ejercicio 12}
+De cinco cifras usando los dígitos $\{ 1,2,3,4,5 \}: 5!$
+
+De cinco cifras usando los dígitos $\{ 1,2,3,4,5,6,7 \}: \frac{5!}{2!}$
+
+De cinco cifras usando los dígitos $\{ 1,2,3,4,5,6,7 \}$ sin 2 en las cententas: $\frac{7!}{2!} \cdot \frac{4}{5}$
+
+\subsection{Ejercicio 13}
+Rdo. funciones inyectivas: Una función $f: A\rightarrow B$ es inyectiva sii $ (x \in A) \wedge (y \in A) \wedge (x\neq y) \implies f(x) \neq f(y)$ 
+
+\begin{enumerate}
+    \item $\frac{10!}{(10-7)!} = \frac{10!}{3!}$
+    \item Para $f(1)$ tengo 5 opciones. Al resto todas menos las que ya fueron asignadas (9,8,7,...) $ \implies 5 \cdot \frac{9!}{3!}$
+\end{enumerate}
+
+\subsection{Ejercicio 14}
+Defino $A = \{ 1,2,3,4,5,6,7 \}$ y $B = \{ 1,2,3,4,5,6,7 \}$
+
+Luego $\#A = \#B = 7$
+
+$f: A \rightarrow B \text{ es viyectiva } \iff \forall x \in A; \exists ! y \in B: f(x) = y$ \\
+Y además me piden que $ f(\{ 1,2,3 \}) \subseteq \{ 3,4,5,6,7 \} $
+
+Luego habrá $ \frac{5!}{2!} \cdot 4! $ funciones que cumplen lo pedido.
+
+\subsection{Ejercicio 15}
+Tengo $R$ relación de equivalencia en $A=\{ f: \{ 1,2,3,4 \} \rightarrow \{ 1,2,3,4,5,6,7,8 \}: \text{f es inyectiva} \}$
+
+Por definición, $fRg \iff f(1) + f(2) = g(1) + g(2)$
+
+Necesito saber cuantas $g \in A$ se relaciones con $ f(n) = n+2 $
+
+Pero,
+\begin{align*}
+    fRg \iff f(1) + f(2) &= g(1) + g(2) \\
+    3+4 &= g(1) + g(2) \\
+    7 &= g(1) + g(2) \\
+\end{align*}
+
+Entonces, busco las $g \in A: g(1) + g(2) = 7$ 
+
+Hay seis funciones de $\{ 1,2 \} \rightarrow \{ 2,3,4,5,6 \}$ que cumplen con esto.
+
+Completo el total de funciones asignando el resto de los elementos de forma inyectiva.
+
+Luego habrá $ 6 \cdot \frac{6!}{4!} = 180$ elementos dentro de la clase de equivalencia de $f(n) = n+2$
+
+\subsection{Ejercicio 16}
+
+Defino $A=\{ 1,2,3,...8 \}$ y $B=\{ 1,2,3,...,12 \}$ con $\#A = 8$ y $ \#B = 12 $
+
+Condiciones que me piden:
+\begin{enumerate}
+    \item f inyectiva
+    \item $f(5) + f(5) = 6$
+    \item $ f(1) \leq 6 $
+\end{enumerate}
+
+Primero busco asignaciones a $f(5)$ y $f(6)$ que cumplan lo pedido. Para esto hay cuatro opciones posibles.
+
+Luego $f(1)$ puede tomar cualquier valor menos los dos que ya fueron asignados ya que $f(5); f(6)$ siempre toman valores $\leq 6$. Luego para $f(1)$ hay 4 opciones.
+
+Para los demás elementos de $A$ pueden tomar alguno de los 9 elementos restantes de $B$.
+
+Por lo tanto hay $4 \cdot 4 \cdot \frac{9!}{4!} $ opciones.
+
+\subsection{Ejercicio 17}
+\begin{enumerate}
+    \item $\binom{7}{4}$
+    \item $\binom{6}{3}$
+    \item $\binom{6}{4}$
+    \item $\binom{5}{3} \cdot 2$
+\end{enumerate}
+
+\subsection{Ejercicio 18}
+Por enunciado $A = \{ n \in \mathbb{N}: n \leq 20 \}$ y $\#A = 20$
+
+\subsubsection{Pregunta i}
+Defino $B_1 = \{ n \in \mathbb{N}: n \leq 20 \wedge n \bmod 3 = 0 \} = \{ 3,6,9,12,15,18 \}$
+
+Luego para armar las funciones debo elegir 4 del conjunto $B_1$ y 6 elementos del conjunto $B - B_1$
+
+Luego habrá $ \binom{6}{4} \cdot \binom{14}{6} $ subconjuntos.
+
+\subsubsection{Pregunta ii}
+Hay suma impar de dos elementos si uno de ellos es par y el otro impar. Entonces, todos los elementos deben ser pares o impares.
+
+Si son todos pares $ \implies \binom{10}{5} $ subconjuntos.
+
+Si son todos impares $ \implies \binom{10}{5} $ subconjuntos.
+
+Luego habrá $ 2 \cdot \binom{10}{5} $
+
+\subsection{Ejercicio 19}
+Cada punto de una recta se une a dos de la otra para formar un triángulo. 
+
+Es decir, para cada vértice en una recta, elijo dos en la otra recta para formar el triángulo.
+
+Luego habrá $ \binom{m}{2} \cdot n $ con $ m \geq 2; n\in \mathbb{N} $
+
+\subsection{Ejercicio 20}
+Defino $ A = \{ 1,2,3,...,11 \} $ y $ B = \{ 1,2,3,...,16 \} $
+
+Me piden:
+\begin{enumerate}
+    \item f inyectiva
+    \item $ n, f(n) $ pares
+    \item $ f(1) < f(3) < f(5) < f(7) $
+\end{enumerate}
+
+La segunda condición me dice que los pares solo pueden tener imagen par, luego habrá $ \#fp $ funciones para los pares.
+
+$ \#fp = \frac{8!}{3!} $
+
+Para los impares tengo que considerar la tercera condición, esta implica que no me importa el orden de los elementos de B, sino que me voy a quedar con aquel que cumple la condición.
+
+Así habrá $\#fi$ funciones para los impares.
+
+$\#fi = \binom{11}{4} \cdot 7 \cdot 6$
+
+Por lo tanto, hay $ \frac{8!}{3!} \cdot \binom{11}{4} \cdot 7 \cdot 6 $ funciones que cumplen lo pedido.
+
+\subsection{Ejercicio 21}
+\begin{enumerate}
+    \item $ 7! $
+    \item $ \frac{7!}{3!} $
+    \item $ \frac{12!}{3!\cdot 2!} $
+\end{enumerate}
+
+\subsection{Ejercicio 22}
+\begin{enumerate}
+    \item $ \binom{7}{3} \cdot 3! \cdot 4! $
+    \item $ \binom{7}{4} \cdot 3! $
+    \item $ 4! \cdot 4! $
+\end{enumerate}
+
+\subsection{Ejercicio 23}
+\begin{enumerate}
+    \item Por el complemento: $ 10! - \binom{10}{2} \cdot 8!$
+    \item $ \binom{10}{3} \cdot 3! \cdot 7!$
+\end{enumerate}
+
+\subsection{Ejercicio 24}
+Defino $ F = \{ D,D,D,D,D,D,N,N,B,P,H,K,C,M \} $
+
+Condiciones:
+\begin{enumerate}
+    \item Dos frutas por día.
+    \item No más de una N por día.
+\end{enumerate}
+
+Calculo por el complemento,
+
+$ \# \text{Todas} - \# \text{Dos naranjas por día} = 14! - 7 \cdot 12!$
 
 \end{document}
