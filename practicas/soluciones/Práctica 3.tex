@@ -313,4 +313,162 @@ Calculo por el complemento,
 
 $ \# \text{Todas} - \# \text{Dos naranjas por día} = 14! - 7 \cdot 12!$
 
+\subsection{Ejercicio 25}
+
+Hay 15 personas pero A Juan y Nicolás los puedo pensar como bloque (JN), luego tengo 14 elementos para ordenar.
+
+Calculo por el complemento: 
+\begin{align*}
+    Rta. &= \# \text{Todas las formas donde JN va en auto} - \# \text{LMD no van en auto y JN va en auto} \\
+    &= 3 \cdot \binom{13}{2} \cdot \binom{11}{4} \cdot \binom{7}{4} - 3 \cdot \binom{10}{2} \cdot \binom{8}{4} \cdot \binom{4}{4}
+\end{align*}
+
+\subsection{Ejercicio 26}
+Hago la demostración por inducción.
+
+Defino $ p(n): \binom{2n}{n} > n\cdot 2^n; \forall n \in \mathbb{N}_{\geq 4} $
+
+\textbf{Caso base n=4}
+
+$ p(4): \binom{8}{4} > 4 \cdot 2^4 \iff \frac{8!}{4! \cdot 4!} > 4 \cdot 2^4 \iff 70 > 64 $
+
+Luego p(4) es verdadero.
+
+\textbf{Paso inductivo}
+
+Dado $ k \geq 4 $ quiero probar que $ p(k) \implies p(k+1) $
+
+HI: $ \binom{2k}{k} > k \cdot 2^k $
+
+Qpq: $\binom{2(k+1)}{k+1} > (k+1) \cdot 2^{k+1} \iff \binom{2k+2}{k+1} > (k+1) \cdot 2^{k+1} $
+
+Pero,
+\begin{align*}
+    \binom{2k+2}{k+1} &= \frac{(2k+2)!}{(k+1)! \cdot (2k+2-h-1)!} \\
+    &= \frac{(2k+2) \cdot (2k+1) \cdot (2k)!}{(k+1)\cdot k! \cdot (k+1) \cdot k!} \\
+    &> \frac{(2k+2)(2k+1)(k.2^k)}{(k+1)^2}
+\end{align*}
+
+Luego alcanza probar que,
+\begin{align*}
+    \frac{(2k+2)(2k+1)(k.2^k)}{(k+1)^2} &\geq (k+1)\cdot 2^{k+1} \\
+    \frac{2(k+1)(2k+1)(k.2^k)}{(k+1)(k+1)} &\geq (k+1)\cdot 2^{k} \cdot 2 \\
+    \frac{(2k+1)\cdot k}{k+1} &\geq k+1 \\
+    2k^2 + k &\geq k^2 + 2k +1 \\
+    k^2 - k &\geq 1 \\
+    k \cdot (k-1) &\geq 1 \\
+\end{align*}
+
+Que es verdadero, $ \forall k \geq 4 $.
+
+Luego $ p(k) \implies p(k+1) $ como se quería probar.
+
+Así, $ p(n) $ es verdadero, $\forall n \in \mathbb{N}_{\geq 4} $
+
+\subsection{Ejercicio 27}
+Lo pruebo por inducción.
+
+Defino $ p(n): a_n = \binom{2n}{n} \forall n \in \mathbb{N} $
+
+\textbf{Caso base n=1}
+
+$ p(1): a_1 = \binom{2.1}{1} = 2$
+
+Por definición de la sucesión, $ a_1 = 2 $
+
+Luego $ p(n) $ es verdadero.
+
+\textbf{Paso inductivo}
+
+Dado $ k \geq 1 $ quiero probar que $ p(k) \implies p(k+1) $
+
+HI: $ a_k = \binom{2k}{k} $
+
+Qpq: $a_{k+1} = \binom{2(k+1)}{k+1} = \binom{2k+2)}{k+1} $
+
+Pero,
+\begin{align*}
+    a_{k+1} &= 4 \cdot a_k - 2 \cdot \frac{(2k)!}{(k+1)! \cdot k!} \\
+    &= 4 \cdot \binom{2k}{k} - 2 \cdot \frac{(2k)!}{(k+1)! \cdot k!} \\
+    &= 4 \cdot \frac{(2k)!}{k! \cdot k!} - 2 \cdot \frac{(2k)!}{(k+1)! \cdot k!} \\
+    &= \frac{4\cdot (k+1)\cdot (2k)! - 2 \cdot (2k)!}{(k+1)! \cdot k!} \\
+\end{align*}
+
+Luego alcanza probar que,
+\begin{align*}
+    \frac{4\cdot (k+1)\cdot (2k)! - 2 \cdot (2k)!}{(k+1)! \cdot k!} &= \binom{2k+2)}{k+1} \\
+    \frac{4\cdot (k+1)\cdot (2k)! - 2 \cdot (2k)!}{(k+1)! \cdot k!} &= \frac{(2k+2)!}{(k+1)!(k+1)!} \\
+    \frac{4\cdot (k+1) - 2}{k!} &= \frac{(2k+2) \cdot (2k+1)}{(k+1)!} \\
+    4\cdot (k+1) - 2 &= \frac{2(k+1)(2k+1)}{k+1} \\
+    4k + 4 - 2 &= 4k + 2 \\
+    4k + 2 &= 4k + 2 \\
+\end{align*}
+
+Luego $ p(k) \implies p(k+1) $ como se quería probar.
+
+Así, $ p(n) $ es verdadero, $\forall n \in \mathbb{N} $
+
+\subsection{Ejercicio 28}
+TODO
+
+\subsection{Ejercicio 29}
+
+Enunciado, $ X = \{ 1,2,3,...,20 \} $ y $R$ una relación en $P(X)$
+
+Por definición, sean $A \in P(X); B \in P(X)$ conjuntos, $ ARB \iff A - B = \emptyset \iff A \subseteq B $
+
+Luego busco $ A \in P(X): (\#A \geq 2) \wedge (AR\{ 1,2,3,4,5,6,7,8,9 \})$
+
+Por el complemento: $ \# P(\{ 1,2,...,9 \}) - \# \{ c: \# c < 2 \wedge c-\{ 1,2,...,9 \} = \emptyset \} $
+
+Luego habrá $ 2^9 - \left[ \binom{9}{0} + \binom{9}{1} \right] = 2^9 - 10 $ subconjuntos.
+
+\subsection{Ejercicio 30}
+Por enunciado, $ X = \{ 1,2,3,4,5,5,7,8,9,10 \} $
+
+Por definición, $ ARB \iff A \cap \{ 1,2,3 \} = B\cap \{ 1,2,3 \} $
+
+Luego busco conjuntos $ B \in P(X): (\#B = 5) \wedge (BR\{ 1,3,5 \})$
+
+Pero $ BR\{ 1,3,5 \} \iff B\cap \{ 1,2,3 \} = \{ 1,3,5 \} \cap \{ 1,2,3 \} = \{ 1,3 \} $
+
+Así, busco subconjuntos de X de 5 elementos que incluyan al $\{ 1,3 \}$ y no tengan al 2.
+
+Entonces, hay $ \binom{7}{3} = 35 $ subconjuntos.
+
+\subsection{Ejercicio 31}
+Por enunciado, $ X = \{ n \in \mathbb{N}: n \leq 100 \} $ y $ A = \{ 1 \} $
+
+Se que $ A \triangle B \iff (A \cup B) - (A \cap B) $
+
+Entonces, busco $B$ tales que $ A \triangle B $ tengan 0 o 1 o 2 elementos.
+
+Para obtener 0 elementos $ B = \{ 1 \} \implies A \triangle B = (A \cup B) - (A \cap B) = \{ 1 \} - \{ 1 \} = \emptyset $
+
+Hay un elemento.
+
+Para obtener 1 elemento $ B = \{ b_1, 1 \} \implies A \triangle B = (A \cup B) - (A \cap B) = \{ b_1, 1 \} - \{ 1 \} = \{ b_1 \}$
+
+Luego hay $ \binom{99}{1} + 99 $ que cumplen esto.
+
+Para obtener 2 elementos $ B = \{ b_1, b_2, 1 \} \implies A \triangle B = (A \cup B) - (A \cap B) = \{ b_1, b_2, 1 \} - \{ 1 \} = \{ b_1, b_2 \}$
+
+Luego hay $ \binom{99}{2} $ que cumplen esto.
+
+Así, habrá $ 1 + \binom{99}{1} + 99 + \binom{99}{2} = 5050 $
+
+\subsection{Ejercicio 32}
+\subsubsection{Pregunta i}
+
+Tengo un conjunto $A$ con n elementos. Busco que la relación de equivalencia de $ a \in A $ tenga n elementos.
+
+La relación de equivalencia me dice con cuantos elementos se relaciona, en este caso, el elemento $a$.
+
+Luego voy a tener tantas clases de equivalencia como formas de elegir $n$ elementos de un conjunto de $2n$ elementos.
+
+Así, habrá $ \binom{2n}{n} $ clases de equivalencia.
+
+\subsubsection{Pregunta ii}
+Con el mismo rezanamiento que el inciso anterior habrá, $ \binom{3n}{b} \cdot \binom{2n}{n} $ clases de equivalencia. 
+
 \end{document}
