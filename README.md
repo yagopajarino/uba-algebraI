@@ -14,7 +14,7 @@ Universidad de Buenos Aires
 
 * [Práctica 1](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia1.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/soluciones/Pr%C3%A1ctica%201.pdf)
 * [Práctica 2](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia2.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/soluciones/Pr%C3%A1ctica%202.pdf)
-* [Práctica 3](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia3.pdf)
+* [Práctica 3](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia3.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/soluciones/Pr%C3%A1ctica%203.pdf)
 * [Práctica 4](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia4.pdf)
 * [Práctica 5](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia5.pdf)
 * [Práctica 6](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia6.pdf)
