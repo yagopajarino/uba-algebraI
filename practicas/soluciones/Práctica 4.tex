@@ -1,0 +1,138 @@
+\input{macrosAlgebra}
+\usepackage{caratula}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+\decimalpoint
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.5em}
+\setcounter{tocdepth}{2} % profundidad de indice
+\setcounter{section}{3} % nro de section
+\renewcommand{\thesubsubsection}{\thesubsection.\Alph{subsubsection}}
+\graphicspath{ {images/} }
+
+% End latex config
+
+\begin{document}
+
+\titulo{Práctica 4}
+\fecha{2do cuatrimestre 2021}
+\materia{Álgebra I}
+\integrante{Yago Pajariño}{546/21}{ypajarino@dc.uba.ar}
+
+%Carátula
+\maketitle
+\newpage
+
+%Indice
+\tableofcontents
+\newpage
+
+% Aca empieza lo propio del documento
+\section{Práctica 4}
+
+Resumen de propiedades de divisibilidad.
+\begin{enumerate}
+    \item $ \forall d \in \mathbb{Z}: d \neq 0 \implies d|0 $
+    \item $ d|a \iff \pm d \vert \pm a \iff |d| \vert |a| $
+    \item $ a \neq 0: d|a \implies |d| \leq |a| $
+    \item $ Inv(\mathbb{Z} = \{ \pm 1 \}) $
+    \item $ d|a \wedge a|d \iff |d| = |a| $
+    \item $ a \in \mathbb{Z}; \pm 1 |a \wedge \pm a |a $
+    \item $ d|a \wedge d|b \implies d|(a+b) $
+    \item $ d|a \implies d|c\cdot a $
+    \item $ d|a \wedge d|b \implies d^2 | ab $
+\end{enumerate}
+
+\subsection{Ejercicio 1}
+\begin{enumerate}
+    \item $ ab | c \iff  c= k \cdot ab \implies c = (kb) \cdot a \implies a | c $ Verdadera
+    \item $ a^2 = 4k \implies a^2 = 2 \cdot (2k) \implies 2 | a^2 \implies 2 |a $ Verdadera
+    \item $ 2 \not \vert a \wedge 2 \not \vert a \implies (2n+1)(2m+1)=2k$. Pero el termino de la izq es impart y el de la dercha par. ABS. Verdadera.
+    \item $ 9|3.3 $ pero $ 9 \not \vert 3 $ Falso
+    \item $ 2|3+3 $ pero $ 2 \not \vert 3 $ Falso
+    \item $ 4|4 \wedge 2|4 $ pero $ 8 \not \vert 4 $ Falso
+    \item $ -2|4 $ pero $ -2 > 4 $ Falso
+    \item Verdadera. Probado en teórica 10.
+    \item Verdadera. $ a|a \implies a |a^2 \implies a|b+a^2-a^2 \implies a|b $
+    \item Verdadera. Probado en teórica 10.
+\end{enumerate}
+
+\subsection{Ejercicio 2}
+\subsubsection{Pregunta i}
+\begin{align*}
+    3n-1 | n+7 &\implies 3n-1 | 3n-1 \wedge 3n-1 | n+7  \\
+    &\implies 3n-1 | (-1)(3n-1) + 3(n+7) \\
+    &\implies 3n-1 | -3n+1+3n+21 \\
+    &\implies 3n-1 | 22
+\end{align*}
+
+Luego $ 3n-1 \in Div_+(22) \iff 3n-1 \in \{ 1,2,11,22 \}$
+
+\begin{enumerate}[label=(\alph*)]
+    \item $ 3n-1 = 1 \implies n = \frac{2}{3} \not \in \mathbb{N}$ NO
+    \item $ 3n-1 = 2 \implies n = 1 $ luego $ 2|8 $ SI 
+    \item $ 3n-1 = 11 \implies n = 4 $ luego $ 11|11 $ SI 
+    \item $ 3n-1 = 22 \implies n = \frac{23}{3} \not \in \mathbb{N} $ NO
+\end{enumerate}
+
+Rta.: $ n \in \{ 1,4 \} $
+
+\subsubsection{Pregunta ii}
+\begin{align*}
+    3n-2 | 5n-8 &\implies 3n-2 | 5n-8 \wedge 3n-2 | 3n-2 \\
+    &\implies 3n-2 | -3(5n-8) + 5(3n-2) \\
+    &\implies 3n-2 | 4
+\end{align*}
+
+Luego $ 3n-2 \in Div_+(4) \iff 3n-2 \in \{ 1,2,4 \} $
+
+\begin{enumerate}[label=(\alph*)]
+    \item $ 3n-2 = 1 \implies n = \frac{-1}{3} \not \in \mathbb{N}$
+    \item $ 3n-2 = 2 \implies n = \frac{4}{3} \not \in \mathbb{N}$
+    \item $ 3n-2 = 4 \implies n = 4 $ y además $ 3.2-2|5.2-8 \iff 4|12 $
+\end{enumerate}
+
+Rta.: $n = 2$
+
+\subsubsection{Pregunta iii}
+\begin{align*}
+    2n+1 | n^2+5 &\implies 2n+1 | n^2+5 \wedge 2n+1 | 2n+1 \\
+    &\implies 2n+1 | 2(n^2+5) + (-n)(2n+1) \\
+    &\implies 2n+1 | 10-n \wedge 2n+1 | 2n+1 \\
+    &\implies 2n+1 | 2(10-n) + 2n+1 \\
+    &\implies 2n+1 | 21
+\end{align*}
+  
+Luego $ 2n+1 \in Div_+(21) \iff 2n+1 \in \{ 1,3,7,21 \}$
+
+\begin{enumerate}[label=(\alph*)]
+    \item $2n+1 = 1 \implies n = 0 \not \in \mathbb{N}$
+    \item $2n+1 = 3 \implies n = 1 $ y $ 3|6 $
+    \item $2n+1 = 7 \implies n = 3 $ y $ 7|14 $
+    \item $2n+1 = 21 \implies n = 10 $ y $ 21|105 $
+\end{enumerate}
+
+Rta.: $ n \in \{ 1,3,10 \} $
+
+\subsubsection{Pregunta iv}
+\begin{align*}
+    n-2 | n^3-8 &\implies n-2 | n^3-8 \wedge n-2 | n-2 \\
+    &\implies n-2 | n^3-8 +(-n^2)(n-2) \\
+    &\implies n-2 | n^3 - 8 -n^3 + 2n^2 \\
+    &\implies n-2 | - 8 + 2n^2 \wedge n-2 | n-2 \\
+    &\implies n-2 | 2n^2 - 8 + (-2n)(n-2) \\
+    &\implies n-2 | 2n^2 - 8 + -2n^2 + 4n \\
+    &\implies n-2 | - 8 + 4n \wedge n-2 | n-2 \\
+    &\implies n-2 | - 8 + 4n -4n+8 \\
+    &\implies n-2 | 0 \\
+\end{align*}
+
+Rta.: $ n \in \mathbb{N} $
+
+\end{document}
