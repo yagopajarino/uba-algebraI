@@ -528,4 +528,391 @@ Pero $ d|1 \iff d=1 $
 
 Por lo tanto $ d=1 \implies 7a-3b \perp 2a-b $ como se quería probar.
 
+\subsection{Ejercicio 22}
+Por enunciado se que $ (a:b) = 2 $. Sea $ d = (7a+3b:4a-5b) $
+
+\textbf{Corpimizar}
+
+Por propiedades del MCD $ a = 2\cdot a' $; $ b = 2b' $ con $ a' \perp b' $
+
+\begin{align*}
+    d &= (7\cdot (2a') + 3\cdot(2b'):4 \cdot (2a')-5\cdot (2b')) \\
+    &= (14a' + 6b':8a' - 10b') \\
+    &= (2\cdot (7a' + 3b'):2\cdot (4a' - 5b')) \\
+    &= 2 \cdot (7a' + 3b':4a' - 5b') \\
+\end{align*}
+
+Defino $ k = (7a' + 3b':4a' - 5b') $
+
+$ (k|7a' + 3b') \wedge (k|4a' - 5b') \implies k|28a' + 12b' -28a' +35b' \implies k|47b' $
+
+$ (k|7a' + 3b') \wedge (k|4a' - 5b') \implies k|35a'+15b'+12a'-15b' \implies k|47a' $
+
+Rdo.: $ k|a \wedge k|b \iff k|(a:b)$
+
+Luego $ k|47a' \wedge k|47b' \iff k|(47a':47b') \implies k|47(a':b') \iff k|47 $
+
+Así, $ k \in Div_+(47) \iff k\in \{ 1,47 \} $
+
+k = 1 $ \implies d = 2.1 = 2 $ \\
+k = 1 $ \implies d = 2.47 = 94 $
+
+a = 0, b = 2 $ \implies (6:-10) = 2$
+a = 26, b = 2 $ \implies (188:94) = 2$
+
+\subsection{Ejercicio 23}
+\subsubsection{Pregunta i}
+
+$ \frac{b+4}{a} + \frac{5}{b} = \frac{b(b+4) + 5a}{ab} = c $
+
+Luego $ c\in \mathbb{Z} \iff ab|b^2+4b+5a $ con $ a\perp b $
+
+Rdo.: Sean $ c \perp d: c|a \wedge d|a \iff cd|a $
+
+Entonces, $ (a|b^2+4b+5a) \wedge (b|b^2+4b+5a) \iff (a|b^2+4b) \wedge (b|5a) \iff (a|b(b+4)) \wedge (b|5)
+\iff (a|b+4) \wedge (b|5) $
+
+Luego $ b \in Div(5) \iff b \in \{ \pm 1, \pm 5 \} $
+
+$ b=1 \implies a|5 \implies a \in \{ \pm 1, \pm 5 \}$ \\
+$ b=-1 \implies a|3 \implies a \in \{ \pm 1, \pm 3 \}$ \\
+$ b=5 \implies a|9 \implies a \in \{ \pm 1, \pm 3, \pm 9 \}$ \\
+$ b=-5 \implies a|-1 \implies a \in \{ \pm 1 \}$
+
+\subsubsection{Pregunta ii}
+$ \frac{9a}{b} + \frac{7a^2}{b^2} = \frac{9ab + 7a^2}{b^2} \implies b^2|9ab + 7a^2 $
+
+Luego $ b|9ab + 7a^2 \iff b|a(9b+7a) \implies b|9b+7a \iff b|7a \iff b|7 $
+
+Así, $ b \in \{ \pm 1, \pm 7 \} $
+
+$ b = \pm 1 $ cumple lo pedido.
+
+$ b = 7 \implies 49|9.7.a+7.a^2 \iff 49|7(9a+a^2) \implies 7|9a+a^2 \implies 7|a(9+a) \implies 7|9+a 
+\implies 9+a = 7k \iff a \equiv -9 \equiv 5(7) $
+
+$ b = -7 \implies 49|9.(-7).a+7a^2 \implies 49|7(-9a+a^2) \implies 7|-9a+a^2 \implies 7|a(-9+a) \implies 7|-9+a 
+\implies -9+a = 7k \iff a \equiv 9 \equiv 2 (7)$
+
+Rta.: \\
+$b = 1, a \in \mathbb{Z} \vee \\b = -1, a \in \mathbb{Z} \vee \\b = 7, a \equiv 5(7) \vee \\b = -7, a \equiv 2(7)$
+
+\subsection{Ejercicio 24}
+TODO
+
+\subsection{Ejercicio 25}
+\subsubsection{Pregunta i}
+$ p|\binom{9}{k} \iff p|\frac{p!}{k! \cdot (p-k)!} \implies \frac{p(p-1)!}{k! \cdot (p-k)!} \equiv 0(p)$
+
+Como se quería probar.
+
+\subsubsection{Pregunta ii}
+Usando el resultado del inciso anterior,
+
+\begin{align*}
+    (a+b)^p &= \binom{p}{1}a^p \cdot b^0 + \binom{p}{2}a^{p-1} \cdot b^1 ... + \binom{p}{p}a^0 \cdot b^p \\
+    &\equiv a^p + 0 \cdot b^1 + 0 + 0 + ... + b^p (p) \\
+    &\equiv a^p + b^p (p)\\
+\end{align*}
+
+Como se quería probar.
+
+\subsection{Ejercicio 26}
+\subsubsection{Pregunta i}
+
+$ a^2 = 3b^3 \implies 3|a^2 \implies 3|a \iff a \equiv 0(3)$
+
+Luego $ a = 9 \implies a^2 = 81 \implies 81 = 3.27 = 3.3^3$  
+
+Así, $ a = 9; b = 3 $ cumplen lo pedido.
+
+\subsubsection{Pregunta ii}
+$ 7a^2 = 8b^2 $
+
+Por TFA la factorización en primos de $ 7a^2 $ tiene que ser igual a la de $ 8b^2 $
+
+Luego $ 2^k | a \implies 2^{2k} | a^2 $
+
+Es decir que el factor 2 en $ 7a^2 $ tiene exponente par, luego $ 8b^2 $ debe tener factor 2 con multiplicidad par.
+
+Pero $ 8b^2 = 2^3 \cdot b^2 \implies $ 2 no puede tener multiplicidad par.
+
+Luego, $ \not \exists a,b \in \mathbb{Z}: 7a^2 = 8b^2 $
+
+\subsection{Ejercicio 27}
+Quiero probar que $ \sqrt[n]{p} \not \in Q$
+
+Por el absurdo, supongo que $ \sqrt[n]{p} = \frac{a}{b} $
+
+Luego, $ \sqrt[n]{p} = \frac{a}{b} \iff p \cdot b^n = a^n $
+
+Pero si miro la factorización de ambos terminos de la igualdad:
+
+Con n par: En $ p.b^n $ el factor p tendrá exponente impar, mientras que en $ a^n $ tendrá exponente par.
+
+Con n impar: $ n = 2k+1 $ En $ p.b^{2k+1} $ el factor p tendrá exponente par, mientras que en $ a^{2k+1} $ tendrá exponente impar.
+
+En ambos casos se llega a un absurdo y así queda demostrado que $ \sqrt[n]{p} \not \in Q; n\geq 2; p \text{ primo} $
+
+\subsection{Ejercicio 28}
+$ pq|a^n \implies p|a^n \wedge q|a^n $ pues $ p\in fact(a^n) $ y $ q\in fact(a^n) $
+
+Luego la factorización de $ a^n $ será de la forma $ a^n = p^{n.r_1} \cdot q^{n.r_2} \cdot ... $
+
+Pero la factorización de a será $ a = a^n = p^{r_1} \cdot q^{r_2} \cdot ... $ y en particular $ a = p.q(p^r_1-1 \cdot q^r_2-1 \cdot ...) $
+
+Luego $ pq|a $ como se quería probar.
+
+\subsection{Ejercicio 29}
+Rdo.: Sea $ a = p_1^{r_1} \cdot p_n^{r_n}$ con $p_i$ primo, $ Div_+(a) = (r_1 + 1)...(r_n + 1) $
+
+\begin{enumerate}
+    \item $ 9000 = 2^3.3^3.5^3 \implies \#Div_+ = (3+1)(2+1)(3+1) = 48$
+    \item $ 15^4.42^3.56^2 = 2^9.3^7.5^4.7^5 \implies \#Div_+ = (9+1)(7+1)(4+1)(5+1) = 2400 $ 
+    \item $ 10^n.11^{n+1} = 2^n.5^n.11^n \implies \#Div_+ = (n+1)(n+1)(n+2) = n^3 + 4n^2+6n+2$ 
+\end{enumerate}
+
+\subsection{Ejercicio 30}
+\subsubsection{Pregunta i}
+
+$ a = 2^4.5^123 $
+
+Los $ Div_+(a) $ serán de la forma $ 2^i . 5^j $ con $ 0\leq i \leq 4 $ y $ 0\leq j \leq 123 $
+
+Luego $ \sum_{i=0}^{4}\left( \sum_{j=0}^{123}2^i.5^j \right) = \left( \sum_{i=0}^{4}2^i \right) \cdot \left( \sum_{j=0}^{123}5^j \right) = \frac{2^5 - 1}{1} \cdot \frac{5^124 - 1}{4} $
+
+\subsubsection{Pregunta ii}
+$ a = 10^n \cdot 11^{n+1} $
+
+Los $ Div_+(a) $ serán de la forma $ 2^i . 5^j . 11^k $ con $ 0\leq i \leq n $ y $ 0\leq j \leq n $ y $ 0\leq k \leq n+1 $
+
+Luego $ \sum_{i=0}^{n}\left( \sum_{j=0}^{n} \left( \sum_{k=0}^{n+1} 2^i.5^j.11^k \right) \right) = \left( \sum_{i=0}^{n}2^i \right) \cdot \left( \sum_{j=0}^{n}5^j \right) \cdot \left( \sum_{k=0}^{n+1}11^k \right) = (2^{n+1} - 1)(\frac{5^{n+1}-1}{4})(\frac{11^{n+2}-1}{10})$
+
+\subsection{Ejercicio 31}
+$ 6552 = 2^3.3^2.7.13 $
+
+Busco n tal que $ 6552 . n = k^2 \iff (2^3.3^2.7.13).n = k^2 $
+
+Luego los factores primos de $ k^2 $ deben ser potencias de 2.
+
+$ n = 2.7.13 \implies k^2 = 2^4.3^2.7^2.13^2 $ que efectivamente es $ (4.3.7.13)^2 = 1092 = 1192464 = 2^4.3^2.7^2.13^2 $
+
+Luego $ n = 182 $ es el menor $ n \in \mathbb{N} $ que cumple lo pedido.
+
+\subsection{Ejercicio 32}
+$ab$ es un cuadrado si $ ab = (p_1^{n_1}...p_k^{n_k})^2 $
+
+Si $ (a:b) = 1 \implies $ a y b no tienen primos en común.
+
+Pero por enunciado, a y b son cuadrados, luego deben tener factorización en primos de la forma $ a = p_1^{2k_1} \cdot ... p_n^{2k_n} $
+
+Y por lo tanto, $ a = (p_1^{k_1} \cdot ... p_n^{k_n})^2 $. Lo mismo con b, como se quería probar.
+
+\subsection{Ejercicio 33}
+\subsubsection{Pregunta i}
+
+$ 945 = 3^3.5.7 $ y $ 63 = 3^2.7$
+
+A) $ n = 3^2.7^i.p_1^{k_1}...p_r^{k_r} $ con $ i \geq 1 $, $ p_r $ primo, $ k_r > 0 $
+
+$ 1176 = 2^3.3.7^2 $ y $ 84 = 2^2.3.7 $
+
+B) $ n = 2^2.3^i.7.p_1^{k_1}...p_r^{k_r} $ con $ i \geq 1 $, $ p_r $ primo, $ k_r > 0 $
+
+Juntando A) y B): $ n = 2^2.3^2.7.p_1^{k_1}...p_r^{k_r} $
+
+Ahora uso que $ n \leq 2800 \implies n = 2^2.3^2.7.p_1^{k_1}...p_r^{k_r} \leq 2800 \iff 252.p_1^{k_1}...p_r^{k_r} \leq 2800 $
+
+Busco candidatos a $ p_1 $: El primer primo no usado es el 11, luego $ 252.11 = 2772 < 2800 $
+
+$ p = 11 \implies n = 2772 $\\
+$ p = 13 \implies n = 3276 > 2800 $
+
+Rta.: $ n\in \{ 252, 2772 \} $
+
+\subsubsection{Pregunta ii}
+$ 1260 = 2^2.3^2.5.7 $ y $ 70 = 2.5.7 $
+
+$ n = 2^1.3^0.5^i.7^j \implies n = 2.5^i.7^j.p_1^{k_1}...p_r^{k_r} $
+
+Luego,
+\begin{align*}
+    \#Div_+(n) &= (1+1)(i+1)(j+1)(k_1+1)(k_2+1)...(k_r + 1) \\
+    30 &= 2(i+1)(j+1)(k_1+1)(k_2+1)...(k_r + 1) \\
+    15 &= (i+1)(j+1)(k_1+1)(k_2+1)...(k_r + 1) \\
+\end{align*}
+
+Pero $ 15 = 3.5 $
+
+Por lo tanto, \\ 
+$ (i+1) = 3 \wedge (j+1) = 5 \implies i = 2; j = 4 $ o \\
+$ (i+1) = 5 \wedge (j+1) = 3 \implies i = 4; j = 2 $ o
+
+Rta.: $ n = 2.5^2.7^4 = 120050 $ o $ n = 2.5^4.7^2 = 61250 $
+
+\subsection{Ejercicio 34}
+$ 3150 = 2.3^2.5^2.7 $ y $ 45=3^2.5 $
+
+Luego $ n = 2^0.3^i.5^1 \implies n = 3^i.5.p_1^{k_1}...p_r^{k_r} $ con $ i\geq 2$
+
+Ahora uso que los divisores positivos de n son 12.
+
+\begin{align*}
+    \#Div_+(n) &= (i+1)(1+1)(k_1+1)...(k_r+1) \\
+    12 &= (i+1)(1+1)(k_1+1)...(k_r+1) \\
+    6 &= (i+1)(k_1+1)...(k_r+1) \\
+\end{align*}
+
+Como $ 6 = 3.2 $
+
+$ (i+1) = 3 \wedge (k_1 + 1) = 2 \implies i = 2; k_1 = 1$ o \\
+$ (i+1) = 2 \wedge (k_1 + 1) = 3 \implies i = 1; k_1 = 2$
+
+Luego $ n_1 = 3^2.5.11 = 495 $ y $ n_2 = 3.5.11^2 = 1815 $
+
+Rta.: $ n = 495 $
+
+\subsection{Ejercicio 35}
+\subsubsection{Pregunta i}
+
+Sea $ d = (2^k+7^k:2^k-7^k) $
+
+$ (d|2^k + 7^k) \wedge (d|2^k-7^k) \implies d|2.2^k $ 
+
+$ (d|2^k + 7^k) \wedge (d|2^k-7^k) \implies d|2^k+7^k+(-1)(2^k-7^7) \implies d|2.7^k $
+
+Luego $ d|(2.2^k:2.7^k) \implies d|2(2^k.7^k) \implies d|2 \implies d \in \{ 1,2 \}$
+
+Pero, $ (2^k:7^k) = (2:7)^k = 1$
+
+Y además, $ 2^k+7^k \equiv 0 + 1^k \equiv 1(2)$ por lo tanto $ d\neq 2 $
+
+Así, $ d = 1 $ como se quería probar.
+
+\subsubsection{Pregunta ii}
+Sea $ d = (2^k+5^{k+1}: 2^{k+1} + 5^k) $
+
+$ (d|2^k + 5^{k+1}) \wedge (d|2^{k+1} + 5^k) \implies d|2(2^k + 5^{k+1}) - 2^{k+1} - 5^k \iff d|9.5^k$
+
+$ (d|2^k + 5^{k+1}) \wedge (d|2^{k+1} + 5^k) \implies d|-2^k - 5^{k+1} + 5(2^{k+1} + 5^k) \iff d|9.2^k$
+
+Luego $ d|(9.2^k:9.5^k) \implies d|9(2^k:5^k) \implies d|9 \implies d \in \{ 1,3,9 \}$
+
+$ 2^k+5^k.5 \equiv (-1)^k + (-1)^{k+1} \equiv 0 (3)$
+
+$ 2^{k+1} + 5^k \equiv (-1)^{k+1} + (-1)^{k} \equiv 0 (3)$
+
+Luego $ d \neq 1 $ y por lo tanto $ d \in \{ 3, 9 \} $ como se quería probar.
+
+\subsubsection{Pregunta iii}
+Sea $ d = (12^k-1:12^k+1286) $
+
+$ (d|12^k-1) \wedge (12^k + 1286) \implies d|1287 $
+
+Se que $ 1287 = 3^2.11.13 $
+
+Es facil ver que $ 11|12^k-1 $ y $ 11|12^k+1286 , \forall k \in \mathbb{N} $
+
+Y además, $ 3\not | 12^k-1 \implies 9\not | 12^k-1 $
+
+Finalmente, $ 12^k-1 \equiv (-1)^k - 1(13) $ y $ 12^k+1286 \equiv (-1)^k -1 (13) $
+
+Rta.:\\
+$ k \equiv 0(2) \implies d = 13.11 $ \\
+$ k \equiv 1(2) \implies d = 11 $ 
+
+\subsection{Ejercicio 36}
+Sea $ d = (a^2.b^3:a+b)$
+
+$ d|a^2.b^3 \implies d|a \vee d|b $
+
+Si $ d|a $ y $ d|a+b \implies d|b $ pero si $ d|a $ y $ d|b $, $ (a:b) \neq 1 $ ABS
+
+Si $ d|b $ y $ d|a+b \implies d|a $ pero si $ d|b $ y $ d|a $, $ (a:b) \neq 1 $ ABS
+
+Luego $ d = 1 $ cuando $ (a:b) = 1 $
+
+\subsection{Ejercicio 37}
+\subsubsection{Pregunta i}
+Sea $ d = (ab:5a-10b) $
+
+Por propiedades del MCD se que $ a = 5a' $ y $ b = 5b' $ con $ a\perp b $
+
+Luego $ (5a'.5b':5.5a'-10.5b') = (25a'b':25a'-50b') = (25a'b':25(a'-2b')) = 25(a'b':a'-2b') $
+
+Sea ahora $ k = (a'b':a'-2b') $
+
+$ (n|a'b') \wedge (n|a'-2b') \implies n|a'b'-a'b'+2b'^2 \implies n|2b'^2 $
+
+$ (n|a'b') \wedge (n|a'-2b') \implies n|4(a'b')+2a'(a'-2b') \implies n|2a'2 $
+
+Luego $ n|(2b'^2:2a'^2) \implies n|2(a'^2:b'^2 \implies n|2.1) \implies n|2 \implies n\in \{ 1,2 \} $
+
+Así, $ d = 25.n \implies d = 25 \vee d = 50$
+
+\subsubsection{Pregunta ii}
+Sea $ d = (a^{k-1}.b:a^k+b^k) $
+
+Por propiedades del MCD se que $ \alpha = 5a' $ y $ \beta = 5b' $ con $ a\perp b $
+
+Luego,
+\begin{align*}
+    d &= ( (5\alpha)^{k-1}.5\beta:(5\alpha)^k+(5\beta)^k ) \\  
+    &= ( (5\alpha)^k. (5\alpha)^{-1}.5\beta: (5\alpha)^k+(5\beta)^k) \\
+    &= ( 5^k(\alpha^k. (5\alpha)^{-1}.5\beta): 5^k(\alpha^k+\beta^k)) \\
+    &= 5^k(\alpha^{k-1}.\beta: \alpha^k+\beta^k) \\
+\end{align*}
+
+Sea ahora $ k = (\alpha^{k-1}.\beta: \alpha^k+\beta^k) $
+
+$ (k|\alpha^{k-1}.\beta) \wedge (k|\alpha^k+\beta^k) \implies ... \implies d|b^{2k}  $
+
+$ (k|\alpha^{k-1}.\beta) \wedge (k|\alpha^k+\beta^k) \implies ... \implies d|a^{2k}  $
+
+Así, $ d|(a^{2k}:b^{2k}) \implies d|(\alpha:\beta)^{2k} \implies d|1^{2k} \implies d|1 $
+
+Luego $ (a^{k-1}.b:a^k+b^k) = 5^k.1 = 5^k; \forall k \in \mathbb{N} $ 
+
+\subsection{Ejercicio 38}
+\subsubsection{Pregunta i}
+TODO
+
+\subsubsection{Pregunta ii}
+Se que $ b\equiv 6(24) $ y $ (a:b)=13 $
+
+Sea $ d = (5a^2+11b+117:624) $
+
+Coprimizando, 
+\begin{align*}
+    d &= (5.(13a')^2 + 11(13b')+117:2^4.3.13) \\
+    &= (5.13^2.a'^2 + 11.13.b'+3^2.13:2^4.3.13) \\
+    &= 13(5.13.a'^2 + 11.b'+3^2:2^4.3) \\
+\end{align*}
+
+Sea ahora $ n = (5.13.a'^2 + 11.b'+3^2:2^4.3) $
+
+Luego n será de la forma $ 2^i.3^j $ con $ 0\leq i \leq 4 $ y $ 0\leq j\leq 1 $
+
+$ b \equiv 6(24) \implies b \equiv 0 (2) $ y $ b \equiv 0 (3) $
+
+Luego $ 5.13.a'^2 + 11.b'+3^2:2^4.3 \equiv \alpha^2 + 1 (2) \neq 0(2); \forall \alpha $
+
+$ 5.13.a'^2 + 11.b'+3^2:2^4.3 \equiv (-1).(1).\alpha^2 + 0 + 0 (3) \equiv -a^2;$
+
+Entonces, $ -a^2 \equiv 0(3) \iff \alpha \equiv 0 (3) $
+
+Rta.: $ \begin{cases}
+    d = 39 & \alpha \equiv 0(3) \\
+    d = 13 & \alpha \not \equiv 0(3)
+\end{cases}$
+
+\subsection{Ejercicio 39}
+\begin{enumerate}
+    \item $ n = 13.2^2.5 = 260 $
+    \item $ n = 2^3.3^3.5.7 = 7560 $
+\end{enumerate}
+
+\subsection{Ejercicio 40}
+TODO
+
 \end{document}
