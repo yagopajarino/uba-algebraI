@@ -34,7 +34,7 @@ Actualización 19/04/2022 | Hice el repo público mientras termino de pasar las 
 
 ## Finales
   
-* [Final <fecha> ]() | [solución]()
+<!-- * [Final <fecha> ]() | [solución]() -->
   
 ## Contribución
 
