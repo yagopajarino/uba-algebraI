@@ -25,7 +25,7 @@ Actualización 19/04/2022 | Hice el repo público mientras termino de pasar las 
 
 ## Parciales
 
-* [Parcial 16/10/2022](https://github.com/yagopajarino/uba-algebraI/blob/main/parciales/enunciados/Parc1-2C2021.pdf)
+* [Parcial 16/10/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/parciales/enunciados/Parc1-2C2021.pdf)
   * [Solución laTex]() 
   * [Video ejercicio 1](https://youtu.be/lDnUY4kQjfM)
   * [Video ejercicio 2](https://youtu.be/UW067OdYJ9s)
