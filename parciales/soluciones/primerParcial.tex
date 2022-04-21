@@ -1,0 +1,344 @@
+\input{macrosAlgebra}
+\usepackage{caratula}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+\decimalpoint
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.5em}
+\setcounter{tocdepth}{3} % profundidad de indice
+\setcounter{section}{0} % nro de section
+\renewcommand{\thesubsubsection}{\thesubsection.\Alph{subsubsection}}
+\graphicspath{ {images/} }
+
+% End latex config
+
+\begin{document}
+
+\titulo{Primer parcial 16/10/2021}
+\fecha{2do cuatrimestre 2021}
+\materia{Álgebra I}
+\integrante{Yago Pajariño}{546/21}{ypajarino@dc.uba.ar}
+
+%Carátula
+\maketitle
+\newpage
+
+%Indice
+\tableofcontents
+\newpage
+
+% Aca empieza lo propio del documento
+\section{Primer parcial Álgebra I}
+\subsection{Ejercicio 1}
+
+Por enunciado se que $ v = \{ 1,2,3,4,5,6,7,8,9,10 \} $ y se define $R$ una relación en el conjunto $ P(V) $ como:
+
+\begin{equation}
+    ARB \iff \{ 1,2,3 \} \subseteq (A\cup B)^c
+\end{equation}
+
+\subsubsection{Pregunta a}
+
+Voy a probar cada propiedad de la relación $R$ por separado.
+
+\textbf{Reflexividad}
+
+Por definición, una relación $R$ es reflexiva $ \iff \forall A \in P(V): ARA $
+
+Por (1), $ ARA \iff \{ 1,2,3 \} \subseteq (A\cup A)^c$
+
+Por definición de la unión de conjuntos, $ (A\cup A) = \{ a \in V: a \in A \vee a \in A\} \implies (A\cup A) = A $
+
+Por lo tanto, $ ARA \iff \{ 1,2,3 \} \subseteq A^c $
+
+A simple vista parece una condición dificil de cumplir para cualquier elemento de $ P(V) $, busco un contraejemplo.
+
+Sea $ M = \{ 1,2,3 \} \in P(V) $, por definición de la relación, 
+
+\begin{align*}
+    MRM &\iff \{ 1,2,3 \} \subseteq M^c \\
+    &\iff \{ 1,2,3 \} \subseteq \{ 1,2,3 \}^c \\
+    &\iff \{ 1,2,3 \} \subseteq \{ 4,5,6,7,8,9,10 \}
+\end{align*}
+Que es falso, luego existe un $ M \in P(V): M\not R M $ y por lo tanto \underline{R NO es reflexiva}.
+
+\textbf{Simetría}
+
+Por definición, una relación $R$ es simétrica $ \iff \forall (A,B) \in P(V)^2: ARB \implies BRA$
+
+Por (1) se que: $ ARB \iff \{ 1,2,3 \} \subseteq (A\cup B)^c$ \\
+Y quiero probar que $ BRA \iff \{ 1,2,3 \} \subseteq (B\cup A)^c$
+
+Pero por definición de la unión conjuntos:
+
+$ (A\cup B) = \{ x \in V: x\in A \vee x \in B \} = (B\cup A) $
+
+Por lo tanto $ (A\cup B) = (B\cup A) \implies (A\cup B)^c = (B\cup A)^c $
+
+Así, 
+\begin{align*}
+    BRA &\iff \{ 1,2,3 \} \subseteq (B\cup A)^c \\
+    &\iff \{ 1,2,3 \} \subseteq (A\cup B)^c \\
+    &\iff ARB
+\end{align*}
+Como se quería probar, luego \underline{R es simétrica}.
+
+\textbf{Transitividad}
+
+Por definición, una relación $R$ es transitiva $ \iff \forall (A,B,C) \in P(V)^3: (ARB \wedge BRC) \implies ARC $
+
+Por (1) se que \\
+$ ARB \iff \{ 1,2,3 \} \subseteq (A\cup B)^c$ \\
+$ BRC \iff \{ 1,2,3 \} \subseteq (B\cup C)^c$
+
+Y quiero probar que \\
+$ ARC \iff \{ 1,2,3 \} \subseteq (A\cup C)^c$
+
+Pero usando propiedades de la unión y el complemento de conjuntos:
+
+$ \{ 1,2,3 \} \subseteq (A\cup B)^c \implies 1\not \in A \wedge 2 \not \in A \wedge 3 \not \in A $ \\
+$ \{ 1,2,3 \} \subseteq (B\cup C)^c \implies 1\not \in C \wedge 2 \not \in C \wedge 3 \not \in C $
+
+Por lo tanto
+\begin{align*}
+    & 1\not \in (A\cup C) \wedge 2 \not \in (A\cup C) \wedge 3 \not \in (A\cup C) \\
+    \implies & 1 \in (A\cup C)^c \wedge 2 \in (A\cup C)^c \wedge 3 \in (A\cup C)^c \\
+    \implies & \{ 1,2,3 \} \subseteq (A\cup C)^c \\
+    \implies & ARC
+\end{align*}
+Como se quería probar. Luego \underline{R es transitiva}.
+
+\textbf{Antisimetría}
+
+Por definición, una relación $R$ es antisimétrica $ \iff \forall (A,B) \in P(V)^2: (ARB \wedge BRA) \implies A=B$
+
+Por (1) se que \\
+$ ARB \iff \{ 1,2,3 \} \subseteq (A\cup B)^c$ \\
+$ BRA \iff \{ 1,2,3 \} \subseteq (B\cup A)^c$ 
+
+De nuevo parece ser una condición dificil de cumplir, dado que es fácil ver que varios elementos de $ P(V) $ puede no inlcuir el $ \{ 1,2,3 \} $
+
+Busco un contraejemplo:
+
+Sean \\ 
+$ A = \{ 4 \} $ \\
+$ B = \{ 5 \} $
+
+$ (A\cup B)^c = (B\cup A)^c = \{ 1,2,3,6,7,8,9,10 \} $
+
+Luego, \\
+$ ARB \iff \{ 1,2,3 \} \subseteq \{ 1,2,3,6,7,8,9,10 \} $ \\
+$ BRA \iff \{ 1,2,3 \} \subseteq \{ 1,2,3,6,7,8,9,10 \} $ 
+
+Pero $ A\neq B $ y por lo tanto \underline{R no es antisimétrica}.
+
+\subsubsection{Pregunta b}
+
+El enunciado me pide que encuentre la cantidad de elementos $ A \in P(V) $ tales que:
+\begin{enumerate}[label=(\alph*)]
+    \item $ A \cap \{ 4,5,6 \} \neq \emptyset $
+    \item $ A R \{ 4,5,6 \}$
+\end{enumerate}
+
+Por definición de la relación, se que
+\begin{align*}
+    AR\{ 4,5,6 \} &\iff \{ 1,2,3 \} \subseteq (A\cup \{ 4,5,6 \})^c \\
+    AR\{ 4,5,6 \} &\iff \{ 1,2,3 \} \subseteq (A^c\cap \{ 4,5,6 \}^c) \text{ DeMorgan} \\
+    AR\{ 4,5,6 \} &\iff \{ 1,2,3 \} \subseteq (A^c\cap \{ 1,2,3,7,8,9,10 \})
+\end{align*}
+Luego $ \{ 1,2,3 \} \not \subseteq A $ pues si $ \{ 1,2,3 \} \subseteq A \implies \{ 1,2,3 \} \not \subseteq A^c $ y por lo tanto
+$ \{ 1,2,3 \} \not \subseteq (A^c \cap \{ 1,2,3,7,8,9,10 \}) $
+
+Así, se que
+\begin{enumerate}
+    \item $ \{ 1,2,3 \} $: ninguno puede pertenecer a A.
+    \item $ \{ 4,5,6 \} $: alguno tiene que pertenecer pertenecer a A.
+    \item $ \{ 7,8,9,10 \} $: No hay restricciones.
+\end{enumerate}
+
+Estas son las condiciones que tengo que cumplir para calcular lo que me piden.
+
+Defino $ M = \{ 4,5,6,7,8,9,10 \} $ con $ \#P(M) = 2^7 $.
+
+Alcanza con quitar del total de conjuntos posibles, aquellos que no tienen a ninguno del conjunto $ \{ 4,5,6 \} $
+
+Luego voy a tener $ 2^4 $ conjuntos en $ P(M) $ que no contienen al $ \{ 4,5,6 \} $
+
+Por lo tanto, \underline{habrá $ 2^7 - 2^4 $ conjuntos que cumplen lo pedido}.
+
+\subsection{Ejercicio 2}
+
+Voy a hacer la demostración usando el principio de inducción.
+
+Defino $ p(n): \prod_{j=1}^{n}(n+j) \geq 2 \cdot 6^{n-1}; \forall n \in \mathbb{N} $
+
+\textbf{Caso base n = 1}
+\begin{align*}
+    p(1): & \prod_{j=1}^{1}(1+j) \geq 2 \cdot 6^{1-1} \\
+    & (1+1) \geq 2 \cdot 6^0 \\
+    & 2 \geq 2 \\
+\end{align*}
+Así $ p(1) $ es verdadero.
+
+\textbf{Paso inductivo}
+
+Dado $ k \geq 1 $ quiero probar que $ p(k) \implies p(k+1) $
+
+HI: $ \prod_{j=1}^{k}(k+j) \geq 2 \cdot 6^{k-1} $ 
+
+Qpq: $ \prod_{j=1}^{k+1}((k+1)+j) \geq 2 \cdot 6^{(k+1)-1} \iff \prod_{j=1}^{k+1}(k+1+j) \geq 2 \cdot 6^{k} $
+
+Desarrollo algunos términos de las productorias.
+
+$ \prod_{j=1}^{k}(k+j) = (k+1)(k+2)(k+3)...(k+k-1)(k+k)$
+
+$ \prod_{j=1}^{k+1}(k+1+j) = (k+2)(k+3)(k+4)...(k+k)(k+k+1)(k+k+2)$
+
+Veo que la productoria de la HI está incluida en la del Qpq.
+
+Luego,
+\begin{align*}
+    \prod_{j=1}^{k+1}(k+1+j) &= \prod_{j=1}^{k}(k+j) \cdot \frac{(2k+1)(2k+2)}{(k+1)} \\
+    &\geq 2 \cdot 6^{k-1} \cdot \frac{(2k+1)(2k+2)}{(k+1)} \\
+\end{align*}
+
+Por lo tanto alcanza probar que,
+\begin{align*}
+    2 \cdot 6^{k-1} \cdot \frac{(2k+1)(2k+2)}{(k+1)} &\geq 2 \cdot 6^k \\
+    2 \cdot 6^k \cdot \frac{(2k+1)(2k+2)}{6(k+1)} &\geq 2 \cdot 6^k \\
+    \frac{(2k+1)(2k+2)}{6(k+1)} &\geq 1 \\
+    (2k+1)(2k+2) &\geq 6(k+1) \\
+    4k^2+4k+2k+2 &\geq 6k+6 \\
+    4k^2+6k+2 &\geq 6k+6 \\
+    4k^2+6k+2 - 6k - 6 &\geq 0 \\
+    4k^2 - 4 &\geq 0 \\
+    k^2 &\geq 1 \\
+\end{align*}
+
+Que es verdadero, $ \forall k \geq 1 $
+
+Entonces, queda demostrado que dado $ k \geq 1: p(k) \implies p(k+1) $. Junto con el caso base $ p(1) $ también verdadero, el principio de inducción asegura que $ p(n) $ es verdadero, $ \forall n \in \mathbb{N} $
+
+\subsection{Ejercicio 3}
+
+Primero reescribo la expresión del enunciado.
+\begin{align*}
+    \frac{2a-1}{5} - \frac{a-1}{2a-3} &= \frac{(2a-3)(2a-1) - 5(a-1)}{5(2a-3)} \\
+    &= \frac{4a^2-2a-6a+3-5a+5}{10a-15} \\
+    &= \frac{4a^2 - 13a + 8}{10a-15} \\
+\end{align*}
+
+Entonces, 
+\begin{align*}
+    \frac{4a^2 - 13a + 8}{10a-15} \in \mathbb{Z} \iff 10a-15|4a^2-13a+8
+\end{align*}
+Busco entonces uan expresión del tipo $ 10a-15|n $ con $ n \in \mathbb{Z} $
+
+Usando las propiedades del algoritmo de división,
+\begin{align*}
+    (10a-15|4a^2-13a+8) \wedge (10a-15|10a-15) &\implies 10a-15|10(4a^2-13a+8) - 4a(10a-15) \\
+    &\implies 10a-15|40a^2-130a+80 - 40a+60 \\
+    &\implies 10a-15|-70a+80 \\
+\end{align*}
+Entonces,
+\begin{align*}
+    (\implies 10a-15|-70a+80) \wedge (10a-15|10a-15) &\implies 10a-15|-70a+80 +7(10a-15) \\
+    &\implies 10a-15|-70a+80 + 70a - 105 \\
+    &\implies 10a-15|-25 \\
+\end{align*}
+
+Pero por algoritmo de división, existe $ k \in \mathbb{Z} $ tal que,
+\begin{align*}
+    10a-15|-25 &\iff -25 = k(10a-15) \\
+    &\iff (-1).5.5 = k.5.(2a-3) \\
+    &\iff -5 = k.(2a-3) \\
+    &\iff (2a-3)|-5 \\
+\end{align*}
+
+Entonces $ 2a-3 \in Div(5) = \{ \pm 1, \pm 5 \} $
+\begin{itemize}
+    \item $ 2a-3 = 1 \implies a = 2 \implies \frac{4a^2-13a+8}{10a-15} = \frac{-2}{5} \not \in \mathbb{Z} $
+    \item $ 2a-3 = -1 \implies a = 1 \implies \frac{4a^2-13a+8}{10a-15} = \frac{-1}{5} \not \in \mathbb{Z} $
+    \item $ 2a-3 = 5 \implies a = 4 \implies \frac{4a^2-13a+8}{10a-15} = \frac{20}{25} \not \in \mathbb{Z} $
+    \item $ 2a-3 = -5 \implies a = -1 \implies \frac{4a^2-13a+8}{10a-15} = \frac{25}{-25} = -1 \in \mathbb{Z} $
+\end{itemize}
+
+Luego,
+\begin{align*}
+    \frac{2a-1}{5} - \frac{a-1}{2a-3} \in \mathbb{Z} \iff a = -1  
+\end{align*}
+
+\subsection{Ejercicio 4}
+
+Por enunciado se que $ (a:b) = 5 $.
+
+Sea $ d = (2a^3 + 35ab + 25: 350) $
+
+Sabiendo el MCD entre a y b, voy a comprimizar d.
+
+Por propiedades del MCD se que existen $ \alpha; \beta \in \mathbb{Z}: \alpha \perp \beta $ y, \\
+$ a = 5\alpha $\\
+$ b = 5\beta $
+
+Luego,
+\begin{align*}
+    d &= ( 2(5\alpha)^3 + 35(5\alpha)(5\beta) + 25:350 ) \\
+    &= ( 2.5^3.\alpha^3 + 7.5^3.\alpha.\beta) + 5^2:2.5^2.7 ) \\
+    &= ( 5^2(2.5.\alpha^3 + 7.5.\alpha.\beta + 1):5^2(2.7) ) \\
+    &= 5^2.( 2.5.\alpha^3 + 7.5.\alpha.\beta + 1:2.7 ) \\
+\end{align*}
+
+Sea ahora $ k = (2.5.\alpha^3 + 7.5.\alpha.\beta + 1:2.7) $
+
+Luego $ k|2.7 $ por lo tanto $ k = 2^i.7^j $ con $ 0\leq i, j \leq 1 $
+
+Resta definir los $ i,j $ tales que $ k|2.5.\alpha^3 + 7.5.\alpha.\beta + 1 $ con los primos 2 y 7.
+
+\textbf{Caso p = 2}
+
+$ 2.5.\alpha^3 + 7.5.\alpha.\beta + 1 \equiv 0 + 1.1.\alpha.\beta + 1 \equiv \alpha.\beta + 1 (2)$
+
+Entonces,
+\begin{itemize}
+    \item Si $ \alpha $ y $ \beta $ son ambos pares $ \implies \alpha.\beta + 1 \equiv 1(2) \implies i = 0$
+    \item Si uno de ellos es par y el otro impar $ \implies \alpha.\beta + 1 \equiv 1(2) \implies i = 0 $
+    \item Si son ambos impares $ \implies \alpha.\beta + 1 \equiv 0(2) \implies i = 1 $
+\end{itemize}
+\textbf{Caso p = 7}
+
+$ 2.5.\alpha^3 + 7.5.\alpha.\beta + 1 \equiv 3.\alpha + 1 (7) $
+
+Entonces busco los $ \alpha $ tales que $ 3.\alpha + 1 \equiv 0 (7) $
+
+(Acá hay que hacer una tabla de restos con totos los posibles escenarios)
+
+Por tabla de restos, $ 3\alpha^3+1 \not \equiv 0(7); \forall \alpha \in \mathbb{Z} $ y por lo tanto $ j = 0 $
+
+Con los i, j hallados; busco k.
+
+$ \begin{cases}
+    k = 2 & \alpha \equiv 1 (2) \wedge \beta \equiv 1(2) \\
+    k = 1 & \text{en otro caso}
+\end{cases} $
+
+Y con los valores de k hallados, busco $ d = 25.k $
+
+$ \begin{cases}
+    d = 25.2 = 50 & \alpha \equiv 1 (2) \wedge \beta \equiv 1(2) \\
+    d = 25.1 = 25 & \text{en otro caso}
+\end{cases} $
+
+\underline{Ejemplos}
+
+$ (a,b) = (0,5) \implies (2.0+0+25:350) = 25 $
+
+$ (a,b) = (5,5) \implies (1150:350) = 50 $
+
+
+\end{document}
