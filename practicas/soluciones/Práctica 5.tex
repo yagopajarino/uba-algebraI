@@ -1,0 +1,208 @@
+\input{macrosAlgebra}
+\usepackage{caratula}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+\decimalpoint
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.5em}
+\setcounter{tocdepth}{2} % profundidad de indice
+\setcounter{section}{4} % nro de section
+\renewcommand{\thesubsubsection}{\thesubsection.\Alph{subsubsection}}
+\graphicspath{ {images/} }
+
+% End latex config
+
+\begin{document}
+
+\titulo{Práctica 5}
+\fecha{2do cuatrimestre 2021}
+\materia{Álgebra I}
+\integrante{Yago Pajariño}{546/21}{ypajarino@dc.uba.ar}
+
+%Carátula
+\maketitle
+\newpage
+
+%Indice
+\tableofcontents
+\newpage
+
+% Aca empieza lo propio del documento
+\section{Práctica 5}
+
+\subsection{Ejercicio 1}
+
+\subsubsection{Pregunta i}
+
+Busco los $ (a,b) \in \mathbb{Z}^2 $ tales que $ 7a+11b = 10 $
+
+\textbf{Verifico que existe solución}
+
+Dado que $ (7:11) = 1 \implies 1|10 \implies $ existe solución.
+
+\textbf{Busco una solución particular}
+
+Por propiedades del MCD se que existen $ (s,t) \in \mathbb{Z}^2 $ tales que:
+\begin{align*}
+    7.s + 11.t &= 1 \\
+    7.(-3) + 11.2 &= 1 \\
+    7.(-3).10 + 11.2.10 &= 1.10 \\
+    7.(-30) + 11.20 &= 10 \\
+    -210+220 &= 10 \\
+\end{align*}
+
+Luego $ (-30,20) $ es solución particular.
+
+\textbf{Solución del homogeneo asociado}
+
+$ 7.a+11.b = 0 \iff 7.a = -11.b \iff -11|7.a \iff -11|a \iff a = -11.k $
+
+$ 7.a+11.b = 0 \iff 7.a = -11.b \iff 7(-11.k) = 11.b \iff b = 7.k$
+
+Luego $ (-11.k, 7.k) $ es solución del homogeneo asociado, $ \forall k \in \mathbb{Z} $
+
+\textbf{Solución general}
+
+Uniendo las dos soluciones halladas previamente,
+
+$ S = (-11.k, 7.k) + (-30,20) = (-11.k-30,7.k+20); \forall k \in \mathbb{Z} $
+
+\textbf{Verifico}
+
+Sea $ (a,b) = (-11.k-30,7.k+20) $ luego,
+\begin{align*}
+    7a+11b = 10 &\iff 7(-11.k-30) + 11(7.k+20) = 10\\ 
+    &\iff 7(-11.k-30) + 11(7.k+20) = 10 \\
+    &\iff 7.-11.k-210 + 11.7.k+220 = 10 \\
+    &\iff -210 + 220 = 10 \\
+\end{align*}
+
+Verificado.
+
+\subsubsection{Pregunta ii}
+
+Busco los $ (a,b) \in \mathbb{Z}^2 $ tales que $ 20a+16b = 30 $
+
+\textbf{Verifico que existe solución}
+
+$ (20:16) = 4 \wedge 4\not | 30 $
+
+Por lo tanto no hay solución en $ \mathbb{Z}^2 $ para la ecuación.
+
+\subsubsection{Pregunta iii}
+
+Busco los $ (a,b) \in \mathbb{Z}^2 $ tales que $ 39a-24b = 6 $
+
+\textbf{Verifico que existe solución}
+
+$ (39:24) = 3 \wedge 3|6 $ luego existe solución en $ \mathbb{z}^2 $
+
+\textbf{Coprimizar}
+
+Dado que el MCD es disinto a 1, debo coprimizar la ecuación para no perder soluciones.
+
+$ 20a+16b = 30 \leftrightsquigarrow 13a-8b = 2$
+
+\textbf{Busco una solución particular}
+
+$ 13.(2) - 8.(3) = 26-24 = 2 $
+
+Luego $ (2,3) $ es solución particular.
+
+\textbf{Solución del homogeneo asociado}
+
+$ 13a -8b = 0 \iff 13a = 8b \implies 13|8b \iff 13|b \iff b = 13k $
+
+$ 13a -8b = 0 \iff 13a = 8b \iff 13a = 8(13k) \iff a = 8k $
+
+Luego $ (8k,13k) $ es solución del homogeneo asociado, $ \forall k \in \mathbb{Z} $
+
+\textbf{Solución general}
+
+Uniendo las dos soluciones halladas previamente,
+
+$ S = (8k,13k) + (2,3) = (8k+2, 13k+3); \forall k \in \mathbb{Z} $
+
+\textbf{Verifico}
+
+Sea $ (a,b) = (8k+2, 13k+3) $ luego,
+\begin{align*}
+    39a-24b = 6 &\iff 39(8k+2)-24(13k+3) = 6\\ 
+    &\iff 39.8k+78-24.13k-72 = 6\\ 
+    &\iff 78-72 = 6\\ 
+\end{align*}
+
+Verificado.
+
+\subsubsection{Pregunta iv}
+
+Busco los $ (a,b) \in \mathbb{Z}^2 $ tales que $ 1555a-300b = 11 $
+
+\textbf{Verifico que existe solución}
+
+$ (1555:300) = 5 \wedge 4\not | 5 $
+
+Por lo tanto no hay solución en $ \mathbb{Z}^2 $ para la ecuación.
+
+\subsection{Ejercicio 2}
+
+Primero busco soluciones $ (a,b) \in \mathbb{Z}^2 $ para la ecuación $ 33a+9b=120 $
+
+\textbf{Verifico que existe solución}
+
+$ (33:9) = 3 \wedge 3|120 \implies $ existe solución.
+
+\textbf{Coprimizar}
+
+Dado que el MCD es disinto a 1, debo coprimizar la ecuación para no perder soluciones.
+
+$ 33a+9b = 120 \leftrightsquigarrow 11a+3b=40$
+
+\textbf{Busco una solución particular}
+
+Por propiedades del MCD se que existen $ (s,t) \in \mathbb{Z}^2 $ tales que:
+\begin{align*}
+    11.s + 3.t &= 1 \\
+    11.(2) + 3.(-7) &= 1 \\
+    11.2.(40) + 3.(-7).(40) &= 1.(40) \\
+    11.80 + 3.(-280) &= 40 \\
+\end{align*}
+Luego $ (80,-280) $ es solución particular.
+
+\textbf{Solución del homogeneo asociado}
+
+$ 11a +3b = 0 \iff 11a = -3b \implies 11|-3b \implies 11|b \implies b=11k $
+
+$ 11a +3b = 0 \iff 11a = -3b \implies 11a = -3(11k) \implies a = -3k $
+
+Luego $ (-3k,11k) $ es solución del homogeneo asociado, $ \forall k \in \mathbb{Z} $
+
+\textbf{Solución general}
+
+Uniendo las dos soluciones halladas previamente,
+
+$ S = (-3k,11k) + (80,-280) = (-3k+80, 11k-280); \forall k \in \mathbb{Z} $
+
+Luego tengo definidas las restricciones para a y b de tal forma que cumplan con la diofántica, ahora uso los datos de divisibilidad.
+
+$ a = -3k+80 \implies -3k+80 \equiv 0(4) \implies k \equiv 0(4)$
+
+$ b = 11k-280 \implies 11k-280 \equiv 0(8) \implies k \equiv 0(8)$
+
+Pero $ k \equiv 0(8) \iff k \equiv 0(4) $
+
+Luego $ k = 8n \implies a = 3(8n) + 80 \wedge b=11(8n)-280; n \in \mathbb{Z}$
+
+Rta.: $ (a,b) = (24n+80, 88n-280); \forall n \in \mathbb{Z} $
+
+\subsection{Ejercicio 3}
+
+
+
+\end{document}
