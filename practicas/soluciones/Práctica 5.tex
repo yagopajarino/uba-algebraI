@@ -203,6 +203,105 @@ Rta.: $ (a,b) = (24n+80, 88n-280); \forall n \in \mathbb{Z} $
 
 \subsection{Ejercicio 3}
 
+Busco los $ (a,b) \in \mathbb{Z}^2 $ que cumplen $ 39a+48b=135 $
 
+\textbf{Verifico que existe solución}
+
+$ (39:135) = 3 \wedge 3|135 \implies $ existe solución.
+
+\textbf{Coprimizar}
+
+Dado que el MCD es disinto a 1, debo coprimizar la ecuación para no perder soluciones.
+
+$ 39a+48b=135 \leftrightsquigarrow 13a+16b=45$
+
+\textbf{Busco una solución particular}
+
+$ (225,-180) $ es solución particular.
+
+\textbf{Solución del homogeneo asociado}
+
+$ 13a +16b = 0 \iff 13a = -16b \implies 13|-16b \implies 13|b \implies b=13k $
+
+$ 13a +16b = 0 \iff 13a = -16b \implies 13a = -16(13k) \implies a = -16k $
+
+Luego $ (-16k,13k) $ es solución del homogeneo asociado, $ \forall k \in \mathbb{Z} $
+
+\textbf{Solución general}
+
+Uniendo las dos soluciones halladas previamente,
+
+$ S = (-16k,13k) + (225,-180) = (-16k+225,13k-180); \forall k \in \mathbb{Z} $
+
+Luego, \\
+$ a \geq 0 \implies -16k+225 \geq 0 \implies 16k \leq 225 \implies k \leq \frac{225}{16} \implies k \leq 14 $ \\
+$ b \geq 0 \implies 13k-180 \geq 0 \implies 13k \geq 180 \implies k \geq \frac{180}{13} \implies k \geq 14 $
+
+Luego $ 14 \leq k \leq 14 \implies k = 14 \implies $ se compran 1 unidad de a y 2 de b, gastando 135 pesos.
+
+\subsection{Ejercicio 4}
+
+\begin{enumerate}
+    \item $ 17x \equiv 3(11) \iff 6x \equiv 3(11) \iff 2.6 \equiv 2.3(11) \iff x \equiv 6(11) $
+    \item $ 56x \equiv 28(35) \iff 21x \equiv 28(35) \iff 3x \equiv 4(5) \iff 6x \equiv 8(5) \iff x \equiv 3(5) $
+    \item $ 56x \equiv 2(884) $ No tiene solución pues $ (56:884) = 4 \not | 2 $
+    \item $ 78x \equiv 30(12126) \iff 13x\equiv 5(2021) \iff 311.13x \equiv 311.5(2021) \iff x \equiv 1551(2021) $
+\end{enumerate}
+
+\subsection{Ejercicio 5}
+
+Primero resuelvo la diofántica: busco $ (a,b) \in \mathbb{Z}^2: 28a+10b = 26 $
+
+\textbf{Verifico que existe solución}
+
+$ (28:10) = 2 \wedge 2|26 \implies $ existe solución.
+
+\textbf{Coprimizar}
+
+Dado que el MCD es disinto a 1, debo coprimizar la ecuación para no perder soluciones.
+
+$ 28a+10b =26 \leftrightsquigarrow 14a+5b=13$
+
+\textbf{Busco una solución particular}
+
+$ (-13,39) $ es solución particular.
+
+\textbf{Solución del homogeneo asociado}
+
+$ 14a+5b = 0 \iff 14a = -5b \implies 14|-5b \implies 14|b \implies b=14k $
+
+$ 14a+5b = 0 \iff 14a = -5b \implies 14a = -5(14k) \implies a = -5k $
+
+Luego $ (-5k, 14k) $ es solución del homogeneo asociado, $ \forall k \in \mathbb{Z} $
+
+\textbf{Solución general}
+
+Uniendo las dos soluciones halladas previamente,
+
+$ S = (-5k, 14k) + (-13,39) = (-5k-13, 14k+39); \forall k \in \mathbb{Z} $
+
+Luego $ a = -5-13 \wedge b= 14k+39 $. Usando el dato de la congruencia,
+\begin{align*}
+    b\equiv 2a(5) &\iff 14k+39 \equiv 2(-5k-13)(5) \\
+    &\iff 4k+4 \equiv 4(5) \\
+    &\iff 4(k+1) \equiv 4(5) \\
+    &\iff k+1 \equiv 1(5) \\
+    &\iff k \equiv 0(5) \\
+\end{align*}
+Luego se que $ k = 5n; n \in \mathbb{Z} $
+
+Por lo tanto, las soluciones serán $ (a,b) = (-25n-13, 70n+39 ); n \in \mathbb{Z} $
+
+\subsection{Ejercicio 6}
+
+\begin{align*}
+    7a \equiv 5(18) &\iff (-5).7.a \equiv (-5).5(18) \\  
+    &\iff -35a \equiv -25(18) \\
+    &\iff a \equiv 11(18)
+\end{align*}
+Luego el resto de dividir a $a$ por 18 es 11.
+
+\subsection{Ejercicio 7}
+TODO
 
 \end{document}
