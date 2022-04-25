@@ -302,6 +302,49 @@ Por lo tanto, las soluciones serán $ (a,b) = (-25n-13, 70n+39 ); n \in \mathbb{
 Luego el resto de dividir a $a$ por 18 es 11.
 
 \subsection{Ejercicio 7}
-TODO
+Primero busco los $ (x,y) \in \mathbb{Z}^2: 110x+250y=100 $
+
+\textbf{Verifico que existe solución}
+
+$ (110:250) = 10 \wedge 10|100 \implies $ existe solución.
+
+\textbf{Coprimizar}
+
+Dado que el MCD es disinto a 1, debo coprimizar la ecuación para no perder soluciones.
+
+$ 110x+250y =100 \leftrightsquigarrow 11x+25y=10$
+
+\textbf{Busco una solución particular}
+
+$ (-90,40) $ es solución particular.
+
+\textbf{Solución del homogeneo asociado}
+
+$ 11x+25y = 0 \iff 11x = -25y \implies 11|-25y \implies 11|y \implies y=11k $
+
+$ 11x+25y = 0 \iff 11x = -25y \implies 11x=-25(11k) \implies x = -25k $
+
+Luego $ (-25k, 11k) $ es solución del homogeneo asociado, $ \forall k \in \mathbb{Z} $
+
+\textbf{Solución general}
+
+Uniendo las dos soluciones halladas previamente,
+
+$ S = (-25k, 11k) + (-90,40) = (-25k-90, 11k+40); \forall k \in \mathbb{Z} $
+
+Luego $ x = -25k-90 \wedge y= 11k+40 $,
+\begin{align*}
+    37^2 |(x-y)^{4321} &\iff 37^2 | (-25k-90-11k-40)^{4321} \\
+    &\iff 37^2 | (-36k-130)^{4321} \\
+\end{align*}
+
+Pero por propiedades de la divisibilidad,
+\begin{align*}
+    37^2 | (-36k-130)^{4321} &\iff 37|(-36k-130) \\
+    &\iff -36k \equiv 130(37) \\
+    &\iff k \equiv 4(37) \\
+\end{align*}
+
+Por lo tanto $ (x, y) = (-25n-90, 11n+40) $ para todo $ n \equiv 4(37) $
 
 \end{document}
