@@ -347,4 +347,648 @@ Pero por propiedades de la divisibilidad,
 
 Por lo tanto $ (x, y) = (-25n-90, 11n+40) $ para todo $ n \equiv 4(37) $
 
+\subsection{Ejercicio 8}
+
+Sea $ d = (2a-3:4a^2+10a-10) $
+
+Busco llegar a una expresión del tipo $ d|n $ con $ n \in \mathbb{Z} $
+
+Luego,
+\begin{align*}
+    d|2a-3 \wedge d|4a^2+10a-10 &\iff d|2a(2a-3) - 4a^2-10a+10 \\
+    &\iff d|4a^2-6a-4a^2-10a+10 \\
+    &\iff d|-16a+10 \\
+\end{align*}
+Por lo tanto,
+\begin{align*}
+    \iff d|-16a+10 \wedge d|2a-3 &\iff d|-16a+10+8(2a-3) \\
+    &\iff d|-16a+10+10a-24 \\
+    &\iff d|-14 \\
+    &\iff d \in Div_+(-14) = \{ 1,2,7,14 \} \\
+\end{align*}
+\begin{itemize}
+    \item $ d = 2 \implies 2|2a-3 \implies 2a-3 \equiv 0(2) \implies 0\equiv 3(2) $ ABS
+    \item $ d = 7 \implies 7|2a-3 \implies 2a-3 \equiv 0(7) \implies 2a\equiv 3(7) \implies a \equiv 5(7) $
+\end{itemize}
+
+Luego con $ a \equiv 5(7) $ se tiene,
+\begin{align*}
+    4a^2+10a-10 &\equiv 4.25+10.5-10 (7) \\
+    &\equiv 2+1+4 (7) \\
+    &\equiv 7 (7) \\
+    &\equiv 0 (7) \\
+\end{align*}
+
+Así, para $ a \equiv 5(7) $ el MCD es igual a 7. No pruebo con 14 ya que $ 14=2.7 $ y si $ 2\not | 2a-3 $ tampoco lo hará 14.
+
+Rta.: Con $ a \equiv 5(7) $ el MCD $ \neq 1 $
+
+\subsection{Ejercicio 9}
+
+Sea $ d = (5a+8:7a+3) $
+
+Busco una expresión del tipo $ d|n $ con $ n \in \mathbb{Z} $
+\begin{align*}
+    d|5a+8 \wedge d|7a+3 &\iff d|7(5a+8) - 5(7a+3) \\
+    &\iff d|35a+56-35a-15 \\
+    &\iff d|41 \\
+\end{align*}
+
+Luego $ d \in Div_+(41) \iff d \in \{ 1,41 \} $
+
+Con $ d = 41 $,
+\begin{align*}
+    d = 41 &\implies 41|5a+8 \\
+    &\iff 5a+8 \equiv 0 (41) \\
+    &\iff 5a\equiv 33 (41) \\
+    &\iff 8.5a\equiv 8.33 (41) \\
+    &\iff -a\equiv 18 (41) \\
+    &\iff a\equiv 23 (41) \\
+\end{align*}
+Con $ a\equiv 23(41) $ \\
+$ 7a+3 \equiv 7.23+3 \equiv 0(41) $
+
+Rta.: $ \begin{cases}
+    (5a+8:7a+3) = 41 & a\equiv 23(41) \\
+    (5a+8:7a+3) = 1 & a \not \equiv 23(41) \\
+\end{cases} $
+
+\subsection{Ejercicio 10}
+
+\subsubsection{Pregunta i}
+
+$ \begin{cases}
+    a\equiv 3(10) \\
+    a\equiv 2(7) \\
+    a\equiv 5(9) \\
+\end{cases} $
+
+El TCR me asegura que existe una solución $ x\equiv n (630) $ con $ 0\leq n \leq 630 $ pues 10,7,9 son primos dos a dos.
+
+Quiebro el sistema de ecuaciones en tres.
+
+S1: $ \begin{cases}
+    a\equiv 3(10) \\
+    a\equiv 0(7) \\
+    a\equiv 0(9) \\
+\end{cases} $
+S2: $ \begin{cases}
+    a\equiv 0(10) \\
+    a\equiv 2(7) \\
+    a\equiv 0(9) \\
+\end{cases} $
+S3: $ \begin{cases}
+    a\equiv 0(10) \\
+    a\equiv 0(7) \\
+    a\equiv 5(9) \\
+\end{cases} $
+
+Busco soluciones a cada sistema por separado.
+
+S1, $ \begin{cases}
+    0\equiv 3(10) \\
+    0\equiv 0(63) \\
+\end{cases} \implies a = 63k \implies 63k \equiv 3(10) \implies 3k \equiv 3(10) \implies k \equiv 1(10)$ 
+
+Luego $ a = 63.k = 63.1 = 63 $
+
+S2, $ \begin{cases}
+    a\equiv 2(7) \\
+    a\equiv 0(90) \\
+\end{cases} \implies a = 90k \implies 90k \equiv 2(7) \implies 6k \equiv 2(7) \implies k \equiv 5(7) $
+
+Luego $ a = 90k = 90.5 = 450 $
+
+S3, $ \begin{cases}
+    a\equiv 5(9) \\
+    a\equiv 0(70) \\
+\end{cases} \implies a = 70k \implies 70k \equiv 5(9) \implies 7k \equiv 5(9) \implies k \equiv 2(9) $
+
+Luego $ a = 70.k = 70.2 = 140 $
+
+Por lo tanto se que $ x\equiv 63+450+140 = 653 (630)$ es solución al sistema.
+
+Rta.: $ x \equiv 653 \equiv 23(630) $ es solución al sistema.
+
+\subsubsection{Pregunta ii}
+
+$ \begin{cases}
+    a\equiv 1(6) \\
+    a\equiv 2(20) \\
+    a\equiv 3(9) \\
+\end{cases} 
+\iff \begin{cases}
+    a\equiv 1(3) \\
+    a\equiv 1(2) \\
+    a\equiv 2(4) \implies a\equiv 0(2) \\
+    a\equiv 2(5) \\
+    a\equiv 3(9) \implies a\equiv 0(3) \\
+\end{cases} $
+Luego el sistema es imcompatible.
+
+\subsubsection{Pregunta iii}
+$ \begin{cases}
+    a\equiv 1(12) \\
+    a\equiv 7(10) \\
+    a\equiv 4(9) \\
+\end{cases} 
+\iff \begin{cases}
+    a\equiv 1(3) \\
+    a\equiv 1(4) \implies a \equiv 1(2) \\
+    a\equiv 7(5) \\
+    a\equiv 7(2) \implies a \equiv 1(2) \\
+    a\equiv 4(9) \implies a \equiv 1(3) \\
+\end{cases}
+\iff \begin{cases}
+    a\equiv 1(4) \\
+    a\equiv 2(5) \\
+    a\equiv 4(9) \\
+\end{cases} $
+
+Quiebro el sistema en tres.
+
+S1: $ \begin{cases}
+    a\equiv 1(4) \\
+    a\equiv 0(5) \\
+    a\equiv 0(9) \\
+\end{cases} $
+S2: $ \begin{cases}
+    a\equiv 0(4) \\
+    a\equiv 2(5) \\
+    a\equiv 0(9) \\
+\end{cases} $
+S3: $ \begin{cases}
+    a\equiv 0(4) \\
+    a\equiv 0(5) \\
+    a\equiv 4(9) \\
+\end{cases} $
+
+Busco soluciones a cada sistema,
+
+S1, $ \begin{cases}
+    a\equiv 1(4) \\
+    a\equiv 0(45) \\
+\end{cases} \implies a = 45k \implies 45k \equiv 1(4) \implies k \equiv 1(4) $
+
+Luego $ x_1 = 45 $
+
+S2, $ \begin{cases}
+    a\equiv 2(5) \\
+    a\equiv 0(36) \\
+\end{cases} \implies a = 36k \implies 36k \equiv 2(5) \implies k \equiv 2(5) $
+
+Luego $ x_2 = 36.2 = 72 $
+
+S3, $ \begin{cases}
+    a\equiv 4(9) \\
+    a\equiv 0(20) \\
+\end{cases} \implies a = 20k \implies 20k \equiv 4(9) \implies k \equiv 2(9) $
+
+Luego $ x_3 = 20.2 = 40 $
+
+Entonces sea $ x = x_1 + x_2 + x_3 = 45+72+40 = 157 $
+
+El TCR me asegura que hay una únnica solución del sistema MOD 180
+
+Rta.: $ x \equiv 157 (180) $ es solución al sistema.
+
+\subsection{Ejercicio 11}
+
+\subsubsection{Pregunta i}
+
+$ \begin{cases}
+    3a \equiv 4(5) \\
+    5a \equiv 4(6) \\
+    6a \equiv 2(7) \\
+\end{cases} 
+\iff \begin{cases}
+    3.3a \equiv 3.4(5) \\
+    5.5a \equiv 5.4(6) \\
+    6.6a \equiv 6.2(7) \\
+\end{cases}
+\iff \begin{cases}
+    a \equiv 3(5) \\
+    a \equiv 2(6) \\
+    a \equiv 5(7) \\
+\end{cases} $
+
+Quiebro el sistema en tres.
+
+S1: $ \begin{cases}
+    a \equiv 3(5) \\
+    a \equiv 0(6) \\
+    a \equiv 0(7) \\
+\end{cases} $
+S2: $ \begin{cases}
+    a \equiv 0(5) \\
+    a \equiv 2(6) \\
+    a \equiv 0(7) \\
+\end{cases} $
+S3: $ \begin{cases}
+    a \equiv 0(5) \\
+    a \equiv 0(6) \\
+    a \equiv 5(7) \\
+\end{cases} $
+
+Busco soluciones de cada sistema.
+
+S1: $ \begin{cases}
+    a \equiv 3(5) \\
+    a \equiv 0(42) \\
+\end{cases} \implies a = 42k \implies 42k \equiv 3(5) \implies 2k \equiv 3(5) \implies k \equiv 4(5) $
+
+Luego $ x_1 = 42.4 = 168 $
+
+S2: $ \begin{cases}
+    a \equiv 2(6) \\
+    a \equiv 0(35) \\
+\end{cases} \implies a = 35k \implies 35k \equiv 2(6) \implies -k \equiv 2(6) \implies k \equiv 4(6) $
+
+Luego $ x_2 = 35.4 = 140 $
+
+S3: $ \begin{cases}
+    a \equiv 5(7) \\
+    a \equiv 0(30) \\
+\end{cases} \implies a = 30k \implies 30k \equiv 5(7) \implies 2k \equiv 5(7) \implies k \equiv 6(7) $
+
+Luego $ x_3 = 30.6 = 180 $
+
+Así, defino $ x = x_1 + x_2 + x_3 = 168 + 140 +180 = 488 $
+
+Rta.: $ a\equiv 488 \equiv 68 (210) $ es solución al sistema.
+
+\subsubsection{Pregunta ii}
+
+$ \begin{cases}
+    3a \equiv 1(10) \\
+    5a \equiv 3(6) \\
+    9a \equiv 1(14) \\
+\end{cases} 
+\iff \begin{cases}
+    -a \equiv 3(10) \implies a \equiv 7(10) \\
+    a \equiv 3(6) \\
+    -a \equiv 3(14) \implies a \equiv 11(14) \\
+\end{cases}
+\iff \begin{cases}
+    a \equiv 7(10) \\
+    a \equiv 3(6) \\
+    a \equiv 11(14) \\
+\end{cases}
+\iff \begin{cases}
+    a \equiv 7(5) \\
+    a \equiv 7(2) \\
+    a \equiv 3(3) \\
+    a \equiv 3(2) \\
+    a \equiv 11(7) \\
+    a \equiv 11(2) \\
+\end{cases}
+\iff \begin{cases}
+    a \equiv 7(5) \\
+    a \equiv 0(3) \\
+    a \equiv 11(14) \\
+\end{cases} $
+
+Quiebro el sostema en tres.
+
+S1: $ \begin{cases}
+    a \equiv 7(5) \\
+    a \equiv 0(3) \\
+    a \equiv 0(14) \\
+\end{cases} $
+S2: $ \begin{cases}
+    a \equiv 0(5) \\
+    a \equiv 0(3) \\
+    a \equiv 0(14) \\
+\end{cases} $
+S3: $ \begin{cases}
+    a \equiv 0(5) \\
+    a \equiv 0(3) \\
+    a \equiv 11(14) \\
+\end{cases} $
+
+Busco soluciones de cada sistema.
+
+S1: $ \begin{cases}
+    a \equiv 7(5) \\
+    a \equiv 0(42) \\
+\end{cases} \implies a = 42k \implies 42k \equiv 7(5) \implies 2k \equiv 2(5) \implies k \equiv 1(5) $
+
+Luego $ x_1 = 42k = 42.1 = 42 $
+
+S2: $ \begin{cases}
+    a \equiv 0(210) \\
+\end{cases} $
+
+Luego $ x_2 = 0 $
+
+S3: $ \begin{cases}
+    a \equiv 11(14) \\
+    a \equiv 0(15) \\
+\end{cases} \implies a = 15k \implies 15k \equiv 11(14) \implies k \equiv 11(14) $
+
+Luego $ x_3 = 15k = 15.11 = 165 $
+
+Por lo tanto, $ x = x_1 + x_2 + x_3 = 42 + 0 + 165 = 207 $
+
+Rta.: $ a\equiv 207(210) $
+
+\subsubsection{Pregunta iii}
+
+$ \begin{cases}
+    15a \equiv 10(35) \\
+    21a \equiv 15(8) \\
+    18a \equiv 24(30) \\
+\end{cases} 
+\iff \begin{cases}
+    3a \equiv 2(7) \\
+    21a \equiv 15(8) \\
+    3a \equiv 4(5) \\
+\end{cases}
+\iff \begin{cases}
+    -a \equiv 4(7) \implies a \equiv 3(7) \\
+    a \equiv 3(8) \\
+    -a \equiv 12(5) \implies a \equiv 3(5) \\
+\end{cases}
+\iff \begin{cases}
+    a\equiv 3(7) \\
+    a\equiv 3(8) \\
+    a\equiv 3(5) \\
+\end{cases} $
+
+Rta.: $ a\equiv 3(280) $
+
+\subsection{Ejercicio 12}
+
+\subsubsection{Pregunta i}
+
+$ \begin{cases}
+    a\equiv 5(6) \\
+    a\equiv 3(10) \\
+    a\equiv 5(8) \\
+\end{cases} 
+\iff \begin{cases}
+    a\equiv 5(3) \implies a\equiv 2(3) \\
+    a\equiv 5(2) \implies a\equiv 1(2) \\
+    a\equiv 3(5) \\
+    a\equiv 3(2) \implies a\equiv 1(2) \\
+    a\equiv 5(8) \\
+\end{cases}
+\iff \begin{cases}
+    a\equiv 2(3) \\
+    a\equiv 3(5) \\
+    a\equiv 5(8) \\
+\end{cases} $
+
+Divido el sistema en tres.
+
+S1: $ \begin{cases}
+    a\equiv 2(3) \\
+    a\equiv 0(5) \\
+    a\equiv 0(8) \\
+\end{cases} $
+S2: $ \begin{cases}
+    a\equiv 0(3) \\
+    a\equiv 3(5) \\
+    a\equiv 0(8) \\
+\end{cases} $
+S3: $ \begin{cases}
+    a\equiv 0(3) \\
+    a\equiv 0(5) \\
+    a\equiv 5(8) \\
+\end{cases} $
+
+Busco soluciones a cada sistema.
+
+S1: $ \begin{cases}
+    a\equiv 2(3) \\
+    a\equiv 0(40) \\
+\end{cases} \implies a = 40k \implies 40k \equiv 2(3) \implies k \equiv 2(3) $
+
+Luego $ x_1 = 40.2 = 80 $
+
+S2: $ \begin{cases}
+    a\equiv 3(5) \\
+    a\equiv 0(24) \\
+\end{cases} \implies a = 24k \implies 24k \equiv 3(5) \implies -k \equiv 3(5) \implies k \equiv 2(5) $
+
+Luego $ x_2 = 24.2 = 48 $
+
+S3: $ \begin{cases}
+    a\equiv 5(8) \\
+    a\equiv 0(15) \\
+\end{cases} \implies a = 15k \implies 15k \equiv 5(8) \implies k \equiv 3(8) $
+
+Luego $ x_3 = 15.3 = 45 $
+
+Por lo tanto, $ x = x_1 + x_2 + x_3 = 80+48+45 = 173 $
+
+Rta.: $ r_{480}(a) = 173 $
+
+\subsubsection{Pregunta ii}
+
+$ \begin{cases}
+    a\equiv 13(21) \\
+    6a\equiv 9(15) \\
+\end{cases} 
+\iff \begin{cases}
+    a \equiv 13(21) \\
+    2a \equiv 3(5) \\
+\end{cases}
+\iff \begin{cases}
+    a \equiv 13(21) \\
+    a \equiv 4(5) \\
+\end{cases} $
+
+Divido el sistema en dos.
+
+S1: $ \begin{cases}
+    a \equiv 13(21) \\
+    a \equiv 0(5) \\
+\end{cases} $
+S2: $ \begin{cases}
+    a \equiv 0(21) \\
+    a \equiv 5(5) \\
+\end{cases} $
+
+Busco soluciones a los sistemas.
+
+S1: $ \begin{cases}
+    a \equiv 13(21) \\
+    a \equiv 0(5) \\
+\end{cases} \implies a = 5k \implies 5k \equiv 13(21) \implies k \equiv 11(21) $
+
+Luego $ x_1 = 5k = 5.11 = 55 $   
+
+S2: $ \begin{cases}
+    a \equiv 4(5) \\
+    a \equiv 0(21) \\
+\end{cases} \implies a = 21k \implies 21k \equiv 4(5) \implies k \equiv 4(5) $
+
+Luego $ x_2 = 21k = 21.4 = 84 $   
+
+Por lo tanto $ x = x_1 + x_2 = 55+84 = 139 \implies a \equiv 35(105)$
+
+Rta.: 34 es el entero positivo más chico que cumple lo pedido.
+
+\subsection{Ejercicio 13}
+
+$ \begin{cases}
+    a \equiv 4(12) \\
+    a \equiv 43(63) \\
+\end{cases} 
+\iff \begin{cases}
+    a \equiv 4(3) \\
+    a \equiv 4(4) \\
+    a \equiv 43(9) \\
+    a \equiv 43(7) \\
+\end{cases}
+\iff \begin{cases}
+    a \equiv 1(3) \\
+    a \equiv 0(4) \\
+    a \equiv 7(9) \implies a \equiv 1(3) \\
+    a \equiv 1(7) \\
+\end{cases}
+\iff \begin{cases}
+    a\equiv 0(4) \\
+    a\equiv 7(9) \\
+    a\equiv 1(7) \\
+\end{cases} $
+
+Divido el sistema en tres.
+
+S1: $ \begin{cases}
+    a\equiv 0(4) \\
+    a\equiv 0(9) \\
+    a\equiv 0(7) \\
+\end{cases} $
+S2: $ \begin{cases}
+    a\equiv 0(4) \\
+    a\equiv 7(9) \\
+    a\equiv 0(7) \\
+\end{cases} $
+S3: $ \begin{cases}
+    a\equiv 0(4) \\
+    a\equiv 0(9) \\
+    a\equiv 1(7) \\
+\end{cases} $
+
+Busco soluciones a los sistemas.
+
+S1: $ \begin{cases}
+    a\equiv 0(252) \\
+\end{cases} $
+
+Luego $ x_1 = 0 $
+
+S2: $ \begin{cases}
+    a\equiv 7(9) \\
+    a\equiv 0(28) \\
+\end{cases} \implies a = 28k \implies 28k \equiv 7(9) \implies k \equiv 7(9) $
+
+Luego $ x_2 = 28k = 28.7 = 196$
+
+S3: $ \begin{cases}
+    a\equiv 1(7) \\
+    a\equiv 0(36) \\
+\end{cases} \implies a = 36k \implies 36k \equiv 1(7) \implies k \equiv 1(7) $
+
+Luego $ x_3 = 36k = 36.1 = 36$
+
+Por lo tanto, $ x = x_1 + x_2 + x_3 = 0+196+36 = 232 \implies a \equiv 232(252) $
+
+Luego $ a \equiv 232(252) \iff a = 252k+232 $
+
+Ahora uso que $ 12600 \leq a \leq 13300 $,
+\begin{align*}
+    12600 &\leq a \leq 13300 \\
+    12600 &\leq 252k+232 \leq 13300 \\
+    \frac{12600-232}{252} &\leq k \leq \frac{13300-232}{252} \\
+    49,07 &\leq k \leq 51,85 \\
+\end{align*}
+
+Luego $ k \in \{ 50,51 \} $
+
+\begin{itemize}
+    \item $ k = 50 \implies a = 12832 $
+    \item $ k = 51 \implies a = 13084 $
+\end{itemize}
+
+Rta.: Había 12832 o 13084 latas.
+
+\subsection{Ejercicio 14}
+
+$ a^2 \equiv 21(238) \iff \begin{cases}
+    a^2 \equiv 21(2) \\
+    a^2 \equiv 21(7) \\
+    a^2 \equiv 21(17) \\
+\end{cases} 
+\iff \begin{cases}
+    a^2 \equiv 1(2) \\
+    a^2 \equiv 0(7) \\
+    a^2 \equiv 4(17) \\
+\end{cases} $
+
+Usando tabla de restos llego a
+
+$ \begin{cases}
+    a \equiv 1(2) \\
+    a \equiv 0(7) \\
+    a \equiv 2(17) \vee a\equiv 15(17) \\
+\end{cases} $
+
+Divido el sistema en tres.
+
+S1: $ \begin{cases}
+    a \equiv 1(2) \\
+    a \equiv 0(7) \\
+    a \equiv 0(17) \vee a\equiv 0(17) \\
+\end{cases} $
+S2: $ \begin{cases}
+    a \equiv 0(2) \\
+    a \equiv 0(7) \\
+    a \equiv 0(17) \vee a\equiv 0(17) \\
+\end{cases} $
+S3: $ \begin{cases}
+    a \equiv 0(2) \\
+    a \equiv 0(7) \\
+    a \equiv 2(17) \vee a\equiv 15(17) \\
+\end{cases} $
+
+Busco soluciones de cada sistema.
+
+S1: $ \begin{cases}
+    a \equiv 1(2) \\
+    a \equiv 0(119) \\
+\end{cases} \implies a = 119k \implies 119k \equiv 1(2) \implies k \equiv 1(2) $
+
+Luego $ x_1 = 119 $
+
+S2: $ \begin{cases}
+    a \equiv 0(238) \\
+\end{cases} $
+
+Luego $ x_2 = 0 $
+
+S3a: $ \begin{cases}
+    a \equiv 2(17) \\
+    a \equiv 0(14) \\
+\end{cases} \implies a = 14k \implies 14k \equiv 2(17) \implies k \equiv 5(17) $
+
+Luego $ x_{3a} = 14.5 = 70 $
+
+S3b: $ \begin{cases}
+    a \equiv 15(17) \\
+    a \equiv 0(14) \\
+\end{cases} \implies a = 14k \implies 14k \equiv 15(17) \implies k \equiv 12(17) $
+
+Luego $ x_{3b} = 14.12 = 168 $
+
+Así, obtengo dos soluciones:
+\begin{itemize}
+    \item $ x_a = x_1 + x_2 + x_{3a} = 119+0+70 = 189 $
+    \item $ x_b = x_1 + x_2 + x_{3b} = 119+0+168 = 287 \equiv 49(238) $
+\end{itemize}
+
+Rta.: Los posibles restos son 49 y 189.
+
 \end{document}
