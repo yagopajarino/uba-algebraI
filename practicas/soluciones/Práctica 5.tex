@@ -991,4 +991,350 @@ Así, obtengo dos soluciones:
 
 Rta.: Los posibles restos son 49 y 189.
 
+\subsection{Ejercicio 15}
+
+Rdo. PTF: $ a^{p-1} \equiv 1(p) \iff p \text{ es primo} \wedge (a:p)=1 $
+
+\subsubsection{Pregunta i}
+
+Como 11 es primo por PTF $ a^{10} \equiv 1(11) $ si $ (a:11) = 1 $
+
+\begin{align*}
+    71^{22283} &\equiv 5^{22283} (11) \\
+    &\equiv 5^{10q+3} (11) \\
+    &\equiv 5^{10^q}. 5^3 (11) \\
+    &\equiv 1^q. 125 (11) \\
+    &\equiv 4 (11) \\
+\end{align*}
+Luego $ r_{11}(71^{22283}) = 4 $
+
+\subsubsection{Pregunta ii}
+\begin{align*}
+    5.7^{2451} + 3.65^{2345} - 23.8^{138} &\equiv 5.7^{2451} +3.0^{2345} - 10.8^{138}(13) \\
+    &\equiv 5.7^{12.q+3} - 10.8^{12q+6}(13) \\
+    &\equiv 5.7^{12^q}. 7^3 - 10.8^{12^q}. 8^6(13) \\
+    &\equiv 25 - 120(13) \\
+    &\equiv 9(13) \\
+\end{align*}
+Luego $ r_{13}(5.7^{2451} + 3.65^{2345} - 23.8^{138}) = 9 $
+
+\subsection{Ejercicio 16}
+
+\subsubsection{Pregunta i}
+
+$ 2^{194} X \equiv 7(97) $
+
+Como $ (2:97) = 1 $ y 97 es primo $ \implies 2^{96} \equiv 1(97) $
+
+\begin{align*}
+    2^{194} X \equiv 7(97) &\iff (2^{96})^2.4X \equiv 7(97) \\
+    &\iff (1)^2.4X \equiv 7(97) \\
+    &\iff 4X \equiv 7(97) \\
+    &\iff -24.4X \equiv -24.7(97) \\
+    &\iff X \equiv 26(97) \\
+\end{align*}
+
+\subsubsection{Pregunta ii}
+
+$ 5^{86}X \equiv 3(89) $
+
+Como $ (5:89) = 1 $ y 89 es primo $ \implies 5^{88} \equiv 1(89) $
+
+Luego,
+\begin{align*}
+    5^{86}X \equiv 3(89) &\iff 5^{88}X \equiv 5^2.3(89) \\
+    &\iff X \equiv 375(89) \\
+    &\iff X \equiv 19(89) \\
+\end{align*}
+
+\subsection{Ejercicio 17}
+TODO
+
+\subsection{Ejercicio 18}
+
+Se que $ 561 = 3.11.17 $ y que $ a \perp 561 $ luego,
+
+\begin{align*}
+    a^{560} \equiv 1(561) &\iff \begin{cases}
+        a^{560}\equiv 1(3) \iff (a^2)^{280} \equiv 1(3) \\
+        a^{560}\equiv 1(11) \iff (a^{10})^{56} \equiv 1(11) \\
+        a^{560}\equiv 1(17) \iff (a^{16})^{35} \equiv 1(17) \\
+    \end{cases}
+\end{align*}
+
+Los tres verdaderos por el PTF.
+
+\subsection{Ejercicio 19}
+
+\subsubsection{Pregunta i}
+
+$ \begin{cases}
+    2^{2013}X \equiv 6(13) \\
+    5^{2013}X \equiv 4(7) \\
+    7^{2013}X \equiv 2(5) \\
+\end{cases} 
+\iff \begin{cases}
+    2^{9}X \equiv 6(13) \\
+    5^{3}X \equiv 4(7) \\
+    7^{1}X \equiv 2(5) \\
+\end{cases}
+\iff \begin{cases}
+    5X \equiv 6(13) \\
+    6X \equiv 4(7) \\
+    7X \equiv 2(5) \\
+\end{cases} 
+\iff \begin{cases}
+    -5.5.X \equiv -5.6(13) \\
+    X \equiv 3(7) \\
+    -2.7.X \equiv -2.2(5) \\
+\end{cases}
+\iff \begin{cases}
+    X \equiv 9(13) \\
+    X \equiv 3(7) \\
+    X \equiv 1(5) \\
+\end{cases} $
+
+Ahora puedo usar el Teorema Chino del Resto. Divido el sistema en tres.
+
+S1: $ \begin{cases}
+    X \equiv 9(13) \\
+    X \equiv 0(7) \\
+    X \equiv 0(5) \\
+\end{cases} $
+S2: $ \begin{cases}
+    X \equiv 0(13) \\
+    X \equiv 3(7) \\
+    X \equiv 0(5) \\
+\end{cases} $
+S3: $ \begin{cases}
+    X \equiv 0(13) \\
+    X \equiv 0(7) \\
+    X \equiv 1(5) \\
+\end{cases} $ 
+
+Busco soluciones a cada sistema.
+
+S1: $ \begin{cases}
+    X \equiv 9(13) \\
+    X \equiv 0(35) \\
+\end{cases} \implies X \equiv 35k \implies 35k \equiv 9(13) \implies 9k\equiv 9(13) \implies k \equiv 1(13) $
+
+Luego $ x_1 = 35.k = 35.1 = 35 $
+
+S2: $ \begin{cases}
+    X \equiv 3(7) \\
+    X \equiv 0(65) \\
+\end{cases} \implies X \equiv 65k \implies 65k \equiv 3(7) \implies 2k \equiv 3(7) \implies k \equiv 5(7) $
+
+Luego $ x_2 = 65.k = 65.5 = 325 $
+
+S3: $ \begin{cases}
+    X \equiv 1(5) \\
+    X \equiv 0(91) \\
+\end{cases} \implies X \equiv 91k \implies 91k \equiv 1(5) \implies k \equiv 1(5) $
+
+Luego $ x_3 = 91.k = 91.1 = 91 $
+
+Así, $ X \equiv x_1 + x_2 + x_3 \equiv 35+325+91 \equiv 451(455) $
+
+\subsubsection{Pregunta ii}
+TODO
+
+\subsection{Ejercicio 20}
+
+\subsubsection{Pregunta i}
+
+Se que $ 70 = 2.5.7 $
+
+Luego sea $x = 3.7^{135} + 24^{78} + 11^{222} $
+
+$ \begin{cases}
+    x \equiv 1+1(2) \\
+    x \equiv 3.2^{135}+4^{78} + 1(5) \\
+    x \equiv 3^{78}+4^{222}(7) \\
+\end{cases} 
+\iff \begin{cases}
+    x \equiv 0(2) \\
+    x \equiv 3.2^{3}+4^{2} + 1(5) \\
+    x \equiv 3^{0}+4^{0}(7) \\
+\end{cases}
+\iff \begin{cases}
+    x \equiv 0(2) \\
+    x \equiv 1(5) \\
+    x \equiv 2(7) \\
+\end{cases} $
+
+Ahora puedo usar el TCR. Divido el sistema en tres.
+
+S1: $ \begin{cases}
+    x \equiv 0(2) \\
+    x \equiv 0(5) \\
+    x \equiv 0(7) \\
+\end{cases} $
+S2: $ \begin{cases}
+    x \equiv 0(2) \\
+    x \equiv 1(5) \\
+    x \equiv 0(7) \\
+\end{cases} $
+S3: $ \begin{cases}
+    x \equiv 0(2) \\
+    x \equiv 0(5) \\
+    x \equiv 2(7) \\
+\end{cases} $
+
+Busco soluciones a cada sistema.
+
+S1: $ \begin{cases}
+    x \equiv 0(2) \\
+    x \equiv 0(35) \\
+\end{cases} $
+
+Luego $ x_1 = 0 $
+
+S2: $ \begin{cases}
+    x \equiv 1(5) \\
+    x \equiv 0(14) \\
+\end{cases} \implies x = 14k \implies 14k \equiv 1(5) \implies k \equiv 4(5) $
+
+Luego $ x_2 = 14k = 14.4 = 56 $
+
+S3: $ \begin{cases}
+    x \equiv 2(7) \\
+    x \equiv 0(10) \\
+\end{cases} \implies x = 10k \implies 10k \equiv 2(7) \implies 3k \equiv 2(7) \implies k \equiv 3(7) $
+
+Luego $ x_3 = 10k = 10.3 = 30 $
+
+Así, $ x_1 + x_2 +x_3 = 0+56+30 = 86 \equiv 16(70) $
+
+Rta.: $ r_{70}(3.7^{135} + 24^{78} + 11^{222}) = 16 $
+
+\subsubsection{Pregunta ii}
+
+Se que $ 56 = 8 . 7 $ luego voy a buscar congruencias de la sumatoria mod 7 y mod 8.
+
+$ \begin{cases}
+    \sum_{i=1}^{1759}i^{42} \equiv n_1 (7) \\
+    \sum_{i=1}^{1759}i^{42} \equiv n_2 (8) \\
+\end{cases} $
+
+\underline{Módulo 7}
+
+\begin{itemize}
+    \item $ (i:7) = 1 \implies i^6 \equiv 1(7) \implies (i^6)^7 \equiv 1(7) \implies i^{42} \equiv 1(7) $
+    \item $ (i:7) \neq 1 \implies 7|i \implies i^{42} \equiv 0(7) $
+\end{itemize}
+
+Luego $ \sum_{i=1}^{1759}i^{42} = \sum_{i=1 \wedge 7|i}^{1759}i^{42} + \sum_{i=1 \wedge 7\not | i}^{1759}i^{42} $
+
+Por lo tanto, necesito saber la cantidad de números x entre 1 y 1759 tales que $ x \not \equiv 0(7) $. Se que $ 1759 = 251.7+2 $ luego hay $ 1759-251=1508 $ que cumplen lo pedido.
+
+Entonces, $ \sum_{i=1}^{1759}i^{42} \equiv 1508 \equiv 3(7) $
+
+\underline{Módulo 8}
+
+\begin{itemize}
+    \item $ 2|i \implies i = 2k \implies i^{42} = (2k)^{42} = (2^3)^{14}. k^{42} \implies i^{42} \equiv 0(8) $
+    \item $ 2 \not | i \implies (i \equiv 1(8)) \vee (i \equiv 3(8)) \vee (i \equiv 5(8)) \vee (i \equiv 7(8)) \implies i^{42} \equiv 1(8)$
+\end{itemize}
+
+El segundo item se puede probar con tabla de restos.
+
+Luego, $ \sum_{i=1}^{1759}i^{42} = \sum_{i=1 \wedge 2|i}^{1759}i^{42} \sum_{i=1 \wedge 2\not |i}^{1759}i^{42} \equiv 0+880\equiv 0(8)$
+
+Entonces $ \begin{cases}
+    x \equiv 3(7) \\
+    x \equiv 0(8) 
+\end{cases} \implies x\equiv 24(56) $
+
+Por TCR es la única solución al sistema. Luego $ r_{56}(\sum_{i=1}^{1759}i^{42}) = 24 $
+
+\subsection{Ejercicio 21}
+
+$ 2^{2^n} \equiv r(13) $ y se que $ (2:13) = 1 $ y 13 es primo $ \implies 2^{12} \equiv 1(13) $
+
+Si escribo $ 2^n = 12k +r_{12}(2^n) $ luego $ 2^{12k+r} \equiv (2^{12})^k . 2^r (13) \equiv 2^{r_{12}(2^n)}(13)$
+
+Ahora estudio congruencia de $ 2^n $ mod 12
+
+$ 2^n \equiv k (12) \iff \begin{cases}
+    2^n \equiv k (3) \\
+    2^n \equiv k (4) \\
+\end{cases} $
+
+\underline{Caso mod 4}
+
+\begin{itemize}
+    \item $ n = 1 \implies 2^n \equiv 2(4) $
+    \item $ n \geq 2 \implies 2^n \equiv 0(4) $
+\end{itemize}
+
+\underline{Caso mod 3}
+
+Por PTF $ 2^2 \equiv 1(3) $ pues $ (2:3) = 1 $ y 3 es primo.
+
+Luego $ n = 2j+r_2(n) \implies 2^n \equiv k(3) \iff 2^{2j+r_2(n)} \equiv (2^2)^j. 2^{r_2(n)} \equiv 2^{r_2(n)} $
+
+Así llego a que,
+
+$ 2^n \equiv 0(4) $ o $ 2^n \equiv 2(4) $ \\
+$ 2^n \equiv 1(3) $ o $ 2^n \equiv 2(3) $ 
+
+\begin{itemize}
+    \item $ n = 1 \implies \begin{cases}
+        2^1 \equiv 2(4) \\
+        2^1 \equiv 2(3) \\
+    \end{cases} 
+    \implies 2 \equiv 2(12) $
+    \item $ n \geq 2 \wedge n \bmod 2 = 0 \implies \begin{cases}
+        2^n \equiv 0(4) \\
+        2^n \equiv 1(3) \\
+    \end{cases} 
+    \implies 2^n \equiv 4(12) $
+    \item $ n \geq 2 \wedge n \bmod 2 = 1 \implies \begin{cases}
+        2^n \equiv 0(4) \\
+        2^n \equiv 2(3) \\
+    \end{cases} 
+    \implies 2^n \equiv 8(12) $
+\end{itemize}
+
+Luego con estas 3 estudio $ 2^{r_{12}(2^n)} \equiv h(13) $
+
+\begin{itemize}
+    \item $ n = 1 \implies 2^2 \equiv 4(13) \implies r_{13}(2^{2^n}) = 4 $
+    \item $ n \geq 2 \wedge n \bmod 2 = 0 \implies 2^4 \equiv 3(13) \implies r_{13}(2^{2^n}) = 3 $
+    \item $ n \geq 2 \wedge n \bmod 2 = 1 \implies 2^8 \equiv 9(13) \implies r_{13}(2^{2^n}) = 9 $
+\end{itemize}
+
+\subsection{Ejercicio 22}
+
+$ 7x^{45} \equiv 1(46) \iff \begin{cases}
+    7x^{45} \equiv 1(23) \\
+    7x^{45} \equiv 1(2)
+\end{cases} 
+\iff \begin{cases}
+    7x^{45} \equiv 1(23) \\
+    x^{45} \equiv 1(2)
+\end{cases} $
+
+Es facil ver que $ 23\not | x $ y $ 2\not | x $
+
+Por lo tanto por PTF $ x^{22} \equiv 1(23) $ y $ x \equiv 1(2) $
+
+$ \begin{cases}
+    7x \equiv 1(23) \\
+    x \equiv 1(2)
+\end{cases} 
+\iff \begin{cases}
+    10.7x \equiv 10.1(23) \\
+    x \equiv 1(2)
+\end{cases}
+\iff \begin{cases}
+    x \equiv 10(23) \\
+    x \equiv 1(2)
+\end{cases} $
+
+Luego por TCR, la unica solución es $ x \equiv 33(46) $
+
+
 \end{document}
