@@ -1336,5 +1336,143 @@ $ \begin{cases}
 
 Luego por TCR, la unica solución es $ x \equiv 33(46) $
 
+\subsection{Ejercicio 23}
+
+Busco los x tales que $ x \in Div(25^{70}) \wedge \begin{cases}
+    x \equiv 2(9) \\
+    x \equiv 3(11)
+\end{cases} $
+
+Luego $ 25^{70} = (5^2)^{70} = 5^{140} \implies Div_+(5^{140}) = \{ 5^n \}; 0\leq n \leq 140 $
+
+Así, busco soluciones de $ \begin{cases}
+    5^n \equiv 2(9) \\
+    5^n \equiv 3(11) \\
+\end{cases} $
+
+\underline{Caso mod 11}
+
+$ 5^n \equiv 3(11) \iff 5^{10k+r_{10}(n)} \equiv 3(11) \iff 5^{r_{10}(n)} \equiv 3(11) $
+
+Luego por tabla de restos se puede ver que $ 5^n \equiv 3(11) \iff (n \equiv 2(10)) \vee (n \equiv 7(10)) $
+
+\underline{Caso mod 9}
+
+\begin{itemize}
+    \item $ n = 0 \implies 5^0 \equiv 1(9) $
+    \item $ n = 1 \implies 5^1 \equiv 5(9) $
+    \item $ n = 2 \implies 5^2 \equiv 7(9) $
+    \item $ n = 3 \implies 5^3 \equiv 8(9) $
+    \item $ n = 4 \implies 5^4 \equiv 4(9) $
+    \item $ n = 5 \implies 5^5 \equiv 2(9) $
+    \item $ n = 6 \implies 5^6 \equiv 1(9) $
+\end{itemize}
+
+Y a partir de $ n = 6 $ se empiezan a repetir.
+
+Armando tabla de restos módulo 6 se puede ver que $ 5^n \equiv 2(9) \iff n \equiv 5(6) $
+
+Uniendo lo hallado,
+
+$ \begin{cases}
+    n \equiv 5(6) \\
+    n \equiv 2(5) \\
+\end{cases} \implies n \equiv 17(30) \iff n = 30k+17$
+
+Luego para el n hallado, busco los divisores de $ 5^{140} $
+
+\begin{align*}
+    0 \leq n \leq 140 &\iff 0\leq 30k+17 \leq 140 \\
+    &\iff -17 \leq 30k \leq 123 \\
+    &\iff \frac{-17}{30} \leq k \leq \frac{123}{30} \\
+    &\iff -0,5 \leq k \leq 4,1 \\
+    &\iff k \in \{ 0,1,2,3,4 \} \\
+\end{align*}
+
+Así, los divisores que cumplen lo pedido son: $ \{ 5^{17}, 5^{47}, 5^{77}, 5^{107}, 5^{137} \} $
+
+\subsection{Ejercicio 24}
+
+\subsubsection{Pregunta i}
+
+\underline{Caso p = 2}
+
+$ 4|38^5+6+171 \iff 38^5+6+171 \equiv 0(4) \iff 2^5 +2+3\equiv 0+2+3 \equiv 5(4) $
+
+Luego $ p \neq 2 $
+
+\underline{Caso $ p \neq 2 $}
+
+\begin{align*}
+    2p | 38^{2p^2-p-1} + 3p+171 &\iff \begin{cases}
+        2 | 38^{2p^2-p-1} + 3p+171 \\
+        p | 38^{2p^2-p-1} + 3p+171
+    \end{cases}
+\end{align*}
+
+Pero $ 2 | 38^{2p^2-p-1} + 3p+171 \iff 38^{2p^2-p-1} + 3p+171 \equiv 0+p+1 \equiv 0(2) $
+
+Así, 2 siempre divide.
+
+Si $ p |38 \implies p = 19 \implies 38^{2p^2-p-1} + 3p+171 \equiv 0+0+0(19) \equiv 0(19)$
+
+Si $ p \not |38 \implies 38^{2p^2-p-1} + 3p+171 \equiv (38^{p-1})^{2p+1} + 0+171 \equiv 172(19)$
+
+Entonces busco p tal que $ 172 \equiv 0(p) \iff 172 = p.k $
+
+Pero $ 172 = 4.43 \implies p = 43 $ es solución.
+
+Rta.: $ \{ 19,43 \} $
+
+\subsubsection{Pregunta ii}
+TODO
+
+\subsection{Ejercicio 25}
+
+Se que $ 88 = 11.2^3 $
+
+$ (a^{760} + 11a + 10 : 88) = 2 \implies \begin{cases}
+    2 | a^{760} + 11a + 10 \\
+    11 \not | a^{760} + 11a + 10 \\
+    2^2 \not | a^{760} + 11a + 10 \\
+\end{cases} $
+
+Busco valores de a que cumplan las tres condiciones.
+
+$ 2 | a^{760} + 11a + 10 \iff a^{760} + 11a + 10 \equiv 0(2) \iff a^{760} + a \equiv 0(2) $
+
+Que se cumple $ \forall a \in \mathbb{Z} $
+
+$ a^{760} + 11a + 10 \equiv a^{760} + 10(11) \implies \begin{cases}
+    a^{760} + 11a + 10 \equiv 10(11) & 11|a \\
+    a^{760} + 11a + 10 \equiv 10(11) & 11\not |a 
+\end{cases} $
+
+Luego $ 11 \not | a^{760} + 11a + 10; \forall a \in \mathbb{Z} $
+
+$ a^{760} + 11a + 10 \equiv a^{760} + 3a + 2 (4) $
+
+Busco valores de a tales que $ a^{760} + 3a + 2 \not \equiv 0(4) $
+
+\begin{itemize}
+    \item $ a \equiv 0(4) \implies a^{760} + 3a + 2 \equiv 0 + 0 + 2 \equiv 2 (4) $
+    \item $ a \equiv 1(4) \implies a^{760} + 3a + 2 \equiv 1 + 3 + 2 \equiv 2 (4) $
+    \item $ a \equiv 2(4) \implies a^{760} + 3a + 2 \equiv 0 + 2 + 2 \equiv 0 (4) $
+    \item $ a \equiv 3(4) \implies a^{760} + 3a + 2 \equiv 1 + 1 + 2 \equiv 0 (4) $
+\end{itemize}
+
+Así, $ a \equiv 0(4) $ o $ a \equiv 1(4) $
+
+Luego $ \begin{cases}
+    a \equiv 10(11) \\
+    a \equiv 0(4) 
+\end{cases} \implies a \equiv 32(44) $
+
+y $ \begin{cases}
+    a \equiv 10(11) \\
+    a \equiv 1(4) 
+\end{cases} \implies a \equiv 21(44) $
+
+Luego los posibles restos son $ \{ 21,32 \} $
 
 \end{document}
