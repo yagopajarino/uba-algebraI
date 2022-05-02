@@ -615,4 +615,167 @@ Los z que cumplen lo pedido son:
     \item $ k = 4 \implies z_4 = 2 \cdot e^{\frac{9}{5}\pi i} $
 \end{itemize}
 
+\subsection{Ejercicio 10}
+
+$ z^n + i\overline{z}^2 = 0 \iff z^n = - i\overline{z}^2$
+
+Voy a usar la igualdad de complejos en forma polar, no cubre el caso $ z = 0 $ asi que lo pruebo primero como caso aparte.
+
+$ z = 0 \implies 0^n + i 0^2 = 0 $ luego tengo la primer solución en $ z = 0 $.
+
+Se que z es de la forma: $ z = |z|\cdot e^{\theta i} $ con $ 0 \leq \theta < 2\pi $
+
+Luego,
+\begin{align*}
+    \overline{z} &= |z|\cdot e^{-\theta i} \\
+    \overline{z}^2 &= |z|^2 \cdot e^{-2 \theta i} \\
+    -i\overline{z}^2 &= |z|^2 \cdot e^{\left(-2 \theta + \frac{3}{2}\pi\right) i}
+\end{align*}
+Por lo tanto, 
+\begin{align*}
+    z^n &= |z|^2 \cdot e^{\left(-2 \theta + \frac{3}{2}\pi\right) i} \\
+    |z|^n\cdot e^{n\theta i} &= |z|^2 \cdot e^{\left(-2 \theta + \frac{3}{2}\pi\right) i} \\
+\end{align*}
+Por igualdad de números complejos,
+\begin{align*}
+    |z|^n\cdot e^{n\theta i} &= |z|^2 \cdot e^{\left(-2 \theta + \frac{3}{2}\pi\right) i} \iff  \begin{cases}
+        |z|^n = |z|^2 \\
+        n\theta = -2 \theta + \frac{3}{2}\pi + 2k\pi
+    \end{cases}
+\end{align*}
+Entonces, mirando la igualdad de los módulos, si $ n = 2 $ existen infinitas soluciones, no sirve pues solo quiero seis.
+Pero si $ n \neq 2 \implies |z| = 1$ es la unica solución posible, es el unico número que elevado a dos potencias distintas cualquiera, sigue siendo el mismo.
+
+Ahora busco $ \theta $,
+\begin{align*}
+    n\theta &= -2 \theta + \frac{3}{2}\pi + 2k\pi \\
+    n\theta + 2 \theta &= \frac{3}{2}\pi + 2k\pi \\
+    (n+2)\theta &= \frac{3}{2}\pi + 2k\pi \\
+    \theta &= \frac{3}{2(n+2)}\pi + \frac{2k}{(n+2)}\pi \\
+\end{align*}
+Con $ 0 \leq \theta < 2\pi $,
+\begin{align*}
+    0 &\leq \frac{3}{2(n+2)}\pi + \frac{2k}{(n+2)}\pi < 2\pi \\
+    0 &\leq \frac{3}{2(n+2)} + \frac{2k}{(n+2)} < 2 \\
+    0 &\leq 3 + 4k < 4(n+2) \\
+    0 &\leq 3 + 4k < 4n+8 \\
+    -\frac{3}{4} &\leq k < n + \frac{5}{4} \iff k \in \{ 0,1,...,n+1 \}
+\end{align*}
+
+Busco cinco soluciones, por lo tanto $ k \in \{ 0,1,2,3,4 \} $
+
+Así las seis soluciones son:
+\begin{itemize}
+    \item $ k = 0 \implies z_0 = e^{\frac{3}{10}\pi i}$
+    \item $ k = 1 \implies z_1 = e^{\frac{7}{10}\pi i}$
+    \item $ k = 2 \implies z_2 = e^{\frac{11}{10}\pi i}$
+    \item $ k = 3 \implies z_3 = e^{\frac{15}{10}\pi i}$
+    \item $ k = 4 \implies z_4 = e^{\frac{19}{10}\pi i}$
+    \item $ z_5 = 0 $
+\end{itemize}
+
+\subsection{Ejercicio 11}
+
+\subsubsection{Pregunta i}
+
+Se que $ w \in G_7 $
+\begin{align*}
+    &w + \overline{w} + (w + w^2)^2 - w^{38}(1-w^2) \\
+    = &w + \overline{w} + w^2 + 2ww^2 + w^4 - w^{38}-w^{40} \\
+    = &w + \overline{w} + w^2 + 2w^3 + w^4 - w^3 + w^5 \\
+    = 1+ &w + w^6 + w^2 + w^3 + w^4 + w^5 -1 = \begin{cases}
+        -1 & w \neq 1 \\
+        6 & w = 1
+    \end{cases} \\
+\end{align*}
+
+\subsubsection{Pregunta ii}
+
+Se que $ w \in G_3 $
+\begin{align*}
+    &w^{73} + \overline{w}w^9 + 8 \\
+    = &w + w^2w^0 + 8 \\
+    = &w + w^2 + 8 \\
+    = 1+&w + w^2 + 7 = \begin{cases}
+        10 & w = 1 \\
+        7 & w \neq 1 \\
+    \end{cases} 
+\end{align*}
+
+\subsubsection{Pregunta iii}
+
+Se que $ w \in G_10 $
+\begin{align*}
+    S &= 1 + w^2 + w^{-2} + w^4 + w^{-4} \\
+    S &= 1 + w^2 + w^8 + w^4 + w^6 \\
+\end{align*}
+Si llamo $ z = w^2 \implies z \in G_5 $
+
+Luego,
+\begin{align*}
+    S = 1 + z + z^4 + z^2 + z^3 = \begin{cases}
+        5 & z = 1 \\
+        0 & z \neq 1 \\
+    \end{cases}
+\end{align*}
+Pero $ z = w^2 \implies z = 1 \iff w = \pm 1 \implies S = \begin{cases}
+    5 & w = \pm 1 \\
+    0 & w \neq \pm 1 \\
+\end{cases} $
+
+\subsubsection{Pregunta iv}
+
+Se que $ w \in G_5 $
+\begin{align*}
+    &w^{14} + w^{-8} + \overline{w}^4 + \overline{w^{-3}} \\
+    = &w^4 + w^2 + w + w^3 \\
+    = 1 + &w^4 + w^2 + w + w^3 -1 = \begin{cases}
+        4 & w = 1 \\
+        -1 & w \neq 1
+    \end{cases}\\
+\end{align*}
+
+\subsection{Ejercicio 12}
+
+\subsubsection{Pregunta i}
+
+Se que $ w \in G_{36} \implies w^{36} = 1 $
+
+Si defino $ z = w^4 $ entonces,
+\begin{align*}
+    \sum_{k = 7}^{60}w^{4k} &= \sum_{k = 0}^{60}z^k - \sum_{k = 0}^{6}z^k \\
+    &= \frac{z^{61} - 1}{z-1} - \frac{z^7-1}{z-1} \\
+    &= \frac{z^{61} - z^7}{z-1} \\
+    &= \frac{z^7(z^{54} - 1)}{z-1} \\
+    &= \frac{(w^4)^7((w^4)^{54} - 1)}{w^4-1} \\
+    &= \frac{w^{28}((w^{36})^6 - 1)}{w^4-1} \\
+    &= \frac{w^{28}(1 - 1)}{w^4-1} \\
+    &= 0 \\
+\end{align*}
+
+\subsubsection{Pregunta ii}
+
+Por propiedades de los números complejos se que $ Re(z) = \frac{z+\overline{z}}{2} $
+
+Luego,
+\begin{align*}
+    Re(\sum_{k = 0}^{60}w^k) &= \frac{\sum_{k = 0}^{60}w^k + \sum_{k = 0}^{60}\overline{w}^k}{2} \\
+    &= \frac{\frac{w^{61} - 1}{w-1} + \frac{\overline{w}^{61} - 1}{\overline{w}-1}}{2} \\
+    &= \frac{\frac{w^{6} - 1}{w-1} + \frac{\overline{w}^{5} - 1}{\overline{w}-1}}{2} \\
+    &= \frac{(w^{6} - 1)(\overline{w}-1) + (\overline{w}^{5} - 1)(w-1)}{2(w-1)(\overline{w}-1)} \\
+    &= \frac{(w^6-1)(w^{10}-1) + (w^5-1)(w-1)}{2(w-1)(w^{10}-1)} \\
+    &= \frac{w^{16} - w^6 - w^{10} + 1 + w^6 - w^5 - w + 1}{2(w^{11} - w^{10} - w + 1)} \\
+    &= \frac{- w^{10}- w + 2}{2(- w^{10} - w + 2)} \\
+    &= \frac{1}{2} \\
+\end{align*}
+
+\subsection{Ejercicio 13}
+TODO
+
+\subsection{Ejercicio 14}
+TODO
+
+\subsection{Ejercicio 15}
+TODO
+
 \end{document}
