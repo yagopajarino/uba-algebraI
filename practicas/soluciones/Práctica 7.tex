@@ -1,0 +1,94 @@
+\input{macrosAlgebra}
+\usepackage{caratula}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+\decimalpoint
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.5em}
+\setcounter{tocdepth}{2} % profundidad de indice
+\setcounter{section}{6} % nro de section
+\renewcommand{\thesubsubsection}{\thesubsection.\Alph{subsubsection}}
+\graphicspath{ {images/} }
+
+% End latex config
+
+\begin{document}
+
+\titulo{Práctica 7}
+\fecha{2do cuatrimestre 2021}
+\materia{Álgebra I}
+\integrante{Yago Pajariño}{546/21}{ypajarino@dc.uba.ar}
+
+%Carátula
+\maketitle
+\newpage
+
+%Indice
+\tableofcontents
+\newpage
+
+% Aca empieza lo propio del documento
+\section{Práctica 7}
+
+\subsection{Ejercicio 1}
+
+Rdo. propiedades del producto y suma de polinomios: 
+\begin{itemize}
+    \item Grado de un producto de polinomios $ gr(ab) = gr(a) + gr(b) $
+    \item Coeficiente principal de un prodcuto de polinomios $ cp(ab) = ca(a)\cdot cd(b) $
+    \item $ \begin{cases}
+        gr(f+g) \leq max(gr(f); gr(g)) \\
+        gr(f+g) = max(gr(f); gr(g)) \iff gr(f) \neq gr(g) \vee (gr(f) = gr(g) \wedge cp(f) \neq cp(g))\\
+    \end{cases}  $
+\end{itemize}
+
+\subsubsection{Pregunta i}
+
+\begin{itemize}
+    \item $ gr(p) = 77 . gr(4x^6-2x^5+3x^2-2x+7) = 77.6 = 462 $
+    \item $ cp(p) = 4^{77} $ 
+\end{itemize}
+
+\subsubsection{Pregunta ii}
+
+Sea $ p = a^4 - b^7 $ con $ a = -3x^7 + 5x^3 + x^2 - x + 5 $ y $ b = 6x^4 + 2x^3 + x - 2 $
+\begin{align*}
+    gp(p) &= max(gr(a^4); gr(b^7)) \iff gr(a^4) \neq gr(b^7) \vee cp(a^4) \neq cp(b^7) \\
+    &= max(7.4; 4.7) \iff cp(a^4) \neq cp(b^7) \\
+    &= 28 \iff (-3)^4 \neq 6^7 \\
+    &= 28 \iff 81 \neq 279936
+\end{align*}
+\begin{itemize}
+    \item $ gr(p) = 28 $
+    \item $ cp(p) = 81-6^7 $ 
+\end{itemize}
+
+\subsubsection{Pregunta iii}
+
+Sea $ p = a - b + c $ con $ \begin{cases}
+    a = (-3x^5 + x^4 - x + 5)^4 \\
+    b = 82x^{20} \\
+    c = 19x^{19}
+\end{cases} $
+
+Luego $ p = 81x^{20} + (...) - 81x^{20}+19x^{19} \implies gr(p) = 19 $ pues se cancelan los termino con $ x^{20} $
+
+Entonces busco el coeficiente para $ x^{19} $
+\begin{align*}
+    cp(p) &= a_{19} + b_{19} + c_{19} \\
+    &= (-3.-3.-3.1) + 0 + 19 \\
+    &= -27 + 0 + 19 \\
+    &= -8 \\
+\end{align*}
+\begin{itemize}
+    \item $ gr(p) = 19 $
+    \item $ cp(p) = -8 $ 
+\end{itemize}
+
+\end{document}
