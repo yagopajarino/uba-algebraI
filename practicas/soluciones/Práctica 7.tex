@@ -91,4 +91,168 @@ Entonces busco el coeficiente para $ x^{19} $
     \item $ cp(p) = -8 $ 
 \end{itemize}
 
+\subsection{Ejercicio 2}
+
+\begin{enumerate}
+    \item \begin{enumerate}
+        \item En $ \mathbb{Q}[x] = 2 $
+        \item En $ \frac{\mathbb{Z}}{2\mathbb{Z}}[x] = 2 $
+    \end{enumerate}
+    \item Usando bin de Newton, $ c(20) = \binom{133}{20}(3i)^{113} $
+    \item Usando bin de Newton cuatro veces, \begin{itemize}
+        \item $ a_1 = \binom{4}{1}x^{1}(-1)^3 \cdot \binom{19}{19}x^{19}5^0 = -4x^{20} $
+        \item $ a_2 = \binom{4}{2}x^{2}(-1)^2 \cdot \binom{19}{18}x^{18}5^1 = 570x^{20} $
+        \item $ a_3 = \binom{4}{3}x^{3}(-1)^1 \cdot \binom{19}{17}x^{17}5^2 = -17100x^{20} $
+        \item $ a_4 = \binom{4}{4}x^{4}(-1)^0 \cdot \binom{19}{16}x^{16}5^3 = 121125x^{20} $
+    \end{itemize}
+    Luego $ c(20) = a_1 + a_2 + a_3 + a_4 - 5 = -4+570-17100+121125 -5 = 104586 $
+    \item $ c(20) = 21504 $
+\end{enumerate}
+
+\subsection{Ejercicio 3}
+
+\subsubsection{Pregunta i}
+
+Reescribo el polinomio que me dan,
+\begin{align*}
+    f^2 = xf + x + 1 &\iff f^2 - xf = x+1 \\
+    &\iff f(f-x) = x+1 \\
+    &\iff f\neq 0 \wedge f-x \neq 0 \\
+\end{align*}
+Tomo grado a ambos lados,
+\begin{align*}
+    gr(f) + gr(f-x) &= gr(x+1) \\
+    gr(f) + gr(f-x) &= 1 \\
+\end{align*}
+Luego el grado de f tiene que se menor a 2.
+
+\textbf{Caso gr(f) = 1}
+
+Si $ gr(f) = 1 \implies gr(f-x) = 0 $ para cumplir la igualdad de grados.
+
+Luego f es de la forma $ f = ax+b $ con $ a = 1 $
+
+Entonces,
+\begin{align*}
+    f(f-x) = x+1 &\iff (x+b)(x+b-x) = x+1 \\
+    &\iff xb + b^2 = x+1 \\
+    &\iff \text{Por igualdad de polinomios} \begin{cases}
+        b = 1 \\
+        b^2 = 1 \\
+    \end{cases} \iff b = 1
+\end{align*}
+Así, $ f_1 = x+1 $
+
+\textbf{Caso gr(f) = 0}
+
+Que el grado del polinomio sea igual a cero implica que $ f = c $ con c una constante.
+
+Entonces,
+\begin{align*}
+    f(f-x) = x+1 &\iff c(c-x) = x+1 \\
+    &\iff c^2 - cx = x+1 \\
+    &\iff \text{Por igualdad de polinomios} \begin{cases}
+        -c = 1 \\
+        c^2 = 1
+    \end{cases} \implies c = -1
+\end{align*}
+Así, $ f_2 = -1 $
+
+Rta.: $ f = x+1 $ y $ f=-1 $
+
+\subsubsection{Pregunta ii}
+
+Reescribo el polinomio que me dan,
+\begin{align*}
+    f^2 - xf = x^2 + 1 \iff f(f-x) = -x^2 + 1
+\end{align*}
+Tomo grado a ambos lados de la igualdad.
+\begin{align*}
+    gr(f) + gr(f-x) &= gr(-x^2 + 1) \\
+    0 + 2 &= 2 \text{ No puede ser} \\
+    1 + 1 &= 2 \\
+    2 + 0 &= 2 \text{ No puede ser} \\
+\end{align*}
+Así, el único caso posible es que $ gr(f) = 1 $ y que $ gr(f-x) = 1 $
+
+Sea $ f = ax+b $,
+\begin{align*}
+    f(f-x) = -x^2 + 1 &\iff (ax+b)(ax+b-x) = -x^2+1 \\
+    &\iff (ax+b)((a-1)x+b) = -x^2+1 \\
+    &\iff a(a-1)x^2 + abx + b(a-1)x + b^2 = -x^2+1 \\
+    &\iff a(a-1)x^2 + (ab+b(a-1))x + b^2 = -x^2+1 \\
+    &\iff \text{Por igualdad de polinomios }\begin{cases}
+        a(a-1) = -1 \\
+        ab+b(a-1) = 0 \\
+        b^2 = -1 
+    \end{cases}
+\end{align*}
+Busco soluciones para el sistema de tres ecuaciones que resultó.
+
+De la tercera, se que $ b = \pm 1 $
+
+$ b = 1 \implies a + a + 1 = 0 \iff 2a = 1 \iff a = \frac{1}{2} $
+
+Pero con $ a = \frac{1}{2} \wedge b= 1 \implies \frac{1}{2} (\frac{1}{2}-1) = \frac{1}{4} - \frac{1}{2} = -\frac{1}{4} \neq -1 $
+
+Luego $ b = 1 $ NO sirve.
+
+$ b = -1 \implies -a-a+1 = 0 \implies -2a = -1 \implies a = \frac{1}{2} $
+
+Se llega al mismo valor de a que con b=1 y ya se probó que no sirve.
+
+Por lo tanto, $ \not \exists f \in \mathbb{C}[x] $ que cumpla lo pedido.
+
+\subsubsection{Pregunta iii}
+
+Reescribo el polinomio que me dan,
+\begin{align*}
+    (x+1)f^2 = x^6 + xf &\iff (x+1)f^2 - xf = x^6 \\
+    &\iff f((x+1)f - x) = x^6 \\
+\end{align*}
+Aplico grado a ambos lados de la igualdad.
+\begin{align*}
+    gr(f) + gr((x+1)f - x) &= gr(x^6) \\
+    0 + 6 &= 6 \\
+    1 + 5 &= 6 \\
+    2 + 4 &= 6 \\
+    3 + 3 &= 6 \\
+    4 + 2 &= 6 \\
+    5 + 1 &= 6 \\
+    6 + 0 &= 6 \\
+\end{align*}
+Luego de dar todos los posibles valores a $ gr(f) $, se puede ver que no existe $ gr((x+1)f - x) $ que cumpla lo pedido.
+
+Por lo tanto, $ \not \exists f \in \mathbb{C}[x] $ que cumpla lo pedido.
+
+\subsubsection{Pregunta iv}
+
+Dado que por enunciado se que $ f \neq 0 $, puedo reescribir la igualdad como,
+\begin{align*}
+    f^3 = gr(f) \cdot x^2f &\iff f^2 = gr(f)\cdot x^2 \\
+\end{align*}
+Aplico grado a ambos lados de la igualdad.
+\begin{align*}
+    gr(f^2) &= gr(gr(f)\cdot x^2) \\
+    gr(f^2) &= 2 \\
+    gr(f.f) &= 2 \\
+    2gr(f) &= 2 \\
+    gr(f) &= 1 \\
+\end{align*}
+Luego, con $ f = ax+b $,
+\begin{align*}
+    f^2 = gr(f)\cdot x^2 &\iff (ax+b)^2 = x^2 \\
+    &\iff a^2x^2 + 2abx + b^2 = x^2 \\
+    &\iff \text{Por igualdad de polinomios} \begin{cases}
+        a^2 = 1 \\
+        2ab = 0 \\
+        b = 0
+    \end{cases}
+\end{align*}
+Entonces, $ a = \pm 1 $ y $ b = 0 $ son las soluciones del sistema.
+
+Rta.: $ f_1 = x $ y  $ f_2 = -x $ son los únicos polinomios que cumplen lo pedido.
+
+
+
 \end{document}
