@@ -253,6 +253,162 @@ Entonces, $ a = \pm 1 $ y $ b = 0 $ son las soluciones del sistema.
 
 Rta.: $ f_1 = x $ y  $ f_2 = -x $ son los únicos polinomios que cumplen lo pedido.
 
+\subsection{Ejercicio 4}
 
+En estos ejercicios hay que hacer la división con la caja. Yo voy a dejar los resultados de cada paso de la división.
+
+\subsubsection{Pregunta i}
+
+\begin{enumerate}
+    \item C = $ 5x^2 $; R = $ 2x^3-10x^2-x+4 $ 
+    \item C = $ 2x $; R = $ -10x^2-5x+4 $ 
+    \item C = $ -10 $; R = $ -5x-16 $ 
+\end{enumerate}
+
+Rta: \begin{itemize}
+    \item C = $ 5x^2 + 2x - 10 $
+    \item R = $ -5x-16 $
+\end{itemize}
+
+\subsubsection{Pregunta ii}
+
+\begin{enumerate}
+    \item C = $ 2x^2 $; R = $ x^3-2x^2-4 $ 
+    \item C = $ \frac{1}{2}x $; R = $ -2x^2 - \frac{1}{2}x - 4 $ 
+    \item C = $ -1 $; R = $ -\frac{1}{2}x - 3 $ 
+\end{enumerate}
+
+Rta: \begin{itemize}
+    \item C = $ 2x^2 + \frac{1}{2}x - 1 $
+    \item R = $ -\frac{1}{2}x - 3 $
+\end{itemize}
+
+\subsubsection{Pregunta iii}
+
+\begin{enumerate}
+    \item C = $ x^{n-1} $; R = $ x^{n-1} - 1 $ 
+    \item C = $ x^{n-2} $; R = $ x^{n-2} - 1 $ 
+    \item C = $ ... $; R = $ ... $ 
+    \item C = $ 1 $; R = $ 0 $ 
+\end{enumerate}
+
+Rta: \begin{itemize}
+    \item C = $ \sum_{i = 1}^{n}x^{n-i}(x-1) $
+    \item R = $ 0 $
+\end{itemize}
+
+\subsection{Ejercicio 5}
+
+\subsubsection{Pregunta i}
+
+Haciendo $ x^3 + 2x^2 + 2x + 1 $ dividido $ x^2 + ax + 1 $ llego a:
+\begin{align*}
+    x^3 + 2x^2 + 2x + 1 = (x^2 + ax + 1)(x + 2 - a) + \left( 1 - 2a + a^2 \right)x -1 + a
+\end{align*}
+Luego busco que el resto $ \left( 1 - 2a + a^2 \right)x -1 + a $ sea igual a cero, por igualdad de polinomios,
+\begin{align*}
+    \left( 1 - 2a + a^2 \right)x -1 + a = 0 \iff \begin{cases}
+    1 - 2a + a^2 = 0 \\
+    -1+a = 0
+    \end{cases}
+\end{align*}
+De la segunda ecuación se que $ -1 + a = 0 \iff a = 1 $.
+
+Reemplazando en la primera y verifico que $ a = 1 $ cumple lo pedido, $ 1-2a+a^2 = 1-2+1 = 0 $
+
+Rta.: $ a = 1 $
+
+\subsubsection{Pregunta ii}
+
+Haciendo $ x^4 - ax^3 + 2x^2 + x + 1 $ dividido $ x^2 + x + 1 $ llego a:
+\begin{align*}
+    x^4 - ax^3 + 2x^2 + x + 1 = (x^2 + x + 1)(x^2 + (-a-1)x + 2 + a) + 1-2-a
+\end{align*}
+Luego busco que el resto $ 1-2-a $ sea igual a cero, por igualdad de polinomios,
+\begin{align*}
+    1-2-a = 0 \iff \begin{cases}
+        1-2-a = 0 \\
+    \end{cases}
+\end{align*}
+Por lo tanto $ a = -1 $ es el único que lo cumple. 
+
+\subsubsection{Pregunta iii}
+
+(Esta división es larga y pesada)
+Haciendo $ x^5 - 3x^3 - x^2 - 2x + 1 $ dividido $ x^2 + ax + 1 $ llego a:
+\begin{align*}
+    x^5 - 3x^3 - x^2 - 2x + 1 = (x^2 + ax + 1)(x^3 - ax^2 + (-4a^2)x + (-1+5a-a^3)) + \left[ (2-a^2 + a - 5a^2 + a^4)x + (2-5a + a^3) \right]
+\end{align*}
+Luego busco que el resto sea igual a $ -8x + 4 $,
+\begin{align*}
+    \left[ (2-a^2 + a - 5a^2 + a^4)x + (2-5a + a^3) \right] = -8x + 4 \iff \begin{cases}
+        a^4 - 6a^2 + a + 2 = -8 \\
+        a^3 - 5a + 2 = 4
+    \end{cases}
+\end{align*}
+De la segunda ecuación,
+\begin{align*}
+    a^3 - 5a + 2 = 4 &\iff a^3 - 5a - 2 = 0 \\
+    &\iff a(a^2 - 5) - 2 = 0 \\
+\end{align*}
+A simple vista veo que $ a = -2 $ es solución, luego usando Ruffini,
+\begin{align*}
+    a^3 - 5a - 2 = (a^2 - 2a - 1)(a+2)
+\end{align*}
+Por lo tanto busco soluciones para $ a^2 - 2a - 1 = 0 \iff a = \frac{2 \pm \sqrt[]{8}}{2} $
+
+Queda ver cuales de estos valores de a hallados cumple la primer ecuación.
+
+\begin{itemize}
+    \item $ a = -2 \implies a^4 - 6a^2 + a + 2 = 16 - 24 - 2 + 2 = -8 $
+    \item $ a = \frac{2 + \sqrt[]{8}}{2} \implies a^4 - 6a^2 + a + 2 \neq -8 $ (Wolfram) 
+    \item $ a = \frac{2 - \sqrt[]{8}}{2} \implies a^4 - 6a^2 + a + 2 \neq -8 $ (Wolfram) 
+\end{itemize}
+
+\subsection{Ejercicio 6}
+TODO
+
+\subsection{Ejercicio 7}
+
+\subsubsection{Pregunta i}
+
+Por definición de congruencias se que $ x^{31} - 2 \equiv 0(x^{31} - 2) \implies x^{31} \equiv 2(x^{31} - 2) $
+
+Luego,
+\begin{align*}
+    x^{353} - x - 1 &\equiv (x^{31})^11 \cdot x^{12} - x - 1 (x^{31} - 2) \\
+    &\equiv 2^11 \cdot x^{12} - x - 1 (x^{31} - 2) \\
+    &\equiv 2048x^{12} - x - 1 (x^{31} - 2)\\
+\end{align*}
+Rta.: $ r_{x^{31} - 2}(x^{353} - x - 1) = 2048x^{12} - x - 1 $
+
+\subsubsection{Pregunta ii}
+
+Se que $ x^{6} + 1 | x^6 + 1 \iff x^6 + 1 \equiv 0 (x^6 + 1) \iff x^6 \equiv -1 (x^6 + 1) $
+
+Luego,
+\begin{align*}
+    x^{1000} + x^{40} + x^{20} + 1 &\equiv (x^6)^{166} \cdot x^4 + (x^6)^6 \cdot x^4 + (x^6)^3 \cdot x^2 + 1 \\
+    &\equiv (-1)^{166} \cdot x^4 + (-1)^6 \cdot x^4 + (-1)^3 \cdot x^2 + 1 \\
+    &\equiv x^4 + x^4 - x^2 + 1 \\
+    &\equiv 2x^4 - x^2 + 1 \\
+\end{align*}
+Rta.: $ r_{x^6 + 1}(x^{1000} + x^{40} + x^{20} + 1) = 2x^4 - x^2 + 1 $
+
+\subsubsection{Pregunta ii}
+
+Se que $ x^{100} - x + 1 \equiv 0 (x^{100} - x + 1) \iff x^{100} \equiv x-1(x^{100} -x + 1) $
+
+Luego,
+\begin{align*}
+    x^{200} - 3x^{101} + 2 &\equiv (x^{100})^2 - 3(x^{100})x + 2 \\
+    &\equiv (x-1)^2 - 3(x-1)x + 2 \\
+    &\equiv x^2 - 2x + 1 - 3x^2 + 3x + 2 \\
+    &\equiv -2x^2 + x + 3 (x^{100} -x + 1) \\
+\end{align*}
+Rta.: $ r_{x^{100} -x + 1}(x^{200} - 3x^{101} + 2) = -2x^2 + x + 3 $
+
+\subsection{Ejercicio 8}
+TODO
 
 \end{document}
