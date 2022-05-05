@@ -411,4 +411,230 @@ Rta.: $ r_{x^{100} -x + 1}(x^{200} - 3x^{101} + 2) = -2x^2 + x + 3 $
 \subsection{Ejercicio 8}
 TODO
 
+\subsection{Ejercicio 9}
+
+Se resuelve con el algoritmo de Euclides en polinomios. Calculadora de MCD de polinomios \url{https://planetcalc.com/7760/}
+
+\begin{enumerate}
+    \item \begin{itemize}
+        \item $ MCD = -x+1 $
+    \end{itemize}
+    \item \begin{itemize}
+        \item $ MCD = x^2 + 1 $
+        \item $ x^2 + 1 = f + (-x^3)g $
+    \end{itemize}
+    \item \begin{itemize}
+        \item $ MCD = 3 $
+        \item $ 3 = (-x+2)f + (1+2x^2 - 4x)g $
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Ejercicio 10}
+
+Se que el resto tiene que tener grado menor al divisor, luego $ gr(r) \leq 2 $
+
+Por algoritmo de división de polinomios existen $ q $ cociente y $ r $ resto tales que:
+\begin{align*}
+    f = q(x^3-2x^2-x+2) + r \\
+\end{align*}
+El enunciado me da las evaluaciones de $f$ en $ 1; 2; -1 $, luego
+\begin{align*}
+    f(1) &= q(1)(1-2-1+2) + r(1) \implies f(1) = r(1) = -2 \\ 
+    f(2) &= q(1)(8-8-2+2) + r(2) \implies f(2) = r(2) = 1 \\ 
+    f(-1) &= q(1)(-1-2+1+2) + r(-1) \implies f(-1) = r(-1) = 0 \\ 
+\end{align*}
+Por lo tanto se que $ r $ es de la forma $ ax^2 + bx + c $, con $ a;b;c \in \mathbb{Q} $, luego
+
+$ \begin{cases}
+    r(1) = a + b + c = -2 \\
+    r(2) = 4a + 2b + c = 1 \\
+    r(-1) = a - b + c = 0 \\
+\end{cases} $
+
+Restando la tercera a la primera, $ 2b = -2 \iff b = -1 $
+
+Rearmando el sistema con lo hallado,
+
+$ \begin{cases}
+    a + c = -1 \\
+    4a + c = 3 \\
+    a + c = -1
+\end{cases} $
+
+La tercera es igual a la primera así que la puedo eliminar y restando la primera a la segunda:
+
+$ 3a = 4 \iff a = \frac{4}{3} $
+
+Luego $ a + c = -1 \iff \frac{4}{3} + c = -1 \iff c = -\frac{7}{3} $
+
+Así, $ r_{x^3-2x^2-x+2}(f) = \frac{4}{3}x^2 - x - \frac{7}{3} $
+
+\subsection{Ejercicio 11}
+
+Sea $ f = x^{2n} + 3x^{n+1} + 3x^n - 5x^2 + 2x + 1 $ \\
+Sea $ g = x^3 - x $
+
+Se que $ f = q.g + r $ con $ gr(r) \leq 2 \implies r = ax^2 + bx + c $
+
+Busco raíces de g,
+\begin{align*}
+    x^3 - x = 0 &\iff x(x^2 - 1) = 0  \\
+    &\iff x \in \{ -1,0,1 \}
+\end{align*}
+Evalúo f para las raíces halladas,
+\begin{align*}
+    f(0) &= q(0)g(0) + r(0) \implies r(0) = 1 \\
+    f(1) &= q(1)g(1) + r(1) \implies r(1) = 1+3+3-5+2+1 = 5 \\ 
+    f(-1) &= q(-1)g(-1) + r(-1) \implies r(-1) = 1+3(-1)^{n+1} + 3(-1)^n -5 - 2 - 1 = -5 \\ 
+\end{align*}
+Por lo tanto, sabiendo que $ r(x) = ax^2 + bx + c $
+$ \begin{cases}
+    r(0) = 1 = c \\
+    r(1) = 5 = a+b+c \\
+    r(-1) = -5 = 25a - 5b + c
+\end{cases} $
+
+Sabiendo $ c = 1 \implies \begin{cases}
+    a+b = 4 \implies a = 4-b \\
+    25a-5b = -6
+\end{cases} $
+
+Sabiendo $ a = 4-b \implies $
+\begin{align*}
+    25(4-b) - 5b &= -6 \\
+    100 - 25b - 5b &= -6 \\
+    -30b &= -106 \\
+    b &= \frac{53}{15}
+\end{align*}
+
+Luego $ a = 4-b \implies a = 4- \frac{53}{15} = \frac{7}{15}$
+
+Así, $ r_{f}(g) = \frac{7}{15}x^2 + \frac{53}{15}x +1 $
+
+\subsection{Ejercicio 12}
+
+Sea $ w = x^3 $ \\
+Sea $ g = w^2 + w - 2 $
+
+Busco raíces de g
+\begin{align*}
+    g(w) = 0 \iff w = \frac{-1 \pm \sqrt[]{1-4.1.-2}}{2} \iff \begin{cases}
+        w_1 = 1 \\
+        w_2 = -2
+    \end{cases}
+\end{align*}
+Por lo tanto, recordando que $ w = x^3 $,
+\begin{align*}
+    w_1 = x^3 = 1 \iff \begin{cases}
+        x_1 = 1 \\
+        x_2 = -\frac{1}{2} + \frac{\sqrt[]{3}}{2}i \\
+        x_3 = -\frac{1}{2} - \frac{\sqrt[]{3}}{2}i \\
+    \end{cases}
+\end{align*}
+Y,
+\begin{align*}
+    w_2 = x^3 = -2 \iff \begin{cases}
+        x_4 = -\sqrt[3]{2} \\
+        x_5 = \frac{\sqrt[3]{2}}{2} + \sqrt[3]{2} \cdot \frac{\sqrt[]{3}}{2}i \\
+        x_6 = \frac{\sqrt[3]{2}}{2} - \sqrt[3]{2} \cdot \frac{\sqrt[]{3}}{2}i \\
+    \end{cases}
+\end{align*}
+
+\subsection{Ejercicio 13}
+
+Por definición de raíz, $ w + w^2 + w^4 $ es raíz de f $ \iff f(w + w^2 + w^4) = 0 $
+
+Luego se que,
+\begin{itemize}
+    \item $ w = e^{\frac{2}{7} \pi i} $
+    \item $ w^2 = e^{\frac{4}{7} \pi i} $
+    \item $ w^4 = e^{\frac{8}{7} \pi i} $
+\end{itemize}
+Luego defino,
+\begin{itemize}
+    \item $ r = Re(w + w^2 + w^4) = \cos{\frac{2}{7} \pi} + \cos{\frac{4}{7} \pi} + \cos{\frac{8}{7} \pi} = -\frac{1}{2} $
+    \item $ m = Im(w + w^2 + w^4) = \sin{\frac{2}{7} \pi} + \sin{\frac{4}{7} \pi} + \sin{\frac{8}{7} \pi} = \frac{\sqrt[]{7}}{2} $
+\end{itemize}
+Luego evalúo f en $ k = r + m.i $
+\begin{align*}
+    f(k) &= (r + m.i)^2 + (r + m.i) + 2 \\
+    &= (-\frac{1}{2} + \frac{\sqrt[]{7}}{2}.i)^2 + (-\frac{1}{2} + \frac{\sqrt[]{7}}{2}.i) + 2 \\
+    &= \frac{1}{4} - \frac{\sqrt[]{7}}{2}.i - \left(\frac{\sqrt[]{7}}{2}\right)^2 - \frac{1}{2} + \frac{\sqrt[]{7}}{2}.i + 2 \\
+    &= 0 \\
+\end{align*}
+
+\subsection{Ejercicio 14}
+
+\subsubsection{Pregunta i}
+
+Me piden probar que $ (w+w^{-1}) $ y $ (w^2 + w^{-2}) $ son raíces de f.
+\begin{align*}
+    w+w^{-1} &= e^{\frac{2}{5} \pi i} + e^{-\frac{2}{5} \pi i} \\
+    &= \cos{\frac{2}{5} \pi} + \cos{-\frac{2}{5} \pi} + i\left( \sin{\frac{2}{5} \pi} + \sin{-\frac{2}{5} \pi} \right) \\
+    &= \cos{(\frac{2}{5} \pi)} + \cos{(-\frac{2}{5} \pi)} \\
+\end{align*}
+Luego sea $ A = \cos{(\frac{2}{5} \pi)} + \cos{(-\frac{2}{5} \pi)} \implies f(A) = A^2 + A - 1 = 0 $ 
+
+Así, $ (w+w^{-1}) $ es raíz de f.
+\begin{align*}
+    w^2 + w^{-2} &= e^{\frac{4}{5} \pi i} + e^{-\frac{4}{5} \pi i} \\
+    &= \cos{\frac{4}{5} \pi} + \cos{-\frac{4}{5} \pi} + i\left( \sin{\frac{4}{5} \pi} + \sin{-\frac{4}{5} \pi} \right) \\
+    &= \cos{(\frac{4}{5} \pi)} + \cos{(-\frac{4}{5} \pi)} \\
+\end{align*}
+Luego sea $ B = \cos{(\frac{4}{5} \pi)} + \cos{(-\frac{4}{5} \pi)} \implies f(B) = B^2 + B - 1 = 0 $ 
+
+Así, $ (w^2 + w^{-2}) $ es raíz de f.
+
+\subsubsection{Pregunta ii}
+TODO
+
+\subsection{Ejercicio 15}
+\subsubsection{Pregunta i}
+
+$a$ es raíz de $f \iff (x-a)|f \iff f = n(x-a) $ \\
+$a$ es raíz de $g \iff (x-a)|g \iff f = m(x-a) $ 
+
+Por propiedades del MCD se que existen s, t tales que,
+\begin{align*}
+    (f:g) = sf + tg &\iff (f:g) = sn(x-a) + tm(x-a) \\
+    &\iff (f:g) = (x-a) \cdot (sn + tm) \\
+    &\iff (x-a)|(f:g) \\
+\end{align*}
+Luego $ (x-a)|(f:g) \iff (x-a) $ es raíz de $ (f:g) $ como se quería probar.
+
+\subsubsection{Pregunta ii}
+
+Primero busco el MCD entre $ x^4 + 3x - 2 $ y $ x^4 + 3x^3 - 3x + 1 $
+
+(Acá van las cuentas del algo de Euclides)
+
+Luego $ MCD = x^2 + x - 1 $
+
+Busco raíces del MCD,
+\begin{align*}
+    x^2 + x - 1 = 0 &\iff x = \frac{-1 \pm \sqrt[]{1-4.1.-1}}{2} \\
+    &\iff x = \frac{-1 \pm \sqrt[]{5}}{2} \\
+\end{align*}
+Luego que f teng auna raíz común con g $ \implies (f:g)|f $
+\begin{align*}
+    x^2 + x - 1 | x^4 + 3x^3 - 3x + 1 \iff x^4 + 3x^3 - 3x + 1 = q(x^2 + x - 1)
+\end{align*}
+(Acá va la división)
+
+Obtengo que, $ x^4 + 3x^3 - 3x + 1 = (x^2 - x + 2)(x^2 + x - 1) $
+
+Ahora busco raíces de $ x^2 - x + 2 $
+\begin{align*}
+    x^2 - x + 2 = 0 &\iff x = \frac{1 \pm \sqrt[]{-7}}{2} \\
+    &\iff x = \frac{1 \pm \sqrt[]{7}i}{2} \\
+\end{align*}
+Luego las raíces de f son:
+\begin{itemize}
+    \item $ x_1 = \frac{-1 + \sqrt[]{5}}{2} $
+    \item $ x_2 = \frac{-1 - \sqrt[]{5}}{2} $
+    \item $ x_3 = \frac{1 + \sqrt[]{7}i}{2} $
+    \item $ x_4 = \frac{1 - \sqrt[]{7}i}{2} $
+\end{itemize}
+
+
 \end{document}
