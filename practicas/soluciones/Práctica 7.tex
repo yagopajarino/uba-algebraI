@@ -717,5 +717,122 @@ Ahora veo el caso $ x^{10} = -40 $
 \end{align*}
 Luego si $ a = 640 $, los x tales que $ x^{10} = -40 $ serán raíces multiples de f, dado que $gr(f) = 20 \implies $ f tiene 20 raíecs en $\mathbb{C}$. Dado que existen 10 x tales que $x^{10} = -40 \implies $ f tiene 10 raíces de multiplicidad 2.  
 
+\subsection{Ejercicio 20}
+Por propiedades de las raíces multiples, se que $f$ tiene raíz múltiple $ \iff \exists \alpha \in \mathbb{C}: f(\alpha) = 0 \wedge f'(\alpha) = 0 $
+
+Luego busco los x tales que $f'(x) = 0$,
+\begin{align*}
+    &f'(x) = 68x^{67} - 68x^{3} = 68x^3(x^{64}-1) \\
+    \implies &f'(x) = 0 \iff (x=0) \vee (x^{64}=1)
+\end{align*}
+Si $x=0$, $ f(0) = 16 \neq 0 $. Luego no es raíz de f.
+
+Si $x^{64} = 1$,
+\begin{align*}
+    f(x) = x^{64} \cdot x^4 - 17x^4 - 16 &= 0 \\
+    x^4 - 17x^4 - 16 &= 0 \\
+    x^4(1-17) &= 16 \\
+    x^4 &= -1 \\
+\end{align*}
+Luego los $\alpha$ que cumplen lo pedido son $ \{\alpha \in \mathbb{C}: \alpha \in G_{64} \wedge \alpha^4=-1 \} $
+
+Pero se que,
+\begin{align*}
+    a^{64} = (a^{4})^{16} = (-1)^{16} = 1
+\end{align*}
+Luego si $ a^{4} = -1 \implies a \in G_{64} $
+
+Y los $ \alpha $ tales que $ \alpha^4 = -1 $ son:
+\begin{itemize}
+    \item $ \alpha_0 = e^{\frac{1}{4}\pi i} $
+    \item $ \alpha_1 = e^{\frac{3}{4}\pi i} $
+    \item $ \alpha_2 = e^{\frac{5}{4}\pi i} $
+    \item $ \alpha_3 = e^{\frac{7}{4}\pi i} $
+\end{itemize}
+Y cada uno de ellos tiene $ mult(\alpha_i, f) = 2$
+
+\subsection{Ejercicio 21}
+
+Para este ejercicio se puede usar la regla de la división de Ruffini, 
+\href{https://calculadorasonline.com/calculadora-de-division-sintetica-regla-de-ruffini-online/}{Calculadora de Ruffini}
+\subsubsection{Pregunta i}
+Probado usando Ruffini
+
+\subsubsection{Pregunta ii}
+Usando ruffini queda resto igual a $ a+2 $, luego f es divisible por $(x-1)^3 \iff a+2 = 0 \iff a = -2$
+
+\subsection{Ejercicio 22}
+
+Busco $a$ tales que
+\begin{itemize}
+    \item $ f(1) = 0 $
+    \item $ f'(1) = 0 $
+    \item $ f''(1) \neq 0 $
+\end{itemize}
+Luego,
+\begin{align*}
+    f(1) &= 1-a-3+2+3a-2a = 0; \forall a \in \mathbb{C} \implies mult(1, f) \geq 1 \\
+    f'(x) &= 4x^3 - 3ax^2  -6x + 2 + 3a \\
+    f'(1) &= 4-3a+6+2+3a = 0; \forall a \in \mathbb{C} \implies mult(1, f) \geq 2 \\
+    f''(x) &= 12x^2 - 6ax + 6 \\
+    f''(1) &= 12-6a-6 = 12-6a
+\end{align*}
+Luego $f(1) \neq 0 \iff 12-6a \neq 0 \iff 12 = 6a \iff a = 2 $
+
+Rta.: 1 es raíz doble de f para $ a = 2 $
+
+\subsection{Ejercicio 23}
+
+f tiene raíces simples $ \iff \forall a \in \mathbb{C}: f(a) = 0 \implies f'(a) \neq 0 $
+
+Si defino $ f_n = \sum_{k = 0}^{n}\frac{x^k}{k!} $
+
+Luego $ f' = \sum_{k = 1}^{n}\frac{kx^{k-1}}{k!} = \sum_{k = 0}^{n-1}\frac{x^{k-1}}{(k-1)!} = f_{n-1} $
+
+Ahora supongo $ f_n(a) = 0 $ y quiero ver que $ f_{n-1}(a) \neq 0 $
+
+Pero, $ f_{n-1}(a) = f_n(a) - \frac{\alpha^n}{n!} = 0 - \frac{\alpha^n}{n!} \neq 0; \forall \alpha \neq 0 $
+
+Y si $ \alpha = 0 \implies f_n(0) = 1 \neq 0 \implies x = 0 $ no es raíz de $ f_n $ como se quería probar.
+
+\subsection{Ejercicio 24}
+
+Demostración usando inducción
+
+Defino $ p(n): f_n(i) = 0 \wedge f'_n(i) = 0 \wedge f''_n(i) \neq 0 $
+
+\textbf{Caso base n = 1}
+\begin{align*}
+    f_1(i) = 1-2+1 = 0 \\
+    f'_1(x) = 4x^3+4x \\
+    f'_1(i) = -4i + 4i = 0 \\
+    f''_1(x) = 12x^2 + 4 \\
+    f''_1(i) = -12+4 \neq 0 \\
+\end{align*}
+Luego $ p(1) $ es verdadero.
+
+\textbf{Paso inductivo}
+
+Dado $ h \geq 1 $ quiero probar que $ p(h) \implies p(h+1) $
+
+HI: $ f_h(i) = 0 \wedge f'_h(i) = 0 \wedge f''_h(i) \neq 0 $
+
+Qpq: $ f_{h+1}(i) = 0 \wedge f'_{h+1}(i) = 0 \wedge f''_{h+1}(i) \neq 0 $
+
+Pero,
+\begin{align*}
+    &f_{h+1} = (x-i)(f_h + f'_h) \implies f_{h+1}(i) = (i-i)(f_h(i) + f'_h(i)) = 0 \\
+    &f'_{h+1} = (f_h + f'_h) + (x-i)(f'_h + f''_h) \implies f'_{h+1}(i) = 0 + (i-i)(f'_h + f''_h) = 0 \\
+    &f''_{h+1} = f'_h + f''_h + f'_h + f''_h + (x-i)(f'_h + f''_h) \implies f''_{h+1}(i) = 0 + f''_h + 0 + f''_h + 0 = 2f''_h \neq 0
+\end{align*}
+Luego $ p(h) \implies p(h+1); \forall h \geq 1 $
+
+Por lo tanto $ p(n) $ es verdadero, $ \forall n \in \mathbb{N} $
+
+\subsection{Ejercicio 25}
+TODO
+
+\subsection{Ejercicio 26}
+TODO
 
 \end{document}
