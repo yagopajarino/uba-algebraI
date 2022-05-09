@@ -835,4 +835,448 @@ TODO
 \subsection{Ejercicio 26}
 TODO
 
+\subsection{Ejercicio 27}
+Rdo. raíces en $ \mathbb{Q}[x] $: Sea $ f \in \mathbb{Z}[x]: \frac{c}{d} $ es raíz de $ f \iff c | a_n \wedge d|a_0 $ con $ c \mathbb{Z}; d \in \mathbb{N}   $
+
+\subsubsection{Pregunta i}
+Usando el rdo, busco posibles candidatos:
+\begin{align*}
+    &c \in Div(-1) = \{ \pm 1 \} \\
+    &d \in Div_+(2) = \{ 1,2 \} \\
+    \implies &\frac{c}{d} \in \{ \pm 1; \pm \frac{1}{2} \}
+\end{align*}
+Evalúo en cada uno de los posibles candidatos y llego a que los unicos a que cumplen $ f(a) = 0 $ son
+\begin{itemize}
+    \item $ a = \frac{1}{2} $
+    \item $ a = -1 $
+\end{itemize}
+\subsubsection{Pregunta ii}
+
+El criterio de Gauss para encontrar raíces enteras, solo funciona con $ f \in \mathbb{Z}[x] $
+
+Luego tengo que transformar el polinomio en $ \mathbb{Q} $ a uno en $ \mathbb{Z} $,
+\begin{align*}
+    f &= x^5 - \frac{1}{2}x^4 - 2x^3 + \frac{1}{2}x^2 - \frac{7}{2}x - 3 \\
+    2f = h &= 2x^5 - x^4 - 4x^3 + x^2 - 7x - 3 \\
+\end{align*}
+Así, $ \frac{c}{d} $ es raíz de h $ \iff \begin{cases}
+    c|-6 \implies c \in \{ \pm 1, \pm 2, \pm 3, \pm 6 \} \\
+    d|2 \implies d \in \{ 1,2 \}
+\end{cases} $
+
+Evaluando en los candidatos hallados, encuentro que las raíces racionales de f son: $ \{ 2, -\frac{3}{2} \} $
+
+\subsubsection{Pregunta iii}
+Usando el criterio de Gauss, 
+\begin{align*}
+    f(\frac{c}{d}) = 0 \iff \begin{cases}
+        c|-2 \implies c \in \{ \pm 1, \pm 2 \} \\
+        d|1 \implies d = 1
+    \end{cases}
+\end{align*}
+Entonces las posibles raíces enteras de f son $ \{ \pm 1, \pm 2 \} $
+
+Evaluando en los cuatro posibles candidatos se llega a que ninguna anula f. Luego f no tiene raíces enteras.
+
+\subsection{Ejercicio 28}
+\subsubsection{PRegunta i}
+$ f = x^2 +6x - 2 $
+
+Usando la resolvente cuadrática, $ x = \frac{-6 \pm w }{2} $ con $ w^2 = 36-4.-2 = 44 $
+
+Luego, \\
+$ x_1 = -3 + \sqrt[]{11} $ \\
+$ x_2 = -3 - \sqrt[]{11} $ 
+
+Entonces,
+\begin{align*}
+    f &= x^2 + 6x - 2 \text{ es la factorización en } \mathbb{Q}[x] \text{ pues es de grado 2 son raíces en } \mathbb{Q} \\
+    f &= (x-(3+\sqrt[]{11})) \cdot (x-(3-\sqrt[]{11})) \text{ es la factorización en } \mathbb{R}[x]; \mathbb{C}[x] \text{ pues los factores son polinomios irred de gr 1} \\
+\end{align*}
+\subsubsection{Pregunta ii}
+$ f = x^2 + x - 6 $
+
+Usando la resolvente, $ x = \frac{-1 \pm w}{2} $ con $ w^2 = 1-4.-6 = 25 $
+
+Luego, \\
+$ x_1 = \frac{-1+5}{2} = 2 $ \\
+$ x_2 = \frac{-1-5}{2} = -3 $ 
+
+Entonces,
+\begin{align*}
+    f = (x-2)(x-3) \text{ es la factorización en } \mathbb{Q}[x]; \mathbb{R}[x]; \mathbb{C}[x]
+\end{align*}
+
+\subsubsection{Pregunta iii}
+$ f = x^2 - 2x + 10 $
+
+Usando la resolvente, $ x = \frac{2 \pm w}{2} $ con $ w^2 = 4-4.1.10 = -36 \implies w = 6i$
+
+Luego, \\
+$ x_1 = \frac{2+6i}{2} = 1+3i $ \\
+$ x_2 = \frac{2-6i}{2} = 1-3i $ 
+
+Por lo tanto,
+\begin{align*}
+    f &= x^2 - 2x + 10 \text{ es la factorización en } \mathbb{Q}[x]; \mathbb{R}[x] \\
+    f &= (x-(1+3i))\cdot (x-(1-3i)) \text{ es la factorización en } \mathbb{C}[x]
+\end{align*}
+
+\subsection{Ejercicio 29}
+\subsubsection{Pregunta i}
+
+$ f = x^2 + (1+2i)x + 2i $
+
+Usando la resolvente, $ x = \frac{-(1+2i) \pm w}{2} $ con $w$ tal que,
+\begin{align*}
+    w^2 &= (1+2i)^2 - 4.1.2i \\
+    w^2 &= (1+2i)(1+2i) - 8i \\
+    w^2 &= 1+2i+2i-4 - 8i \\
+    w^2 &= -3-4i
+\end{align*}
+Luego busco los $ w = a+bi $ tales que $ w^2 = -3-4i $
+
+Pero $ w^2 = (a+bi) \cdot (a+bi) = a^2 - b^2 + 2abi $ y \\
+$ |w^2| = |-3-4i| \iff |w|^2 = 5 \iff a^2 + b^2 = 5$
+
+Usando la igualdad de números complejos,
+\begin{align*}
+    w^2 = -3-4i \iff \begin{cases}
+        a^2 - b^2 = -3 \\
+        2ab = -4 \\
+        a^2 + b^2 = 5
+    \end{cases}
+\end{align*}
+Luego (1) + (3) $ \implies 2a^2 = 2 \iff a^2 = 1 \iff a = \pm 1 $ \\
+Luego (3) - (1) $ \implies 2b^2 = 8 \iff b^2 = 4 \iff b = \pm 2 $ \\
+
+Usando (2): $ w_1 = 1-2i; w_2 = -1+2i $
+
+Con los w hallados, busco los x;
+\begin{align*}
+    x_1 = \frac{-1-2i + 1 - 2i}{2} = -2i \\
+    x_2 = \frac{-1-2i - 1 + 2i}{2} = -1 \\
+\end{align*}
+Luego $ f = (x+2i)(x+1) $ es la factorización en $ \mathbb{C}[x] $
+
+\subsubsection{Pregunta ii}
+$ f = x^8 - 1 $
+
+Luego busco los $ \alpha \in \mathbb{C}: f(\alpha) = 0 \iff \alpha^8 = 1 \implies \alpha \in G_8 $
+
+Y se que el grupo $ G_8 = \{ c \in \mathbb{C}: c = e^{\frac{2k\pi i}{8}}; 0 \leq k \leq 7 \} $
+
+Por lo tanto, $ f = \prod_{k = 0}^{7}(x-e^{\frac{2k \pi i}{8}}) $ es la factorización en $ \mathbb{C}[x] $
+
+\subsubsection{Pregunta iii}
+$ f = x^6 - (2-2i)^{12} $
+
+Idem ejercicio anterior, busco los $ \alpha \in \mathbb{C}: f(\alpha) = 0 \iff a^6 = (2-2i)^{12} $
+
+Ahora voy a usar la forma polar para hallar los $ \alpha $ que cumplen lo pedido.
+
+Defino $ \alpha = |\alpha| \cdot e^{\theta i} \implies \alpha^6 = |\alpha|^6 \cdot e^{6\theta i} $
+
+Además, $ 2-2i = |2-2i| \cdot e^{\frac{7}{4}\pi i} = \sqrt[]{8} \cdot e^{\frac{7}{4}\pi i} $
+
+Luego $ (2-2i)^{12} = (\sqrt[]{8})^{12} \cdot e^{12\frac{7}{4}\pi i} = 262144 \cdot e^{21\pi i} $
+
+Por lo tanto usando la igualdad de números complejos,
+\begin{align*}
+    a^6 = (2-2i)^{12} \iff \begin{cases}
+        |\alpha|^6 = 262144 \implies |\alpha| = 8 \\
+        6\theta = \pi + 2k \pi \implies \theta = \frac{\pi +2k \pi}{6}
+    \end{cases}
+\end{align*}
+Luego,
+\begin{align*}
+    0 &\leq \theta < 2\pi \\
+    0 &\leq \frac{\pi +2k \pi}{6} < 2\pi \\
+    0 &\leq 2k < 12 \\
+    0 &\leq k < 6 \\
+\end{align*}
+Por lo tanto,
+$ f = \prod_{k = 0}^{5}(x-8\cdot e^{\frac{(1+2k)\pi i}{6}}) $ es la factorización en $ \mathbb{C}[x] $
+
+\subsection{Ejercicio 30}
+
+\subsubsection{Pregunta i}
+$ f = x^6 - 9 $
+
+Veo que $ x^6 = (x^3)^2 $ y $ 9 = 3^2 $ por lo tanto, $ x^6 - 9 $ es diferencia de cuadrados.
+
+Así, $ f = (x^3 - 3 (x^3 + 3)) $ es la factorización en $ \mathbb{Q}[x] $ pues los factores no tienen raíces en $ \mathbb{Q} $
+
+Ahora defino $ g = x^3 - 3 $ y $ h = x^3 + 3 $
+
+Busco raíces de g,
+\begin{align*}
+    g(x) = 0 &\iff x^3 = 3 \\
+    &\iff x = \sqrt[3]{3} \cdot e^{\frac{2k\pi i}{3}}; 0\leq k \leq 2 \\
+\end{align*}
+Luego las raíces de g son,
+\begin{itemize}
+    \item $ x_1 = \sqrt[3]{3} $
+    \item $ x_2 = -\frac{\sqrt[3]{3}}{2} + \frac{\sqrt[6]{243}}{2}i $
+    \item $ x_3 = -\frac{\sqrt[3]{3}}{2} - \frac{\sqrt[6]{243}}{2}i $
+\end{itemize}
+
+Ahora busco raíces de h,
+\begin{align*}
+    h(x) = 0 \iff x^3 = -3 
+\end{align*}
+Defino $ \beta = |\beta|\cdot e^{\theta i} \implies \beta^3 = |\beta|^3 \cdot e^{3\theta i} $
+
+Y se que $ -3 = 3\cdot e^{\pi i} $
+
+Usando la igualdad de números complejos,
+$ \beta^3 = -3 \iff \begin{cases}
+    |\beta|^3 = 3 \implies |\beta| = \sqrt[3]{3} \\
+    3\theta = \pi + 2k\pi \implies \theta = \frac{\pi +2k\pi}{3}; 0\leq k \leq 2
+\end{cases} $
+
+Luego las raíces de h son,
+\begin{itemize}
+    \item $ x_1 = \sqrt[3]{3}\cdot e^{\frac{1}{3}\pi i} = \frac{\sqrt[3]{3} + \sqrt[6]{243}i}{2} $
+    \item $ x_2 = \sqrt[3]{3}\cdot e^{\pi i} = -\sqrt[3]{3} $
+    \item $ x_3 = \sqrt[3]{3}\cdot e^{\frac{1}{3}\pi i} = \frac{\sqrt[3]{3} - \sqrt[6]{243}i}{2} $
+\end{itemize}
+
+Luego queda armar la factorización del polinomio, con todas las raíces halladas. $\square$
+
+\subsubsection{Pregunta ii}
+
+\textbf{En $ \mathbb{Q}[x] $}
+
+Se ve facíl que no tine raíces en $\mathbb{Q}$. Pero el hecho de que sea un polinomio de grado 4 sin raíces, no quiere decir que no
+sea irreducible en $ \mathbb{Q} $ ya que podría ser producto de dos polinomios de grado 2.
+
+Luego,
+\begin{align*}
+    x^4 + 3 &= (x^2 + ax + b)(x^2 + cx + d) \\
+    &= x^4 + (c+a)x^3 + (b+d+ac)x^2 + (ad+cb) \\
+\end{align*}
+Por iguldad de polinomios, $ \begin{cases}
+    1=1 \\
+    0 = a+c \\
+    0 = b+d+ac \\
+    1 = bd
+\end{cases} $
+
+Con un poco de manipulación del sistema, se llega a que no existen soluciones $ a,b,c,d $ que cumplan todas las restricciones.
+
+Luego f es irreducible en $ \mathbb{Q}[x] $
+
+\textbf{En $ \mathbb{C}[x] $}
+
+Busco los $ \alpha \in \mathbb{C}: a^4 = -3 $
+
+Los $ \alpha $ que lo cumplen son:
+\begin{itemize}
+    \item $ \alpha_1 = \sqrt[4]{3} $
+    \item $ \alpha_2 = -\sqrt[4]{3} $
+    \item $ \alpha_3 = \sqrt[4]{3}i $
+    \item $ \alpha_4 = -\sqrt[4]{3}i $
+\end{itemize}
+Luego, $ f = (x-\sqrt[4]{3})(x+\sqrt[4]{3})(x-\sqrt[4]{3}i)(x+\sqrt[4]{3}i) $ es la factorización de f en $ \mathbb{C}[x] $
+
+\textbf{En $ \mathbb{R}[x] $}
+
+Agrupo los conjugados de las raíces complejas.
+
+Luego, $ f = (x-\sqrt[4]{3})(x+\sqrt[4]{3})(x^2 + \sqrt[]{3}) $ es la factorización de f en $ \mathbb{R}[x] $
+
+\subsubsection{Pregunta iii}
+
+$ f = x^4 - x^3 + x^2 - 3x - 6 $
+
+\textbf{En $ \mathbb{Q}[x] $}
+
+Usando el criterio de Gauss, obtengo candidatos en $ \{ \pm 1, \pm 2, \pm 3, \pm 6 \} $
+
+Evaluando, obtengo que $ x = -1 $ y $ x = 2 $ son raíces de f.
+
+Luego, $ f = (x+1)(x-2)(x^2+3) $ es la factorización en $ \mathbb{Q}[x] $
+
+\textbf{En $ \mathbb{R}[x] $}
+
+Dado que $(x^2+3)$ no tiene raíces reales, $ f = (x+1)(x-2)(x^2+3) $ es la factorización en $ \mathbb{R}[x] $
+
+\textbf{En $ \mathbb{C}[x] $}
+
+Busco las raíces complejas de $ (x^2+3) $,
+
+Luego, $ f = (x+1)(x-2)(x-\sqrt[]{3}i)(x+\sqrt[]{3}i) $ es la factorización en $ \mathbb{C}[x] $
+
+\subsection{Ejercicio 31}
+TODO
+
+\subsection{Ejercicio 32}
+Quiero usar la suma geométrica, por lo que separo en casos $ a = 1 $ y $ a \neq 1 $
+
+$ a = 1 \implies f(1) = n \neq 0 \implies a = 1 $ no es raíz de f
+
+$ a\neq 1 \implies f(a) = \sum_{k=0}^{n}a^k = \frac{a^{k+1} - 1}{a-1} = 0 \iff a^{n+1} = 1 \iff a \in G_{n+1} - \{ 1 \}$
+
+Luego $ \#(G_{n+1} - \{-1\}) = n+1-1 = n \implies $ f tiene n raíces $ \implies $ todas las raíces deben ser simples, como se quería probar.
+
+\subsection{Ejercicio 33}
+
+\subsubsection{Pregunta i}
+
+Rdo.: Sea $ a+b\sqrt[]{d}; a,b,c \in \mathbb{Q}; \sqrt[]{d} \not \in \mathbb{Q}; b \neq 0; d > 0 \implies (x-(a+b\sqrt[]{d}))(x-(a-b\sqrt[]{d})) | f $ 
+
+Luego dado que $ 2-\sqrt[]{3} $ es raíz, por el rdo, $ 2+\sqrt[]{3} $ también los es $ \implies (x-(2+\sqrt[]{3})) (x-(2-\sqrt[]{3}))|f $
+\begin{align*}
+    (x-(2+\sqrt[]{3})) (x-(2-\sqrt[]{3})) &= x^2 -2x + \sqrt[]{3}x - 2x + 4 - 2\sqrt[]{3} - \sqrt[]{3}x + 2\sqrt[]{3} - 3 \\
+    &= x^2 + (-2+\sqrt[]{3} - 2 + \sqrt[]{3})x + (4-2\sqrt[]{3} + 2\sqrt[]{3} - 3) \\
+    &= x^2 + 4x + 1 \\
+\end{align*}
+Por lo tanto se que $ x^2 + 4x + 1 |f $
+
+Usando el algoritmo de división, $ f = (x^2 + 4x + 1)(x^3-2x+1) $
+
+Sea ahora $ g = x^3-2x+1 $
+
+Busco raíces de g. Veo a simple vista que $ g(1) = 0 \implies x = 1 $ es raíz de g.
+
+Usando Ruffini, llego a que $ g = (x-1)(x^2+x-1) $
+
+Defino $ h = x^2+x-1 $, $ h = 0 \iff x = \frac{-1 \pm \sqrt[]{5}}{2} $
+
+Usando todo los hallado,
+\begin{itemize}
+    \item $ f = (x^2 -4x + 1)(x-1)(x^2 +x -1) $ es la factorización en $ \mathbb{Q}[x] $
+    \item $ f = (x-2-\sqrt[]{3})(x-2+\sqrt[]{3})(x-1)(x-(\frac{-1+\sqrt[]{5}}{2}))(x-(\frac{-1-\sqrt[]{5}}{2})) $ es la factorización en $ \mathbb{R}[x]; \mathbb{C}[x] $
+\end{itemize}
+
+\subsubsection{Pregunta ii}
+
+Se que $ 1+2i $ es raíz $ \iff 1-2i $ es raíz $ \implies (x-(1+2i))(x-(1-2i)) | f $
+
+Luego $ (x-(1+2i))(x-(1-2i)) = x^2 - 2x+5 $
+
+Usando el algoritmo de división obtengo que $ f = (x^2 - 2x+5)(x^3+2x^2-2x+3) $
+
+Defino $ g = x^3+2x^2-2x+3 $
+
+Por el lema de Gauss, las posibles raíces enteras de g son $  \{ \pm 1; \pm 3 \}$
+
+Evaluando, obtengo que $-3$ es raíz de g
+
+Usando ruffini, $ g = (x+3)(x^2-x+1) $
+
+Sea ahora $ h = x^2-x+1 $, busco sus raíces usando la resolvente cuadrática.
+
+$ h(x) = 0 \iff x = \frac{1 \pm \sqrt[]{3}i}{2} $
+
+Luego $ h = (x-(\frac{1 + \sqrt[]{3}i}{2}))(x-(\frac{1 - \sqrt[]{3}i}{2})) $ 
+
+Con todo lo hallado armo las factorizaciones.
+
+\begin{itemize}
+    \item $ f = (x^2-2x+5)(x+3)(x^2-x+1) $ es la factorización en $ \mathbb{Q}[x] $
+    \item $ f = (x^2-2x+5)(x+3)(x^2-x+1) $ es la factorización en $ \mathbb{R}[x] $
+    \item $ f = (x-(1+2i))(x-(1-2i))(x+3)(x-(\frac{1 + \sqrt[]{3}i}{2}))(x-(\frac{1 - \sqrt[]{3}i}{2})) $ es la factorización en $ \mathbb{C}[x] $
+\end{itemize}
+
+\subsubsection{Pregunta iii}
+
+Se que $ a $ es raíz con $ mult(a, f) = n \iff f^n(a) = 0 \wedge f^{n+1}(a) \neq 0 $
+
+Luego busco la multiplicidad de $ \sqrt[]{2}i $ sabiendo que es raíz multiple $ \implies f(a) = 0 \wedge f'(a) = 0 $
+
+\begin{align*}
+    f''(x) &= 30x^4 + 20x^3 + 60x^2 + 24x + 16 \\
+    f''(\sqrt[]{2}i) &= 30(\sqrt[]{2}i)^4 + 20(\sqrt[]{2}i)^3 + 60(\sqrt[]{2}i)^2 + 24(\sqrt[]{2}i) + 16 \\
+    &= 30.4 - 20.\sqrt[]{8}i - 60.2 + 24(\sqrt[]{2}i) + 16 \\
+    &= 120 - 40.\sqrt[]{2}i - 120 + 24(\sqrt[]{2}i) + 16 \\
+    &= - 40.\sqrt[]{2}i + 24(\sqrt[]{2}i) + 16 \neq 0 \implies mult(\sqrt[]{2}i, f) = 2 \\
+\end{align*}
+
+Luego $ (x-\sqrt[]{2}i)(x+\sqrt[]{2}i) | f \implies (x^2+2)^2 | f \implies x^4 + 4x^2 + 4 |f $
+
+Usando ahora el algoritmo de división, $ f = (x^4 + 4x^2 + 4)(x^2+x+1) $
+
+Defino $ g = x^2+x+1 $ y busco sus raíces usando la resolvente cuadrática.
+
+Luego $ g = (x-(\frac{-1+\sqrt[]{3}i}{2}))(x-(\frac{-1-\sqrt[]{3}i}{2})) $
+
+Con lo hallado armo las factorizaciones.
+
+\begin{itemize}
+    \item $ f = (x^2+x+1)(x^2+2)^2 $ es la factorización en $ \mathbb{Q}[x]; \mathbb{R}[x] $
+    \item $ f = (x-(\frac{-1+\sqrt[]{3}i}{2}))(x-(\frac{-1-\sqrt[]{3}i}{2}))(x-\sqrt[]{2}i)^2(x+\sqrt[]{2}i)^2 $ es la factorización en $ \mathbb{C}[x] $
+\end{itemize}
+
+\subsubsection{Pregunta iv}
+
+Se que existe una raíz imaginaria pura, es decir del tipo $ bi $
+
+Luego $ bi $ es raíz de sii,
+\begin{align*}
+    f(bi) = 0 &\iff (bi)^4 + 2(bi)^3 + 3(bi)^2 + 10(bi) - 10 = 0 \\
+    &\iff b^4 - 2b^3i - 3b^2 + 10bi - 10 = 0 \\
+    &\iff b^4 - 3b^2 - 10 + (- 2b^3  + 10b)i  = 0 \\
+    &\iff \begin{cases}
+        b^4 - 3b^2 - 10 = 0 \\
+        - 2b^3  + 10b = 0
+    \end{cases} \\
+\end{align*}
+De la segunda ecuación obtengo que $ b = 0 \vee b = \pm \sqrt[]{5} $
+
+Reemplazando en la primera $ b = 0 \implies 0^4 - 3.0^2 - 10 = -10 \neq 0 \implies b= 0 $ no sirve.
+
+Y reemplazando en la primera $ b = \sqrt[]{5} \implies (\sqrt[]{5})^4 - 3(\sqrt[]{5})^2 - 10 = 0 \implies b = \sqrt[]{5} $ sirve.
+
+Luego $ \pm \sqrt[]{5}i $ son raíces de f $ \iff (x-\sqrt[]{5}i)(x+\sqrt[]{5}i) | f $
+
+Por lo tanto, $ (x-\sqrt[]{5}i)(x+\sqrt[]{5}i) = (x^2+5) | f $
+
+Usando el algoritmo de division, obtngo que $ f = (x^2+5)(x^2+2x-2) $
+
+Defino $ g = x^2+2x-2 $ y busco sus raíces usando la resolvente cuadrática.
+
+Luego $ g = (x-1)(x+3) $
+
+Con lo hallado armo las factorizaciones.
+\begin{itemize}
+    \item $ f = (x^2 + 5)(x-1)(x+3) $ es la factorización en $ \mathbb{Q}[x]; \mathbb{R}[x] $
+    \item $ f = (x-\sqrt[]{5}i)(x+\sqrt[]{5}i)(x-1)(x+3) $ es la factorización en $ \mathbb{C}[x] $
+\end{itemize}
+
+\subsubsection{Pregunta v}
+
+Se que sea g un polinomio, $ g|f \wedge g|x^3+1 \implies g|(f:x^3+1) $, luego busco $ MCD(f, x^3+1) $
+
+Usando el algoritmo de Euclides, $ MCD(f, x^3+1) = x^2-x+1 $
+
+Por lo tanto, se que $ x^2-x+1 | f $
+
+Usando el algoritmo de división, $ f = (x^2-x+1)(x^3-2x^2-5x+10) $
+
+Defino $ h = x^3-2x^2-5x+10 $ y busco sus raíces.
+
+Usando el lema de Gauss obtengo posibles candidatos a raíces enteras: $ \{ \pm 1, \pm 2, \pm 5, \pm 10 \} $
+
+Evaluando en los candidatos obtengo que $ x = 2 $ es raíz de h.
+
+Usando Ruffini, $ h = (x-2)(x^2-5) $
+
+Defino $ k = x^2 - 5 $ y busco sus raíces usando la resolvente cuadrática.
+
+Luego, $ k = (x-\sqrt[]{5})(x+\sqrt[]{5}) $
+
+Defino $ m = x^2-x+1 $ y busco sus raíces usando la resolvente cuadrática.
+
+Luego, $ m = (x-(\frac{1+\sqrt[]{3}i}{2}))(x-(\frac{1-\sqrt[]{3}i}{2})) $
+
+Con todo lo hallado armo las factorizaciones.
+
+\begin{itemize}
+    \item $ f = (x^2-x+1)(x-2)(x^2-5) $ es la factorización en $ \mathbb{Q}[x] $
+    \item $ f = (x^2-x+1)(x-2)(x-\sqrt[]{5})(x+\sqrt[]{5}) $ es la factorización en $ \mathbb{R}[x] $
+    \item $ f = (x-(\frac{1+\sqrt[]{3}i}{2}))(x-(\frac{1-\sqrt[]{3}i}{2}))(x-2)(x-\sqrt[]{5})(x+\sqrt[]{5}) $ es la factorización en $ \mathbb{C}[x] $
+\end{itemize}
+
 \end{document}
