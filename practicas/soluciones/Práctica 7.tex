@@ -1279,4 +1279,191 @@ Con todo lo hallado armo las factorizaciones.
     \item $ f = (x-(\frac{1+\sqrt[]{3}i}{2}))(x-(\frac{1-\sqrt[]{3}i}{2}))(x-2)(x-\sqrt[]{5})(x+\sqrt[]{5}) $ es la factorización en $ \mathbb{C}[x] $
 \end{itemize}
 
+\subsection{Ejercicio 34}
+
+$ a \in \mathbb{Q} $ es raíz doble $ f(a) =  0 \wedge f'(a) = 0 \wedge f''(a) \neq 0 $
+
+Luego,
+\begin{align*}
+    f'(x) = 4x^3 - 3(a+4)x^2 + 2(4a+5)x-(5a+2) \\
+    f''(x) = 12x^2 - 6(a+4)x + 8a + 10
+\end{align*}
+Ahora busco los $ a $ que cumplan lo pedido, evalúo $f$ en $a$,
+\begin{align*}
+    f(a) = 0 &\iff a^4 - (a+4)a^3 + (4a+5)a^2 - (5a+2)a + 2a = 0 \\
+    &\iff a^4 - a^4 - 4a^3 + 4a^3 + 5a^2 - 5a^2 -2a + 2a = 0 \\
+    &\iff 0 = 0 \\
+\end{align*}
+Luego $ f(a) = 0; \forall a \in \mathbb{Q} $
+
+Ahora evalúo $f'$ en $a$,
+\begin{align*}
+    f'(a) = 0 &\iff 4a^3 - 3(a+4)a^2 + 2(4a+5)a-(5a+2) = 0 \\ 
+    &\iff 4a^3 - 3a^3 - 12a^2 + +8a^2 + 10a -5a - 2 = 0 \\ 
+    &\iff a^3 - 4a^2 + 5a - 2 = 0 \\ 
+\end{align*}
+Luego busco las raíces enteras de $ g = a^3 - 4a^2 + 5a - 2 $
+
+Usando el lema de Gauss, los candidatos son: $ \{ \pm 1, \pm 2 \} $
+
+Evaluando obtengo que $1$ es raíz de g. Usando Ruffini obtengo que,
+
+$ g = (a-1)(a^2-3a+2) $
+
+Luego defino $ h = a^2-3a+2 $ y busco sus raíces usando la resolvente cuadrática.
+
+Obtengo que $ h = (a-1)(a-2) $
+
+Por lo tanto, $ g = (a-1)^2(a-2) $
+
+Entonces los únicos valores de $a$ tales que la derivada primera se anula son $ a = 1; a = 2 $
+
+Ahora, para que sean raíces dobles no deben anular la derivada segunda,
+\begin{align*}
+    f''(1) \neq 0 &\iff 12.1^2 - 6(1+4)1 + 8.1 + 10 \neq 0 \\
+    &\iff 12 - 30 + 8 + 10 \neq 0 \\
+    &\iff 0 \neq 0 \\
+\end{align*}
+Luego $ a = 1 $ no cumple lo pedido.
+\begin{align*}
+    f''(2) \neq 0 &\iff 12.2^2 - 6(2+4)2 + 8.2 + 10 \neq 0 \\
+    &\iff 12.4 - 6.6.2 + 8.2 + 10 \neq 0 \\
+    &\iff 48 - 72 + 16 + 10 \neq 0 \\
+    &\iff 2 \neq 0 \\
+\end{align*}
+Luego $ a = 2 $ cumple lo pedido.
+
+Entonces, $ f = x^4 - 6x^3 + 13x^2 - 12x + 4 $
+
+Se que $ a = 2 $ es raíz doble $ \iff (x-2)^2 | f \iff (x^2-4x+4) | f $
+
+Usando el algoritmo de división, $ f = (x-2)^2(x^2-2x+1) $
+
+Y se ve que $ x^2-2x+1 $ tiene forma del binomio cuadrático $ (x-1)^2 $
+
+Por lo tanto, $ f = (x-2)^2(x-1)^2 $ es la factorización de $f$ en $ \mathbb{Q}[x]; \mathbb{R}[x]; \mathbb{C}[x] $
+
+\subsection{Ejercicio 35}
+
+Se que $ w \in G_6 $ es raíz de $f$ pero $ w \not \in G_3 $
+
+Luego $ w^6 = 1 \implies (w^2)^3 = 1 \iff w^2 = 1 \implies w=-1 $
+
+Entonces busco $ a \in \mathbb{C}: (x+1)|f $
+\begin{align*}
+    f(-1) = 0 &\iff 1 - 1 -3 -2 +1 +3 +a =0 \\ 
+    &\iff -1 + a =0 \\ 
+    &\iff a = 1 \\ 
+\end{align*}
+
+Luego $ f = x^6 + x^5 - 3x^4 + 2x^3 + x^2 -3x + 1 $
+
+Usando el lema de Gauss y Ruffini obtengo las raíces enteras y la factorización de $f$.
+
+Luego $ f = (x - 1) (x + 1) (x^2 - x + 1) (x^2 + 2 x - 1) $
+
+Usando la resolvente cuadrática,
+
+$ (x^2 - x + 1) = (x-(\frac{1}{2} - \frac{\sqrt[]{3}i}{2}))(x-(-1-\sqrt[]{2})) $
+
+$ (x^2 + 2 x - 1) = (x-(-1-\sqrt[]{2}))(x-(\sqrt[]{2} - 1)) $
+
+Luego,
+\begin{itemize}
+    \item $ f = (x - 1) (x + 1) (x^2 - x + 1) (x^2 + 2 x - 1) $ es la factorización en $ \mathbb{Q}[x] $
+    \item $ f = (x - 1) (x + 1) (x^2 - x + 1) (x-(-1-\sqrt[]{2}))(x-(\sqrt[]{2} - 1)) $ es la factorización en $ \mathbb{R}[x] $
+    \item $ f = (x - 1) (x + 1)(x-(\frac{1}{2} + \frac{\sqrt[]{3}i}{2}))(x-(\frac{1}{2} - \frac{\sqrt[]{3}i}{2}))(x-(-1-\sqrt[]{2}))(x-(\sqrt[]{2} - 1)) $ es la factorización en $ \mathbb{C}[x] $
+\end{itemize}
+
+\subsection{Ejercicio 36}
+
+\subsubsection{Pregunta i}
+
+Por TFA se que $ x^2|(f:f') $ y que $ (x^2+1) | (f:f') $
+
+Luego,
+\begin{align*}
+    &f(0) = 0 \wedge f'(0) = 0 \wedge mult(0,f') = 2 \implies mult(0,f) = 3 \\
+    &f(1) = 0 \wedge f'(1) = 0 \wedge mult(1,f') = 1 \implies mult(1,f) = 2 \\
+    &f(-1) = 0 \wedge f'(-1) = 0 \wedge mult(-1,f') = 1 \implies mult(-1,f) = 2 \\
+\end{align*}
+Por lo tanto para cumplir la primer condición, $ f = x^3(x-1)^2(x+1)^2 $ es el de menor grado que cumple lo pedido.
+
+\subsubsection{Pregunta ii}
+
+\begin{align*}
+    (f:f') &= x^5-5x^4+\frac{25}{4}x^3 \\
+    (f:f') &= x^3(x^2-5x+\frac{25}{4}) \\
+    (f:f') &= x^3(x-\frac{5}{2})^2 \\
+\end{align*}
+Luego $ f = x^4(x-\frac{5}{2})^3 $
+\begin{align*}
+    f(1) = 3 &\iff a.1.(1-\frac{5}{2})^3 = 3 \\
+    &\iff a.(-\frac{3}{2})^3 = 3 \\
+    &\iff a = 3. -\frac{8}{23} = -\frac{8}{9} \\
+\end{align*}
+Luego $ f = -\frac{8}{9}x^3(x-\frac{5}{2})^2 $
+
+\subsubsection{Pregunta iii}
+TODO
+
+\subsubsection{Pregunta iv}
+TODO
+
+\subsection{Ejercicio 37}
+
+Sea $ g = \alpha x^3 + \beta x^2 + \sigma x + \theta  $ un polinomio genérico de grado 3 con raíces $ a, b, c $
+\begin{align*}
+    g&= \alpha((x-a)(x-b)(x-c)) \\
+    &= \alpha((x^2 - bx - ax + ab)(x-c)) \\
+    &= \alpha(x^3 - x^2c - bx^2 + bcx - ax^2 + acx + abx - abc) \\
+    &= \alpha(x^3 + (-a-b-c)x^2 + (bc+ac+ab)x - abc) \\
+    &= \alpha x^3 + \alpha(-a-b-c)x^2 + \alpha(bc+ac+ab)x - \alpha abc \\
+\end{align*}
+Luego,
+\begin{itemize}
+    \item $ -\frac{\beta}{\alpha} = a+b+c $
+    \item $ \frac{\sigma}{\alpha} = bc + ac + ab $
+    \item $ -\frac{\theta}{\alpha} = abc $
+\end{itemize}
+Ahora sea $ f = 2x^3 - 3x^2 + 4x + 1 \implies \alpha = 2; \beta = -3; \sigma = 4; \theta = 1 $ con $ a,b,c $ raíces de f.
+
+\begin{itemize}
+    \item $ a+b+c = \frac{3}{2} $
+    \item $ ab + ac + bc = \frac{4}{2} = 2 $
+    \item $ abc = -\frac{1}{2} $
+\end{itemize}
+
+\subsection{Ejercicio 38}
+
+\subsubsection{Pregunta i}
+Se que tiene una raíz real, luego $ \exists a \in \mathbb{R}: f(a) = 0 $, la busco.
+
+\begin{align*}
+    f(a) = 0 &\iff a^4 - (i+4)a^3 + (8+4i)a^2 -  (2i+24)a + 12 = 0 \\
+    &\iff a^4 - a^3i + 4a^3 + 8a^2 + 4a^2i - 2ai - 24a + 12 = 0 \\
+    &\iff (a^4 + 4a^3 + 8a^2 - 24a + 12) + (- a^3 + 4a^2 - 2a)i  = 0 \\
+    &\iff \begin{cases}
+        a^4 + 4a^3 + 8a^2 - 24a + 12 = 0 \\
+        - a^3 + 4a^2 - 2a = 0
+    \end{cases} \\
+\end{align*}
+Del sistema obtengo que $ a = 2\pm\sqrt[]{2} $ cumplen lo pedido
+
+Luego $ (x-(2+\sqrt[]{2}))(x-(2-\sqrt[]{2})) | f \iff (x^2 - 4x + 2) |f $
+
+Usando el algoritmo de división, $ f = (x^2 - 4x + 2)(x^2 - ix + 6) $
+
+Defino $ g = x^2 -ix + 6 $ y busco sus raíces usando la resolvente cuadrática.
+
+Luego $ g = (x-3i)(x+3i) $
+
+Y por lo tanto, $ f = (x-(2+\sqrt[]{2}))(x-(2-\sqrt[]{2}))(x-3i)(x+3i) $ es la factorización de f en $ \mathbb{C}[x] $
+
+\subsubsection{Pregunta ii}
+TODO
+
+\subsection{Ejercicio 39}
+TODO
+
 \end{document}
