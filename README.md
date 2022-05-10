@@ -14,6 +14,8 @@ Actualización 19/04/2022 | Hice el repo público mientras termino de pasar las 
 
 ## Prácticas
 
+Si estas buscando un ejercicio en particular, primero revisar los [ejercicios faltantes](https://github.com/yagopajarino/uba-algebraI/issues).
+
 * [Práctica 1](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia1.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/soluciones/Pr%C3%A1ctica%201.pdf)
 * [Práctica 2](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia2.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/soluciones/Pr%C3%A1ctica%202.pdf)
 * [Práctica 3](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia3.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/soluciones/Pr%C3%A1ctica%203.pdf)
