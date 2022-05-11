@@ -34,7 +34,12 @@ Si estas buscando un ejercicio en particular, primero revisa los [ejercicios fal
   * [Video ejercicio 2](https://youtu.be/UW067OdYJ9s)
   * [Video ejercicio 3](https://youtu.be/CWYxOHTu9Ls)
   * [Video ejercicio 4](https://youtu.be/Iz9AmBiD9MI)
-* [Parcial 30/11/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/parciales/enunciados/Parc2-2C2021.pdf) 
+* [Parcial 30/11/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/parciales/enunciados/Parc2-2C2021.pdf)
+  * [Solución laTex](https://github.com/yagopajarino/uba-algebraI/blob/main/parciales/soluciones/segundoParcial.pdf)
+  * [Video ejercicio 1](https://youtu.be/EE_pujbQHRk)
+  * [Video ejercicio 2](https://youtu.be/Q8q_jvpKsQw)
+  * [Video ejercicio 3](https://youtu.be/3T9_E0ssgUM)
+  * [Video ejercicio 4](https://youtu.be/Z1DQkTT_HvM)
 
 ## Finales
   
