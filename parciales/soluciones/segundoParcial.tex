@@ -1,0 +1,191 @@
+\input{macrosAlgebra}
+\usepackage{caratula}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+\decimalpoint
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.5em}
+\setcounter{tocdepth}{3} % profundidad de indice
+\setcounter{section}{1} % nro de section
+\renewcommand{\thesubsubsection}{\thesubsection.\Alph{subsubsection}}
+\graphicspath{ {images/} }
+
+% End latex config
+
+\begin{document}
+
+\titulo{Segundo parcial 30/11/2021}
+\fecha{2do cuatrimestre 2021}
+\materia{Álgebra I}
+\integrante{Yago Pajariño}{546/21}{ypajarino@dc.uba.ar}
+
+%Carátula
+\maketitle
+\newpage
+
+%Indice
+\tableofcontents
+\newpage
+
+% Aca empieza lo propio del documento
+\section{Segundo parcial Álgebra I}
+\subsection{Ejercicio 1}
+
+Busco $ (a,b) \in \mathbb{Z}^2: 51a+33b = 21 \wedge 8a \equiv b(49) $
+
+Primero busco soluciones para la ecuación diofántica $ 51a+33b = 21 $
+
+\textbf{1) verificar que existe solución}
+
+Existe solución $ (a,b) \in \mathbb{Z}^2 \iff (51:33) | 21 $
+
+Luego,
+\begin{align*}
+    (51:33) &= (3.17: 3.11) \\
+    &= 3 \\
+\end{align*}
+Como $ 3|21 $ existe solución a la ecuación.
+
+\textbf{2) coprimizar}
+\begin{align*}
+    51a+33b = 21 &\iff 3.17.a + 3.11.b = 3.7 \\
+    &\iff 17a + 11b = 7 \\
+\end{align*}
+
+\textbf{3) busco solución particular}
+
+Por propiedades del MCD, se que existen $ (s,t) \in \mathbb{Z}^2: (17:11) = s.17 + t.11 $
+
+Dado que 17 y 11 son ambos primos, en particular $ (17:11) = 1 \implies \exists (s,t) \in \mathbb{Z}^2: 1 = s.17 + t.11 $
+
+A ojo veo que $ 2.17 + (-3).11 = 34 - 33 = 1 $
+
+Por lo tanto, $ 1 = 2.17 + (-3).11 \iff 7 = 14.17 + (-21).11 $
+
+Así encuentro que $ S_p = (14,-21) $ es solución particular de la ecuación.
+
+\textbf{4) busco solución del homogeneo asociado}
+\begin{align*}
+    17a + 11b = 0 \iff a = 11k \wedge b = -17k; \forall k \in \mathbb{Z}
+\end{align*}
+Luego $ S_0 = (11k, -17k) $ es solución al homogeneo asociado.
+
+\textbf{5) busco todas las soluciones}
+
+Con lo hallado obtengo que,
+
+\begin{align*}
+    S &= S_0 + S_p \\ 
+    &= (11k; -17k) + (14; -21) \\ 
+    &= (11k+14; -17k-21); k \in \mathbb{Z}
+\end{align*}
+Y así, $S$ es el conjunto de soluciones a la ecuación diofántica.
+
+\textbf{6) verifico el conjunto solución}
+\begin{align*}
+    51a+33b = 21 &\iff 51(11k+14) + 33(-17k-21) = 21 \\ 
+    &\iff 561k + 714 - 561k - 693 = 21 \\
+    &\iff 714 - 693 = 21 \\
+    &\iff 21 = 21 \\
+\end{align*}
+Como se quería verificar.
+
+Ahora utilizo la otra restricción. Sabiendo que $ (a,b) = (11k+14; -17k-21) $ son soluciones de la ecuación diofántica, busco los $(a,b) $ tales que $ 8a \equiv b(49) $
+\begin{align*}
+    8a \equiv b(49) &\iff 8(11k+14) \equiv -17k-21(49) \\
+    &\iff 88k + 112 \equiv -17k-21(49) \\
+    &\iff 88k + 17k \equiv -21-112(49) \\
+    &\iff 105k \equiv -133(49) \\
+    &\iff 7k \equiv 14(49) \\
+    &\iff k \equiv 2(7) \\
+\end{align*}
+Entonces para que se cumpla la segunda restricción, necesito que $ k = 7h + 2; h \in \mathbb{Z} $ 
+
+Por lo tanto si $ k = 7h + 2 $ ,
+\begin{align*}
+    (a,b) &= (11k+14; -17k-21) \\
+    &= (11(7h + 2)+14; -17(7h + 2)-21) \\
+    &= (77h + 36; -119h - 55) \\
+\end{align*}
+Rta.: $ \{ (a,b) \in \mathbb{Z}^2 / a = 77h+36 \wedge b = -119h-55 \wedge h \in \mathbb{Z} \} $
+
+\subsection{Ejercicio 2}
+
+Busco el resto de dividir a $ 8^{3^n-2} $ por $20$
+
+Usando congruencia, $ 8^{3^n-2} \equiv a (20) $
+
+Por el teorema chino del resto, se que existe una única solución mod 20 que satisface $ \begin{cases}
+    8^{3^n-2} = x (4) \\
+    8^{3^n-2} = y (5) \\
+\end{cases} $ pues $(4:5) = 1$
+
+\textbf{Busco x}
+
+Se que $ 8 \equiv 0(4) $ pero,
+\begin{align*}
+    8^{3^n-2} \equiv 0 (4) \iff 3^n-2 \geq 1
+\end{align*}
+Y $ 3^n-2 \geq 1; \forall n \in \mathbb{N} $
+
+Luego $ x = 0 $
+
+\textbf{Busco y}
+
+Por el Pequeño Teorema de Fermat, dados $ a \in \mathbb{Z}; p \text{ primo }; a \perp p \implies a^{p-1} \equiv 1(p) $
+
+En particular, $ 8\perp 5 \wedge 5 $ primo $ \implies 8^4 \equiv 1(5) $
+
+Usando el algoritmo de división se que, $ 3^n-2 = 4j + r_4(3^n-2); j \in \mathbb{Z} $
+
+Por lo tanto,
+\begin{align*}
+    8^{3^n-2} &= 8^{4j + r_4(3^n-2)} \\
+    &= (8^4)^j \cdot 8^{r_4(3^n-2)} \\
+    &\equiv 8^{r_4(3^n-2)} (5) \\
+\end{align*}
+Luego, $ r_4(3^n-2) \implies 3^n-2 \equiv (-1)^n + 2 (4) $
+
+\begin{itemize}
+    \item n par $ \implies r_4(3^n-2) = 3 $
+    \item n impar $ \implies r_4(3^n-2) = 1 $
+\end{itemize}
+Y por lo tanto
+\begin{itemize}
+    \item n par $ \implies 8^{r_4(3^n-2)} \equiv 8^3 \equiv 3^3 \equiv 2 (5) $
+    \item n impar $ \implies 8^{r_4(3^n-2)} \equiv 8^1 \equiv 3 (5) $
+\end{itemize}
+
+Así, $ y = \begin{cases}
+    2 & n \equiv 0 (2) \\
+    3 & n \equiv 1 (2) \\
+\end{cases} $
+
+Volviendo al sistema de ecuaciones con $x$ e $y$ hallados me quedan dos sistemas,:
+
+$ S_1 = \begin{cases}
+    8^{3^n-2} \equiv 0 (4) \\
+    8^{3^n-2} \equiv 2 (5)
+\end{cases} n \equiv 0(2)$
+
+$ S_2 = \begin{cases}
+    8^{3^n-2} \equiv 0 (4) \\
+    8^{3^n-2} \equiv 3 (5)
+\end{cases} n \equiv 1(2)$
+
+Por TCR ya enunciado existe una única solución de $S_1$. A ojo veo que $ 8^{3^n-2} \equiv 12(20) $ es solución de $S_1$
+
+Por TCR ya enunciado existe una única solución de $S_2$. A ojo veo que $ 8^{3^n-2} \equiv 8(20) $ es solución de $S_2$
+
+Rta.: $ r_{20}(8^{3^n-2}) = \begin{cases}
+    12 & n \equiv 0(2) \\
+    8 & n \equiv 1(2)
+\end{cases} $
+
+\end{document}
