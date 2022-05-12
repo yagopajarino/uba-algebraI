@@ -1,0 +1,245 @@
+\input{macrosAlgebra}
+\usepackage{caratula}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+\decimalpoint
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.5em}
+\setcounter{tocdepth}{3} % profundidad de indice
+\setcounter{section}{0} % nro de section
+\renewcommand{\thesubsubsection}{\thesubsection.\Alph{subsubsection}}
+\graphicspath{ {images/} }
+
+% End latex config
+
+\begin{document}
+
+\titulo{Final 14/05/2021}
+\fecha{2do cuatrimestre 2021}
+\materia{Álgebra I}
+\integrante{Yago Pajariño}{546/21}{ypajarino@dc.uba.ar}
+
+%Carátula
+\maketitle
+\newpage
+
+%Indice
+\tableofcontents
+\newpage
+
+% Aca empieza lo propio del documento
+\section{Final 14/05/2021}
+
+\subsection{Ejercicio 1}
+
+Defino $ p(n): \frac{4^n}{n+1} < \binom{2n}{n}; \forall n \geq 2 $
+
+\textbf{Caso base n = 2}
+
+\begin{align*}
+    p(2)&: \frac{4^2}{2+1} < \binom{2.2}{2} \\
+    p(2)&: \frac{16}{3} < \binom{4}{2} \\
+    p(2)&: \frac{16}{3} < \frac{4!}{2!2!} \\
+    p(2)&: \frac{16}{3} < 6 \\
+\end{align*}
+$ p(2) $ es verdadero.
+
+\textbf{Paso inductivo}
+
+Dado $ h \geq 2 $, quiero probar que $ p(h) \implies p(h+1) $
+
+HI: $ \frac{4^h}{h+1} < \binom{2h}{h} \implies \frac{4^h}{h+2} < \binom{2h}{h}\frac{h+1}{h+2} $
+
+QpQ: $ \frac{4^{h+1}}{h+2} < \binom{2(h+1)}{h+1} $
+
+Pero,
+\begin{align*}
+    \frac{4^{h+1}}{h+2} &= \frac{4^h}{h+2} \cdot 4 \\
+    &\leq \binom{2h}{h}\frac{h+1}{h+2} \cdot 4 \\
+\end{align*}
+
+Luego alcanza probar que,
+\begin{align*}
+    \binom{2h}{h}\frac{h+1}{h+2} \cdot 4 &< \binom{2(h+1)}{h+1} \\
+    \frac{(2h)!}{h!h!} \cdot \frac{h+1}{h+2} \cdot 4 &< \frac{(2h+2)!}{(h+1)!(h+1)!} \\
+    \frac{(2h)!(h+1)4}{h!h!(h+2)} &< \frac{(2h+2)(2h+1)(2h)!}{(h+1)h!(h+1)h!} \\
+    \frac{(h+1)4}{h+2} &< \frac{(2h+2)(2h+1)}{(h+1)^2} \\
+    (h+1)^3 \cdot 4 &< 2(h+1)(2h+1)(h+2) \\
+    (h+1)^2 \cdot \frac{4}{2} &< (2h+1)(h+2) \\
+    2h^2 + 4h + 2 &< 2h^2 + 4h + h + 2 \\
+    0 &< h \\
+\end{align*}
+Dado que $ h \geq 2 $ qued probado el paso inductivo.
+
+Luego $ p(n) $ es verdadero, $ \forall n \in \mathbb{N}_{\geq 2}$
+
+\subsection{Ejercicio 2}
+
+Tengo el conjunto $ X = P(\{ 1,2,3,...,12 \}) $. Se define $R$ relación tal que $ ARB \iff \#\text{pares}(A) = \#\text{pares}(B) $
+
+\subsubsection{Pregunta i}
+
+Voy a probar cada propiedad de la relación de equivalencia por separado.
+
+\textbf{Reflexividad}
+
+Por definición de reflexividad, $ R $ es reflexiva $ \iff \forall A \in X: ARA $
+
+Por definición de la relación, $ ARA \iff \#\text{pares}(A) = \#\text{pares}(A) $
+
+Dado que $ A = A $, en particular tienen los mismos elementos pares, luego $ R $ es reflexiva.
+
+\textbf{Simetría}
+
+Por definición de simetría, $ R $ es simétrica $ \iff \forall (A,B) \in X^2: ARB \implies BRA $
+
+Por definición de la relación, $ ARB \iff \#\text{pares}(A) = \#\text{pares}(B) $
+
+Y quiero probar que $ BRA \iff \#\text{pares}(B) = \#\text{pares}(A) $
+
+Pero,
+\begin{align*}
+    ARB &\iff \#\text{pares}(A) = \#\text{pares}(B) \\
+    &\iff \#\text{pares}(B) = \#\text{pares}(A) \\
+    &\iff BRA \\
+\end{align*}
+Luego $R$ es simétrica.
+
+\textbf{Transitividad}
+
+Por definición de transitividad, $ R $ es transitiva $ \iff \forall (A,B,C) \in X^3: (ARB \wedge BRC) \implies ARC $
+
+Por definición de la relación, 
+\begin{align*}
+    ARB &\iff \#\text{pares}(A) = \#\text{pares}(B) \\
+    BRC &\iff \#\text{pares}(B) = \#\text{pares}(C) \\
+\end{align*}
+Luego,
+\begin{align*}
+    ARB \wedge BRC &\iff \#\text{pares}(A) = \#\text{pares}(B) \wedge \#\text{pares}(B) = \#\text{pares}(C) \\
+    &\implies \#\text{pares}(A) = \#\text{pares}(C) \\
+    &\implies ARC
+\end{align*}
+Luego $R$ es transitiva.
+
+Dado que $R$ es reflexiva, simétrica y transitiva; $R$ es una relación de equivalencia.
+
+\subsubsection{Pregunta ii}
+
+Veo que por definición de la relación, lo que determina que un conjunto pertenezca a una clase de equivalencia es la cantidad de pares que contenga.
+
+Luego existen 7 clases de equivalencia: clases con elementos que contienen 0, 1, 2, 3, 4, 5, 6 pares.
+
+Luego la clase del $ \#\{ \text{3 pares} \} = \binom{6}{3} \cdot 2^6 = 1280 $ tiene más de 1000 elementos como se quería probar.
+
+\subsection{Ejercicio 3}
+
+Defino $ d = (a^{60} + 6:560) $ y se que $ 560 = 7.2^4.5 $
+
+Luego la factorización en primos de $d$ será:
+
+$ d = 2^i \cdot 5^j \cdot 7^k $ con $ \begin{cases}
+    0\leq i \leq 4 \\
+    0\leq j \leq 1 \\
+    0\leq k \leq 1 \\
+\end{cases} $
+
+Estudio cada primo en particular.
+
+\textbf{Caso p = 5}
+\begin{align*}
+    5 | a^{60} + 6 &\iff a^{60} + 6 \equiv 0 (5) \\
+    &\iff a^{60} \equiv 4 (5) \\
+    &\iff \begin{cases}
+        0 \equiv 4(5) & 5|a \\
+        1 \equiv 4(5) & 5 \not | a \text{ por PTF} \\
+    \end{cases}
+\end{align*}
+En ambos casos se llega a un absurdo, luego $ j = 0 $
+
+\textbf{Caso p = 7}
+\begin{align*}
+    7 | a^{60} + 6 &\iff a^{60} + 6 \equiv 0 (7) \\
+    &\iff a^{60} \equiv 1 (7) \\
+    &\iff \begin{cases}
+        0 \equiv 1(7) & 7|a \\
+        1 \equiv 1(7) & 7\not |a \text{ por PTF} \\
+    \end{cases} \\
+\end{align*}
+Luego $ k = 0 \vee k = 1 $
+
+\textbf{Caso p = 2}
+
+Si $ a \equiv 0(2) \iff a = 2k $,
+\begin{align*}
+    a^{60} + 6 &\equiv 0^{60} + 6 \equiv 0 (2) \\
+    a^{60} + 6 &\equiv (2k)^{2^{30}} + 6 \equiv 2 (4) \\
+\end{align*}
+Y si no es divisible por 4 tampoco lo es por 8 y por 16
+
+Si $ a \equiv 1(2) $,
+\begin{align*}
+    a^{60} + 6 &\equiv 1^{60} + 6 \equiv 1 (2) \\
+\end{align*}
+Luego si no es divisible por 2, tampoco lo será por 5, 8, 16
+
+Luego $ i = 0 \vee i = 1 $
+
+Por lo tanto, los posibles MCD son
+\begin{itemize}
+    \item $ k = 0 \wedge i = 0 \implies d = 1 $
+    \item $ k = 0 \wedge i = 1 \implies d = 2 $
+    \item $ k = 1 \wedge i = 0 \implies d = 7 $
+    \item $ k = 1 \wedge i = 1 \implies d = 14 $
+\end{itemize}
+
+\subsection{Ejercicio 5}
+
+P tiene una raíz imaginaria pura $ \iff \exists a \in \mathbb{R}: P(ai) = 0 $
+
+\begin{align*}
+    P(ai) = 0 &\iff (ai)^6 + (ai)^5 + 5(ai)^4 + 4(ai)^3 + 8(ai)^2 + 4(ai) + 4 = 0 \\
+    &\iff -a^6 + a^5i + 5a^4 - 4a^3i - 8a^2 + 4ai + 4 = 0 \\
+    &\iff (-a^6 + 5a^4 - 8a^2 + 4) + (a^5 - 4a^3 + 4a)i = 0 \\
+    &\iff \begin{cases}
+        -a^6 + 5a^4 - 8a^2 + 4 = 0 \\
+        a^5 - 4a^3 + 4a = 0
+    \end{cases} \\
+\end{align*}
+De donde se obtiene que $ a = \sqrt[]{2} $
+
+Luego $ \sqrt[]{2}i $ es raíz de P $ \iff -\sqrt[]{2}i $ es raíz de P.
+
+Por lo tanto $ (x-\sqrt[]{2}i)(x+\sqrt[]{2}i)|P \iff (x^2 + 2)|P $
+
+Usando el algoritmo de división de polinomios, $ P = (x^2 + 2)(x^4 + x^3 + 3x^2 + 2x + 2) $
+
+Y por enunciado se que son raíces múltiples, luego se que $ (x^2 + 2) | (x^4 + x^3 + 3x^2 + 2x + 2) $
+
+Usando el algoritmo de división, $ P = (x^2 + 2)^2(x^2 + x + 1) $
+
+Defino $ g = x^2 + x + 1 $ y busco sus raíces utilizando la resolvente cuadrática.
+
+Obtengo que $ g = (x-(-\frac{1}{2} + \frac{\sqrt[]{3}}{2}i))(x-(-\frac{1}{2} - \frac{\sqrt[]{3}}{2}i)) $
+
+Por lo tanto,
+\begin{itemize}
+    \item $ P = (x-\sqrt[]{2}i)^2(x+\sqrt[]{2}i)^2(x-(-\frac{1}{2} + \frac{\sqrt[]{3}}{2}i))(x-(-\frac{1}{2} - \frac{\sqrt[]{3}}{2}i)) $ es la factorización en $ \mathbb{C}[x] $
+    \item $ P = (x^2 + 2)^2(x^2 + x + 1) $ es la factorización en $ \mathbb{Q}[x]; \mathbb{R}[x] $
+\end{itemize}
+
+Las raíces de P son sus multiplicidades son:
+\begin{itemize}
+    \item $ mult(\sqrt[]{2}i, f) = 2 $
+    \item $ mult(-\sqrt[]{2}i, f) = 2 $
+    \item $ mult(-\frac{1}{2} + \frac{\sqrt[]{3}}{2}i, f) = 1 $
+    \item $ mult(-\frac{1}{2} - \frac{\sqrt[]{3}}{2}i, f) = 1 $
+\end{itemize}
+
+\end{document}
