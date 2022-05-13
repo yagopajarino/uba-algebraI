@@ -1,0 +1,278 @@
+\input{macrosAlgebra}
+\usepackage{caratula}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+\decimalpoint
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.5em}
+\setcounter{tocdepth}{3} % profundidad de indice
+\setcounter{section}{0} % nro de section
+\renewcommand{\thesubsubsection}{\thesubsection.\Alph{subsubsection}}
+\graphicspath{ {images/} }
+
+% End latex config
+
+\begin{document}
+
+\titulo{Final 11/06/2021}
+\fecha{2do cuatrimestre 2021}
+\materia{Álgebra I}
+\integrante{Yago Pajariño}{546/21}{ypajarino@dc.uba.ar}
+
+%Carátula
+\maketitle
+\newpage
+
+%Indice
+\tableofcontents
+\newpage
+
+% Aca empieza lo propio del documento
+\section{Final 11/06/2021}
+
+\subsection{Ejercicio 3}
+
+Se que $ 442 = 2.13.17 $
+
+Luego,
+\begin{align*}
+    (4n^{49} + n + 33:442) = 221 &\iff (4n^{49} + n + 33:2.13.17) = 13.17 \\
+    &\iff \begin{cases}
+        13 | 4n^{49} + n + 33 \\
+        17 | 4n^{49} + n + 33 \\
+        2 \not | 4n^{49} + n + 33 \\
+    \end{cases} \\
+\end{align*}
+Ahora busco los $n$ que cumplan cada una de las ecuaciones.
+
+\textbf{Caso 13}
+\begin{align*}
+    13 | 4n^{49} + n + 33 &\iff 4n^{49} + n + 33 \equiv 0 (13) \\
+    &\iff 4n^{49} + n \equiv 6 (13) \\
+\end{align*}
+Ahora separo en casos: $ 13|n$ y $13 \not | n $
+
+\textbf{Caso $13|n$ }
+\begin{align*}
+    13 | n \implies 4n^{49} + n \equiv 0 + 0 \not \equiv 6 (13)
+\end{align*}
+Luego $ n \not \equiv 0(13) $
+
+\textbf{Caso $13\not |n$ }
+\begin{align*}
+    13 \not | n &\implies 4n^{49} + n \equiv 6 (13) \\
+    &\iff 4n^{r_{12}(49)} + n \equiv 6 (13) \\
+    &\iff 4n + n \equiv 6 (13) \\
+    &\iff 5n \equiv 6 (13) \\
+    &\iff (-5)5n \equiv (-5)6 (13) \\
+    &\iff -25n \equiv -30 (13) \\
+    &\iff n \equiv 9 (13) \\
+\end{align*}
+Luego $ n \equiv 9(13) $
+
+\textbf{Caso 17}
+\begin{align*}
+    17 | 4n^{49} + n + 33 &\iff 4n^{49} + n + 33 \equiv 0 (17) \\
+    &\iff 4n^{49} + n \equiv 1 (17) \\
+\end{align*}
+De nuevo tengo dos casos $ 17|n$ y $17 \not | n $
+
+\textbf{Caso $17|n$}
+\begin{align*}
+    17 | n \implies 4n^{49} + n \equiv 1 (17) \iff 0 + 0 \equiv 1 (17)
+\end{align*}
+Luego $ n \not \equiv 0 (17) $
+
+\textbf{Caso $17\not |n$}
+\begin{align*}
+    17 \not | n &\implies 4n^{49} + n \equiv 1 (17) \\
+    &\iff 4n^{r_{16}(49)} + n \equiv 1 (17) \\
+    &\iff 4n + n \equiv 1 (17) \\
+    &\iff 7.5n \equiv 7.1 (17) \\
+    &\iff 35n \equiv 7 (17) \\
+    &\iff n \equiv 7 (17) \\
+\end{align*}
+Luego $ n \equiv 7(17) $
+
+\textbf{Caso 2}
+\begin{align*}
+    2 \not | 4n^{49} + n + 33 &\iff 4n^{49} + n + 33 \not \equiv 0 (2) \\
+    &\iff \begin{cases}
+        n \equiv 0 (2) \implies 0 + 0 + 33 \equiv 1 \not \equiv 0 (2) \\
+        n \equiv 1 (2) \implies 4 + 1 + 33 \equiv 0 (2)
+    \end{cases}
+\end{align*}
+Luego $ n \equiv 0 (2) $
+
+Entonces juntando todo lo hayado, $S = \begin{cases}
+    n \equiv 9(13) \\
+    n \equiv 3(17) \\
+    n \equiv 0(2) \\
+\end{cases} $
+
+Por el Teorema Chino del Resto se que existe una única solución mod 442, que es lo que busco.
+
+Separo $ S $ en tres sistemas:
+
+$ S_0 = \begin{cases}
+    n \equiv 9(13) \\
+    n \equiv 0(17) \\
+    n \equiv 0(2) \\
+\end{cases} $
+$ S_1 = \begin{cases}
+    n \equiv 0(13) \\
+    n \equiv 3(17) \\
+    n \equiv 0(2) \\
+\end{cases} $
+$ S_2 = \begin{cases}
+    n \equiv 0(13) \\
+    n \equiv 0(17) \\
+    n \equiv 0(2) \\
+\end{cases} $
+
+Busco soluciones a cada sistema.
+
+$ S_0 = \begin{cases}
+    n \equiv 9(13) \\
+    n \equiv 0(34) \\
+\end{cases} \implies n = 34k \implies 34k \equiv 9(13) \iff k \equiv 8 (13) $
+
+Luego $ x_0 = 8.34 = 272 $
+
+$ S_1 = \begin{cases}
+    n \equiv 3(17) \\
+    n \equiv 0(26) \\
+\end{cases} \implies n = 26k \implies 26k \equiv 3(17) \iff k \equiv 6 (17) $
+
+Luego $ x_1 = 6.26 = 156 $
+
+$ S_2 = \begin{cases}
+    n \equiv 0(2) \\
+    n \equiv 0(17.13) \\
+\end{cases} $
+
+Luego $ x_2 = 0 $
+
+Entonces $ x = x_0 + x_1 + x_2 = 272 + 156 + 0 = 428 $
+
+Por lo tanto, $ n \equiv 428(442) \implies r_{442}(n) = 428 $
+
+\subsection{Ejercicio 4}
+
+Sea $ n \in \mathbb{N} $ fijo, se define $ R $ una relación en $ \mathbb{C} - \{ 0 \} $ tal que
+\begin{equation}
+    z R w \iff \text{ existe } \alpha \in G_n \text{ tal que } z = \alpha w
+\end{equation}
+\subsubsection{Pregunta i}
+Probar que es de equivalencia. Voy a probar cada propiedad por separado.
+
+\textbf{Reflexividad}
+
+Por definición de reflexividad, $ R $ es reflexiva $ \iff \forall k \in \mathbb{C}-\{ 0 \}: kRk $
+
+Por (1), $ kRk \iff \text{ existe } \alpha \in G_n \text{ tal que } k = \alpha k $
+
+Pero $ \forall n \in \mathbb{N} $, $ 1 \in G_n $ pues $ (1)^n = 1 $, luego $ k = k $ y por lo tanto $ R $ es reflexiva.
+
+\textbf{Simetría}
+
+Por definición de simetría, $ R $ es simétrica $ \iff \forall (k, j) \in (\mathbb{C} - \{ 0 \})^2: kRj \implies jRk $
+
+Por (1), $ kRj \iff \text{ existe } \alpha \in G_n \text{ tal que } k = \alpha j $
+
+Y quiero probar $ jRk \iff \text{ existe } \alpha \in G_n \text{ tal que } j = \alpha k $
+
+Por lo tanto,
+\begin{align*}
+    &k = \alpha j; \alpha \in G_n \\
+    \implies & j = \beta \alpha j \iff \beta \alpha = 1
+\end{align*}
+Pero dado que $ \alpha \in G_n \iff \alpha^{-1} \in G_n $ y $ \alpha \cdot \alpha^{-1} = 1 $
+
+Por lo tanto $ \beta = \alpha^{-1} \implies j = \alpha^{-1}k $
+
+Luego R es simétrica
+
+\textbf{Transitividad}
+
+Por definición de transitividad, $R$ es transitiva $ \iff \forall (j,k,l) \in (\mathbb{C} - \{ 0 \})^3: (jRk \wedge kRl) \implies jRl $
+
+Por (1), \\
+$ jRk \iff \exists \alpha \in G_n: j = \alpha k $ \\
+$ kRl \iff \exists \alpha \in G_n: k = \alpha l $ \\
+$ jRl \iff \exists \alpha \in G_n: j = \alpha l $
+
+Luego $ jk = \alpha k \beta l \iff j = \alpha \beta l $
+
+Entonces queda demostrar que $ \alpha \beta \in G_n $, pero se que $ \alpha^n = 1 $ y $ \beta^n = 1 $
+
+Por lo tanto, $ (\alpha \beta)^n = \alpha^n \beta^n = 1 \implies \alpha \beta \in G_n $
+
+Luego R es transitiva.
+
+\subsubsection{Pregunta ii}
+
+$ z = 3+5i $ y $ n = 4 $
+
+Busco el conjunto de los $ w \in \mathbb{C} - \{ 0 \}: zRw $
+
+Por (1), $ zRw \iff \exists \alpha \in G_4 / 3+5i = \alpha \cdot w $
+
+Pero $ \alpha \in G_4 \iff \alpha \in \{ \pm 1, \pm i \} $
+
+Luego,
+\begin{itemize}
+    \item $ \alpha = 1 \implies w = 3+5i $
+    \item $ \alpha = -1 \implies w = -3-5i $
+    \item $ \alpha = i \implies w = 5-3i $
+    \item $ \alpha = -i \implies w = -5+3i $
+\end{itemize}
+Luego $ \overline{3+5i} = \{ 3+5i, -3-5i, 5+3i, -5+3i \} $
+
+\subsection{Ejercicio 5}
+
+\subsubsection{Pregunta i}
+
+Factorización sabiendo que una de las raíces es cúbica de la unidad.
+
+$ \alpha \in G_3 \iff \alpha \in \{ 1, -\frac{1}{2} + \frac{\sqrt[]{3}}{2}i, -\frac{1}{2} - \frac{\sqrt[]{3}}{2}i \} $
+
+Dado que $ P(1) \neq 0 \implies (x-(-\frac{1}{2} + \frac{\sqrt[]{3}}{2}i))(x-(-\frac{1}{2} - \frac{\sqrt[]{3}}{2}i))|P $
+
+Luego, $ (x-(-\frac{1}{2} + \frac{\sqrt[]{3}}{2}i))(x-(-\frac{1}{2} - \frac{\sqrt[]{3}}{2}i))|P \iff (x^2 + x +1) |P $
+
+Usando el algoritmo de división, $ f = (x^2 + x +1)(x^4 - 4x^2 + 4) $
+
+Defino $ g = x^4 - 4x^2 + 4 $
+
+Cambio de variable $ y = x^2 $
+
+Luego $ g' = y^2 - 4y + 4 \implies g' = (y-2)^2$ 
+
+Por lo tanto, $ (x-\sqrt[]{2})(x+\sqrt[]{2}) | g \iff (x^2 - 2) | g $
+
+Usando el algoritmo de división, $ g = (x^2 - 2)(x^2 - 2) $
+
+Por lo tanto, juntando todo lo encontrado.
+
+\begin{itemize}
+    \item $ f = (x-(-\frac{1}{2} + \frac{\sqrt[]{3}}{2}i))(x-(-\frac{1}{2} - \frac{\sqrt[]{3}}{2}i))(x-\sqrt[]{2})^2(x+\sqrt[]{2})^2 $ es la factorización en $ \mathbb{C}[x] $
+    \item $ f = (x^2 + x +1)(x-\sqrt[]{2})^2(x+\sqrt[]{2})^2 $ es la factorización en $ \mathbb{R}[x] $
+    \item $ f = (x^2 + x +1)(x^2 - 2)^2 $ es la factorización en $ \mathbb{Q}[x] $
+\end{itemize}
+
+\subsubsection{Pregunta ii}
+\begin{itemize}
+    \item $ mult(-\frac{1}{2} + \frac{\sqrt[]{3}}{2}i, f) = 1 $
+    \item $ mult(-\frac{1}{2} - \frac{\sqrt[]{3}}{2}i, f) = 1 $
+    \item $ mult(x+\sqrt[]{2}, f) = 2 $
+    \item $ mult(x-\sqrt[]{2}, f) = 2 $
+\end{itemize}
+
+\end{document}
