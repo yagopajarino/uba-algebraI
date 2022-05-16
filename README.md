@@ -45,7 +45,7 @@ Si estas buscando un ejercicio en particular, primero revisa los [ejercicios fal
   
 * [Final 14/05/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20210514%20-%20enunciado.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020210514.pdf) 
 * [Final 11/06/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20210611%20-%20enunciado.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020210611.pdf)
-* [Final 20/07/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20210720%20-%20enunciado.pdf) <!-- | [solución]() -->
+* [Final 20/07/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20210720%20-%20enunciado.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020210720.pdf)
 * [Final 28/07/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20210728%20-%20enunciado.pdf) <!-- | [solución]() -->
 * [Final 04/08/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20210821%20-%20enunciado.pdf) <!-- | [solución]() -->
 * [Final 21/10/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20211021%20-%20enunciado.pdf) <!-- | [solución]() -->
