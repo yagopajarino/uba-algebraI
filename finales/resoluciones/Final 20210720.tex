@@ -1,0 +1,186 @@
+\input{macrosAlgebra}
+\usepackage{caratula}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+\decimalpoint
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.5em}
+\setcounter{tocdepth}{3} % profundidad de indice
+\setcounter{section}{0} % nro de section
+\renewcommand{\thesubsubsection}{\thesubsection.\Alph{subsubsection}}
+\graphicspath{ {images/} }
+
+% End latex config
+
+\begin{document}
+
+\titulo{Final 20/07/2021}
+\fecha{2do cuatrimestre 2021}
+\materia{Álgebra I}
+\integrante{Yago Pajariño}{546/21}{ypajarino@dc.uba.ar}
+
+%Carátula
+\maketitle
+\newpage
+
+%Indice
+\tableofcontents
+\newpage
+
+% Aca empieza lo propio del documento
+\section{Final 20/07/2021}
+
+\subsection{Ejercicio 1}
+
+Busco funciones $ f: A = \{ 1,2,3,4,...,10,11 \} \rightarrow B = \{ 1,2,3,..,24 \} $ que cumplan:
+\begin{itemize}
+    \item (a) $f$ es inyectiva
+    \item (b) $ 10 \leq f(2) \leq 20 $
+    \item (c) $ f(3) + f(4) = 13 $
+\end{itemize}
+
+Pero por definición, $f$ es inyectiva $ \iff \forall (a,b) \in A: f(a) = f(b) \implies a = b $
+
+Es decir, cada elemento de $ A $ solo puede estar asociado a 0 o 1 de $B$
+
+Por (b) al elemento $ 2 $ solo le puedo asignar uno de $ \{ 10,11,...,20 \} $
+
+Por (c), busco formas de sumar 13: $ 1+12; 2+11; 3+10; 4+9; 5+8; 6+7 $ y las permutaciones. Luego hay 12 formas de sumar 13.
+
+Luego separo en dos casos: el primero el caso en el que $ f(3) $ o $ f(4) \in \{ 10,11,...,20 \} $ y el segundo $ f(3) $ o $ f(4) \not \in \{ 10,11,...,20 \} $
+
+\textbf{Caso 1}
+
+En este caso voy a tener $10$ posibilidades para asignarle a $2$ y $6$ para $ f(3); f(4) $
+
+Quedarían $ 11-3 = 8 $ elementos a los que asignar $ 24-3 = 21 $ elementos.
+
+Luego habrá $ 10.6.\frac{21!}{8!} $ funciones
+
+\textbf{Caso 2}
+
+En este caso hay $11$ posibilidades para asignar al $2$ y $6$ posibilidades para $ f(3); f(4) $
+
+Luego habrá $ 11.6.\frac{21!}{8!} $ funciones
+
+Por lo tanto en total habrá $ 10.6.\frac{21!}{8!} + 11.6.\frac{21!}{8!} = 21.6.\frac{21!}{8!} $ funciones.
+
+\subsection{Ejercicio 2}
+
+Busco $p$ primos tales que $ p^4 | 77^{p^2} + 91^{p-1} + 21! \cdot p \implies p | 77^{p^2} + 91^{p-1} + 21! \cdot p $
+
+Se que $ p | 21! \cdot p \implies p | 77^{p^2} + 91^{p-1} $ y $ 77 = 11.7; 91 = 13.7 $
+
+\textbf{Caso $ p = 7 $}
+
+$ 77^{p^2} + 91^{p-1} \equiv 0 (7) $ 
+
+$ p = 7 $ es posible solución.
+
+\textbf{Caso $ p = 11 $}
+
+$ 77^{p^2} + 91^{p-1} \equiv 3^{10} \equiv 1(11) $
+
+$ p = 11 $ NO es solución.
+
+\textbf{Caso $ p = 13 $}
+
+$ 77^{p^2} + 91^{p-1} \equiv (-1)^{13^2} \equiv -1 (13) $
+
+$ p = 13 $ NO es solución.
+
+\textbf{Caso $ p \not \in \{ 7, 11, 13 \} $}
+\begin{align*}
+    77^{p^2} + 91^{p-1} &\equiv (77^p)^p + 91^{p-1} (p) \\
+    &\equiv 77 + 1 (p) \\
+    &\equiv 78 (p) \\
+\end{align*}
+
+Luego $ p |78 \iff p|2.3.13 $
+
+$ p = 2 \implies 77^4 + 91 \equiv 1 + 1 \equiv 0 (2) $ \\
+$ p = 3 \implies 77^9 + 91^2 \equiv 2^9 + 1 \equiv 0 (3) $
+
+Luego $ p = 2 $ y $ p = 3 $ son posibles soluciones.
+
+Por lo tanto, los posibles $p$ son $ 2, 3, 7 $
+
+Ahora busco ver si para los $p$ hallados $ p^4 | 77^{p^2} + 91^{p-1} + 21! \cdot p $
+
+Caso $ p = 2 $
+\begin{align*}
+    p = 2 \implies 16 | 77^4 + 91 + 21! .2 &\iff 77^4 + 91 + 21! .2 \equiv 0 (16) \\
+    &\iff 13^4 + 11 + 0 \equiv 0 (16) \\
+    &\iff 1 + 11 + 0 \equiv 0 (16) \\
+    &\iff 12 \equiv 0 (16) \\
+\end{align*}
+Luego $ p = 2 $ NO es solución
+
+Caso $ p = 3 $
+\begin{align*}
+    p = 3 \implies 81 | 77^9 + 91^2 + 21! .3 &\iff 77^9 + 91^2 + 21! .3 \equiv 0 (81) \\
+    &\iff 11^9. 7^9 + 100 + 0 \equiv 0 (81) \\
+    &\iff 26. 55 + 100 + 0 \equiv 0 (81) \\
+    &\iff 72 \equiv 0 (81) \\
+\end{align*}
+Luego $ p = 3 $ NO es solución
+
+Caso $ p = 7 $
+\begin{align*}
+    p = 7 \implies 7^4 | 77^{7^2} + 91^6 + 21! .7 &\iff 77^{7^2} + 91^6 + 21! .7 \equiv 0 (7^4) \\
+    &\iff (7^7.11^7)^{7} + 7^6. 13^6 + 7.3.20....15.7.2....8.7....1 .7 \equiv 0 (7^4) \\
+    &\iff 0 + 0 + 0 \equiv 0 (7^4) \\
+    &\iff 0 \equiv 0 (7^4) \\
+\end{align*}
+Luego $ p = 7 $ es el uníco que cumple lo pedido.
+
+\subsection{Ejercicio 3}
+
+$ (4n^2 - 1:14) = 7 \implies \begin{cases}
+    7 | 4n^2 - 1 \\
+    2 \not | 4n^2 - 1 \\
+\end{cases} $
+
+Luego $ 4n^2 \equiv 1 (7) \iff n^2 \equiv 2(7) $
+\begin{itemize}
+    \item $ n \equiv 0(7) \implies n^2 \equiv 0 (7) $
+    \item $ n \equiv 1(7) \implies n^2 \equiv 1 (7)$
+    \item $ n \equiv 2(7) \implies n^2 \equiv 4 (7)$
+    \item $ n \equiv 3(7) \implies n^2 \equiv 2 (7)$
+    \item $ n \equiv 4(7) \implies n^2 \equiv 2 (7)$
+    \item $ n \equiv 5(7) \implies n^2 \equiv 4 (7)$
+    \item $ n \equiv 6(7) \implies n^2 \equiv 1 (7)$
+\end{itemize}
+Luego $ n \equiv 3(7) $ o $ n \equiv 4(7) $
+
+Por otro lado $ 4n^2 - 1 \equiv 0 (2) \iff 4n^2 \equiv 1 (2) $
+
+Pero esto no se cumple para ningún $n$, luego $ 2 \not | 4n^2 - 1; \forall n \in \mathbb{N} $
+
+Luego busco los $n$ tales que $ n^n \equiv 3(7) $
+\begin{itemize}
+    \item $ n \equiv 3(7) \implies 3^n \equiv 3^{6k + r_6(n)} \equiv 3^{r_6(n)} \equiv 3(7) $
+    \item $ n \equiv 4(7) \implies 4^n \equiv 4^{6k + r_6(n)} \equiv 4^{r_6(n)} \equiv 3(7) $
+\end{itemize}
+Luego
+\begin{itemize}
+    \item $ n \equiv 0(6) \implies 3^0 \equiv 1 (7) \wedge 4^0 \equiv 1 (7) $
+    \item $ n \equiv 1(6) \implies 3^1 \equiv 3 (7) \wedge 4^1 \equiv 4 (7) $
+    \item $ n \equiv 2(6) \implies 3^2 \equiv 2 (7) \wedge 4^2 \equiv 2 (7) $
+    \item $ n \equiv 3(6) \implies 3^3 \equiv 6 (7) \wedge 4^3 \equiv 1 (7) $
+    \item $ n \equiv 4(6) \implies 3^4 \equiv 4 (7) \wedge 4^4 \equiv 4 (7) $
+    \item $ n \equiv 5(6) \implies 3^5 \equiv 5 (7) \wedge 4^5 \equiv 2 (7) $
+\end{itemize}
+Por lo tanto, $ n \equiv 1(6) \wedge n \equiv 3(7) $ es la unica solución.
+
+Usando el teorema chino del resto existe una única solución mod $6.7 = 42 $ que cumple lo pedido.
+
+A ojo veo que $ n \equiv 31(42) $ cumple lo pedido.
+
+\end{document}
