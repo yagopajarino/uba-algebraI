@@ -1,0 +1,195 @@
+\input{macrosAlgebra}
+\usepackage{caratula}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+\decimalpoint
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.5em}
+\setcounter{tocdepth}{3} % profundidad de indice
+\setcounter{section}{0} % nro de section
+\renewcommand{\thesubsubsection}{\thesubsection.\Alph{subsubsection}}
+\graphicspath{ {images/} }
+
+% End latex config
+
+\begin{document}
+
+\titulo{Final 28/07/2021}
+\fecha{2do cuatrimestre 2021}
+\materia{Álgebra I}
+\integrante{Yago Pajariño}{546/21}{ypajarino@dc.uba.ar}
+
+%Carátula
+\maketitle
+\newpage
+
+%Indice
+\tableofcontents
+\newpage
+
+% Aca empieza lo propio del documento
+\section{Final 28/07/2021}
+
+\subsection{Ejercicio 1}
+
+Demostración usando el principio de inducción
+
+Defino $ p(n): \begin{cases}
+    a_n \in \mathbb{Z} \\
+    5^n | a_n \\
+    5^{n+1} \not | a_n \\
+\end{cases} \forall n \in \mathbb{N}_0$
+
+Luego $p(n)$ será verdadero si las tres condiciones son verdaderas.
+
+\textbf{Casos base n = 0; n = 1}
+
+$ p(0): \begin{cases}
+    a_0 \in \mathbb{Z} \iff 1 \in \mathbb{Z} \\
+    5^0 | a_0 \iff 1 | 1 \\
+    5^{0+1} \not | a_0 \iff 5 \not | 1 \\
+\end{cases} $
+
+Luego $ p(0) $ es verdadero.
+
+$ p(1): \begin{cases}
+    a_1 \in \mathbb{Z} \iff -5 \in \mathbb{Z} \\
+    5^1 | a_1 \iff 5 | 5 \\
+    5^{1+1} \not | a_1 \iff 25 \not | 5 \\
+\end{cases} $
+
+Luego $ p(1) $ es verdadero.
+
+\textbf{Paso inductivo}
+
+Dado $ h \geq 0 $ quiero probar que $ p(h) \wedge p(h+1) \implies p(h+2) $
+
+HI: $ p(h): \begin{cases}
+    a_h \in \mathbb{Z} \\
+    5^h | a_h \\
+    5^{h+1} \not | a_h \\
+\end{cases} $
+$ p(h+1): \begin{cases}
+    a_{h+1} \in \mathbb{Z} \\
+    5^{h+1} | a_{h+1} \\
+    5^{h+2} \not | a_{h+1} \\
+\end{cases} $
+
+Luego busco probar que $ p(h+2) $ es verdadero $ \iff \begin{cases}
+    a_{h+2} \in \mathbb{Z} \\
+    5^{h+2} | a_{h+2} \\
+    5^{h+3} \not | a_{h+2} \\
+\end{cases} $
+
+Pero,
+\begin{align*}
+    a_{h+2} = \frac{a_{h+1}^3}{5} + 75a_h
+\end{align*}
+
+Y ahora pruebo cada condición en particular.
+\begin{align*}
+    a_{h+2} \in \mathbb{Z} &\iff \frac{a_{h+1}^3}{5} + 75a_h \in \mathbb{Z} \\
+    &\iff \frac{a_{h+1}^3}{5} \in \mathbb{Z} \\
+    &\iff 5|a_{h+1}^3 \\
+\end{align*}
+Pero por HI,
+\begin{align*}
+    5^{h+1} | a_{h+1} &\iff a_{h+1} = 5^{h+1} \cdot k \\
+    &\iff a_{h+1} = 5^h \cdot 5 \cdot k \\
+    &\iff a_{h+1} = (5^h \cdot k) \cdot 5 \\
+    &\iff 5|a_{h+1} \\
+\end{align*}
+Y por propiedades de divisibilidad, $ 5|a \implies 5|\sigma a, \forall \sigma \in \mathbb{Z} $, en particular, $ 5 | a_{h+1}^3 $ como se quería probar.
+
+Luego $ a_{h+2} \in \mathbb{Z} $
+
+Ahora quiero saber si $ 5^{h+2} | a_{h+2} $
+
+Por definición $ a_{h+2} = \frac{a_{h+1}^3}{5} + 75a_h $
+
+Luego quiero probar que $ 5^{h+2} | \frac{a_{h+1}^3}{5} + 75a_h $
+
+Pero $ 75a_h = 25.3.a_h $ y se que $ 5^h | a_h $, luego
+\begin{align*}
+    a_h &= 5^h.p_{1}^h...p_{m}^{r_{m}} \\
+    7a_h &= 5^2.5^h.p_1^h...p_m^{r_m} \\
+    7a_h &= 5^{h+2}.p_1^h...p_m^{r_m} \\
+    \implies& 5^{h+2}|75a_h \\
+\end{align*}
+Entonces, necesito probar que $ 5^{h+2} | \frac{a_{h+1}^3}{5} $
+
+Pero se que
+\begin{align*}
+    5^{h+1} | a_{h+1} &\iff a_{h+1} = 5^{h+1} . p_1^{r_1}...p_m^{r_m} \\
+    &\iff a_{h+1}^3 = 5^{3(h+1)} . p_1^{3r_1}...p_m^{3r_m} \\
+    &\iff \frac{a_{h+1}^3}{5} = 5^{3(h+1) - 1} . p_1^{3r_1}...p_m^{3r_m} \\
+\end{align*}
+Luego $ 5^{h+2} | \frac{a_{h+1}^3}{5} \iff 3(h+1) - 1 \geq h+2 \iff 3h+3-1 \geq h+2 \iff 2h \geq 0 $
+
+Que es verdadero, $ \forall h \geq 0 $
+
+Luego $ 5^{h+2} | a_{h+2} $ como se quería probar.
+
+Por ultimo quiero ver que $ 5^{h+3} \not | a_{h+2} \iff 5^{h+3} \not | \frac{a_{h+1}^3}{5} + 75a_h $
+
+Por inciso anterior, $ 5^{h+3} | \frac{a_{h+1}^3}{5} $ pero $ 5^{h+3} \not | 5^{h+2}.3.p_1^{r_1}...p_m^{r_m} $
+
+Y como divide a uno de los sumandos pero no al otro, $ 5^{h+2} | a_{h+2} $ como se quería probar.
+
+Por lo tanto queda probado el paso inductivo y así $ p(n) $ es verdadero $ \forall n \in \mathbb{N}_0 $
+
+\subsection{Ejercicio 3}
+
+Busco el polinomio $f$ de grado mínimo mónico tal que:
+\begin{itemize}
+    \item (a) f tiene copmo raíz a alguna raíz sexta de la unidad
+    \item (b) $ (f:f') = x^2(x^2 + 1) $
+    \item (c) $ x- \sqrt[]{3} | f $ en $ \mathbb{R}[x] $
+\end{itemize}
+
+Por (a) se que f tiene raíz $ a / a^6 = 1 $, pero $ f \in \mathbb{Q}[x] \implies a \in \mathbb{Q} \iff a =\pm 1 $
+
+Por (b) se que $ x^2 | f' \implies x^3 | f $ y $ x^2 + 1 | f' \iff (x^2 + 1)^2 | f $
+
+Luego $ f = (x \pm 1)x^3(x^2+1)^2 $
+
+Por (c) $ x- \sqrt[]{3} | f $ pero como $ f \in \mathbb{Q} \implies (x^2 - 3) |f $
+
+Así, $ f = (x-1)x^3(x^2+1)^2(x^2-3) $ cumple lo pedido
+
+\subsection{Ejercicio 4}
+
+Por lema de Gauss, si $f$ tiene una raíz racional, $ \frac{c}{d} \implies c|p \wedge d | 1 $
+
+Luego los posibles candidatos son $ \{ \pm 1, \pm p \} $
+
+Evaluando obtengo que $ p = 17 $ es el único primo tal que $f$ admite una raíz racional positiva $a = 1$
+
+Busco ahora la factorización de f.
+
+Se que $ (x-1) | f $
+
+Usando Ruffini, $ f = (x-1)(x^3-x^2-17x+17) $
+
+Defino $ g = x^3-x^2-17x+17 $ y a ojo veo que $ g(1) = 0 \implies (x-1) |g $
+
+Usando Ruffini, $ g = (x-1)(x^2-17) $
+
+Defino $ h = x^2-17 $ y busco sus raíces usando la resolvente cuadrática.
+
+Luego $ h = (x-\sqrt[]{17})(x+\sqrt[]{17}) $
+
+Usando todo lo hallado armo las factorizaciones.
+
+\begin{itemize}
+    \item $ f = (x-1)(x-1)(x-\sqrt[]{17})(x+\sqrt[]{17}) $ es la factorización en $ \mathbb{R}[x]; \mathbb{C}[x] $
+    \item $ f = (x-1)(x-1)(x^2-17) $ es la factorización en $ \mathbb{Q}[x] $
+\end{itemize}
+
+\end{document}
