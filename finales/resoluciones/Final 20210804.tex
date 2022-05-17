@@ -1,0 +1,209 @@
+\input{macrosAlgebra}
+\usepackage{caratula}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+\decimalpoint
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.5em}
+\setcounter{tocdepth}{3} % profundidad de indice
+\setcounter{section}{0} % nro de section
+\renewcommand{\thesubsubsection}{\thesubsection.\Alph{subsubsection}}
+\graphicspath{ {images/} }
+
+% End latex config
+
+\begin{document}
+
+\titulo{Final 04/08/2021}
+\fecha{2do cuatrimestre 2021}
+\materia{Álgebra I}
+\integrante{Yago Pajariño}{546/21}{ypajarino@dc.uba.ar}
+
+%Carátula
+\maketitle
+\newpage
+
+%Indice
+\tableofcontents
+\newpage
+
+% Aca empieza lo propio del documento
+\section{Final 08/04/2021}
+
+\subsection{Ejercicio 1}
+
+Tengo $ f: \mathbb{Z}^2 \rightarrow \mathbb{Z} $ y $ f(a,b) = 18a+60b $
+
+\subsubsection{Pregunta i}
+
+Me piden decidir si f es inyectiva, si no lo es describir $ \{ (a,b) \in \mathbb{Z}^2 / f(a,b) = 0 \} $
+
+Por definición, una función $h$ es inyectiva $ \iff \forall (a,b) \in \mathbb{Z}^2: h(a) = h(b) \implies a = b $
+
+Pues las inyecctivas son aquellas funciones que asignan a lo sumo 1 elemento del codominio a cada una del dominio.
+
+Luego debo ver si $ f(a,b) = 18a+ 60b $ es inyectiva.
+Dados $ \alpha, \beta, \sigma, \rho \in \mathbb{Z} $
+\begin{align*}
+    f(\alpha, \beta) = 18\alpha + 60\beta \\
+    f(\sigma, \rho) = 18\sigma + 60\rho \\
+\end{align*}
+Luego,
+\begin{align*}
+    f(\alpha, \beta) = f(\sigma, \rho) &\iff 18\alpha + 60\beta = 18\sigma + 60\rho \\
+    &\iff 18\alpha - 18\sigma = 60\rho - 60\beta \\
+    &\iff 18(\alpha - \sigma) = 60(\rho - \beta) \\
+    &\iff 3(\alpha - \sigma) = 10(\rho - \beta) \\
+\end{align*}
+Por lo tanto a ojo veo que valen todas las soluciones tales que $ (\alpha - \sigma = 10) \wedge (\rho - \beta = 3) $
+
+Contrejemplo: Sean $ \alpha = 11 \wedge \sigma = 1 \wedge \rho = 4 \beta = 1 $
+
+Luego,
+\begin{align*}
+    f(\alpha, \beta) = 18\alpha + 60\beta = 18.11 + 60.1 = 258 \\
+    f(\sigma, \rho) = 18\sigma + 60\rho = 18.1 + 60.4 = 258 \\
+\end{align*}
+Pero $ (11,1) \neq (1,4) $
+
+Por lo tanto $ f $ no es inyectiva.
+
+Ahora busco $ (a,b)/ f(a,b) = 0 \iff 18a+60b = 0 $
+
+\textbf{Verifico que existe solución}
+
+Hay solución, pues $(18:60)|0 \iff (3^2.2:3.2^2.5) = 3.2 = 6|0 $
+
+\textbf{Coprimizo la ecuación}
+
+$ 18a+60b = 0 \iff 3a+10b = 0 $
+
+\textbf{Armo conjunto solución}
+
+El conjunto de soluciones es $ S_0 = (10k; -3k) \forall k \in \mathbb{Z} $
+
+\textbf{Verifico que son soluciones}
+
+$ a = 10k \wedge b = -3k \implies 18a + 60b = 18(10k) + 60(-3k) = 180k - 180k = 0 $
+
+Por lo tanto $ f(a,b) = 0 \iff (a,b) \in \{ (x,y) \in \mathbb{Z}^2 / x = 10k \wedge y = -3k \wedge k \in \mathbb{Z} \} $
+
+\subsubsection{Pregunta ii}
+
+Por definición, $ f $ es sobreyectiva $ \iff \forall x\in \mathbb{Z}, \exists(a,b) \in \mathbb{Z}^2: f(a,b) = x $
+
+Se que una ecuación diofántica $ ax+by = c $ tiene solución cuando $ (x:y) | c $
+
+Luego $ 18a+60b = c $ no tiene solución cuando $ (18:60) \not | c $. Por ejemplo, $ 18a+60b = 5 $ no tiene solución, pues $ 6 \not | 5 $
+
+Así, $ \not \exists (a,b) \in \mathbb{Z}^2 / f(a,b) = 5 \implies f $ no es sobreyectiva. 
+
+Y la $ Im(f) = \{ x \in \mathbb{Z}: x = 6k \wedge k \in \mathbb{Z} \} $
+
+\subsection{Ejercicio 2}
+
+Se que $ a \in \mathbb{Z} \wedge 96a \equiv 51(27) $
+
+Defino $ d = (4a^2-a+3:16a^2+9) $
+
+Reescribo la congruencia que me dieron
+\begin{align*}
+    96a \equiv 51(27) &\iff 15a \equiv 24(27) \\
+    &\iff 5a \equiv 8(9) \\
+    &\iff a \equiv 7(9) \\
+\end{align*}
+
+Usando el algoritmo de Euclides, llego a que $ d|9 \implies d \in \{ 1,3,9 \} $
+
+\textbf{Caso d = 3}
+
+Se que $ a \equiv 7(9) \implies a \equiv 1(3) $
+\begin{align*}
+    3 | 4a^2-a+3 &\iff 4a^2-a+3 \equiv 0 (3) \\
+    &\iff 1^2-1+0 \equiv 0 (3) \\
+    &\iff 0 \equiv 0 (3) \\
+\end{align*}
+Y,
+\begin{align*}
+    3 | 16a^2 + 9 &\iff 16a^2 + 9 \equiv 0 (3) \\
+    &\iff 1^2 + 0 \equiv 0 (3) \\
+    &\iff 1 \equiv 0 (3) \\
+\end{align*}
+Luego $ d \neq 3 $ y por lo tanto, $ d \neq 9 $. Así,
+
+Rta.: $ (4a^2-a+3:16a^2+9) = 1 $
+
+\subsection{Ejercicio 4}
+
+$ f_1 = x^2 - 6x + 9 $ y $ f_2 = x^3 - 5x^2 + 3x + 9 $ y $ f_{n+2} = (x^2 - 9)f_{n+1} \cdot f''_n + f'_{n+1} \cdot f'_n + f^2_n(x-2)^n $
+
+Por multiplicidad de raíces, se que $ mult(3,f) = 2 \iff \begin{cases}
+    f(3) = 0 \\
+    f'(3) = 0 \\
+    f''(3) \neq 0 \\
+\end{cases} $
+
+Voy a hacer la prueba por inducción
+
+Defino $ p(n): mult(3,f_n) = 2; \forall n \in \mathbb{N} $
+
+\textbf{Casos base n = 1, n = 2}
+
+$ p(1): mult(3,f_1) = 2 \iff \begin{cases}
+    f_1(3) = 0 \iff 9-18+9 = 0 \\
+    f'_1(3) = 0 \iff 6 - 6 = 0\\
+    f''_1(3) \neq 0 \iff 2 \neq 0\\
+\end{cases} $
+
+Luego $ p(1) $ es verdadero.
+
+$ p(n): mult(3,f_n) = 2 \iff \begin{cases}
+    f_2(3) = 0 \iff 27-45+9+9 = 0 \\
+    f'_2(3) = 0 \iff 27-30+3 = 0\\
+    f''_2(3) \neq 0 \iff 18-10 \neq 0\\
+\end{cases} $
+
+Luego $ p(2) $ es verdadero.
+
+\textbf{Paso inductivo}
+
+Dado $ h \geq 1 $ quiero probar que $ p(h) \wedge p(h+1) \implies p(h+2) $
+
+HI: $ mult(3, f_h) = 2 $ y $ mult (3, f_{h+1}) = 2 $
+
+Qpq: $ mult(3, f_{h+2}) = 2 $
+
+Se que $ mult(3,f) = x \implies mult(3, f') = x-1 $
+
+Luego
+\begin{itemize}
+    \item $ f_h = (x-3)^2 \cdot k $ con $ (x-3) \not | k $
+    \item $ f'_h = (x-3) \cdot q $ con $ (x-3) \not | q $
+    \item $ f''_h = r $ con $ (x-3) \not | r $
+    \item $ f_{h+1} = (x-3)^2 \cdot t $ con $ (x-3) \not | t $
+    \item $ f'_{h+1} = (x-3) \cdot u $ con $ (x-3) \not | u $
+    \item $ f''_{h+1} = v $ con $ (x-3) \not | v $
+\end{itemize}
+
+Reescribo $ f_{h+2}$,
+\begin{align*}
+    f_{h+2} &= (x+3)(x-3)(x-3)^2tr + (x-3)q(x-3)u + (x-3)^4k^2(x-2)^n \\
+    &= (x-3)^2 \left[ (x+3)(x-3)tr + qu + (x-3)^2k^2(x-2)^n \right] \\
+\end{align*}
+Luego se que $ (x-3)^2 | f_{h+2} \implies mult(3, f_{h+2}) \geq 2 $
+
+Falta ver que $ (x-3) \not | \left[ (x+3)(x-3)tr + qu + (x-3)^2k^2(x-2)^n \right] $
+
+Pero $ \begin{cases}
+    (x-3) | (x+3)(x-3)tr \\
+    (x-3) | (x-3)^2k^2(x-2)^n \\
+    (x-3) \not | qu \\
+\end{cases} $
+Luego $ mult(3, f_{h+2}) = 2 $ como se quería probar.
+\end{document}
