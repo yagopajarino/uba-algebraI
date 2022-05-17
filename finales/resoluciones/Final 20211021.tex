@@ -1,0 +1,229 @@
+\input{macrosAlgebra}
+\usepackage{caratula}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+\decimalpoint
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.5em}
+\setcounter{tocdepth}{3} % profundidad de indice
+\setcounter{section}{0} % nro de section
+\renewcommand{\thesubsubsection}{\thesubsection.\Alph{subsubsection}}
+\graphicspath{ {images/} }
+
+% End latex config
+
+\begin{document}
+
+\titulo{Final 21/10/2021}
+\fecha{2do cuatrimestre 2021}
+\materia{Álgebra I}
+\integrante{Yago Pajariño}{546/21}{ypajarino@dc.uba.ar}
+
+%Carátula
+\maketitle
+\newpage
+
+%Indice
+\tableofcontents
+\newpage
+
+% Aca empieza lo propio del documento
+\section{Final 21/10/2021}
+
+\subsection{Ejercicio 1}
+
+Por enunciado, se define la relación $R$ en $G_{50}$ como,
+\begin{align*}
+    zRw \iff zw^{24} \in G_2
+\end{align*}
+Por definición de raíces de la unidad, se que los elementos de $G_{50}$ son aquellos $ \alpha \in \mathbb{C}: \alpha^{50} = 1 $
+
+Por lo tanto, es el conjunto de los elementos donde se define la relación, luego sean $ \alpha, \beta \in G_{50} $ la relación se define como:
+\begin{align*}
+    \alpha R\beta &\iff \alpha \beta^{24} \in G_2 \\
+    &\iff (\alpha \beta^{24})^2 = 1 \\
+    &\iff \begin{cases}
+        \alpha \beta^{24} = 1 \\
+        \alpha \beta^{24} = -1 \\
+    \end{cases} \\
+\end{align*}
+
+\subsubsection{Pregunta i}
+Busco probar que $R$ es una relación de equivalencia. Por definición, lo es si $R$ es reflexiva, transitiva y simétrica. Pruebo cada uno por separado.
+
+\textbf{Reflexividad}
+
+Por definición de reflexividad, $R$ es reflexiva $ \iff \forall a \in G_{50}: aRa $
+
+Por definición de $R$,
+\begin{align*}
+    aRa &\iff a.a^{24} \in G_2 \\
+    &\iff (a.a^{24})^2 = 1 \\
+    &\iff (a^{25})^2 = 1 \\
+    &\iff a^50 = 1 \\
+\end{align*}
+Y dado que $ a \in G_{50} \implies a^{50} = 1 $. Luego $R$ es reflexiva.
+
+\textbf{Simetría}
+
+Por definición de simetría, $R$ es simétrica $ \iff \forall \alpha, \beta \in G_{50}: \alpha R \beta \implies \beta R \alpha $
+
+Luego, por definición de $R$,
+\begin{align*}
+    \alpha R \beta &\iff (\alpha \beta^{24})^2 = 1 \\
+    &\iff \alpha^2 \beta^{48} = 1 \\
+    &\iff (\alpha^2 \beta^{48})^{-1} = 1^{-1} \\
+    &\iff \alpha^{-2} \beta^{-48} = 1 \\
+    &\iff \alpha^{48} \beta^{2} = 1 \\
+    &\iff (\alpha^{24} \beta)^2 = 1 \\
+    &\iff \beta R \alpha \\
+\end{align*}
+Luego $R$ es simétrica.
+
+\textbf{Transitividad}
+
+Por definición, $R$ es transitiva $ \iff \forall a,b,c \in G_{50}: (aRb \wedge bRc) \implies aRc  $
+
+Luego por definición de la relación se que,
+\begin{align*}
+    aRb &\iff ab^{24} \in g_2 \\
+    bRc &\iff bc^{24} \in g_2
+\end{align*}
+Y quiero ver que $ ac^{24} \in G_2 $
+
+Pero,
+\begin{align*}
+    (ab^{24})^2 = 1 \wedge (bc^{24})^2 = 1 &\implies (ab^{24})^2 \cdot (bc^{24})^2 = 1 \\
+    &\iff (ab^{24}  \cdot bc^{24})^2 = 1 \\
+    &\iff ab^{24} \cdot bc^{24} \in G_2 \\
+\end{align*}
+Luego,
+\begin{align*}
+    ab^{24} \cdot bc^{24} \in G_2 &\iff (ab^{24} \cdot bc^{24})^2 = 1 \\
+    &\iff (ab^{25}c^{24})^2 = 1 \\
+    &\iff (b^{25})^2 \cdot (ac^{24})^2 = 1 \\
+    &\iff 1 \cdot (ac^{24})^2 = 1 \\
+    &\iff (ac^{24})^2 = 1 \\
+    &\iff aRc \\
+\end{align*}
+Como se quería probar, luego $R$ es transitiva.
+
+Probado que $R$ es reflexiva, simétrica y transitiva; $R$ es una relación de equivalencia.
+
+\subsection{Ejercicio 2}
+
+Demostración usando el principio de inducción.
+
+Defino $ p(n): F_n = \frac{L_{n-1} + L_{n+1}}{5}; \forall n \geq 1 $
+
+\textbf{Caso base n = 1, n = 2 }
+
+Por definición, p(1)
+\begin{align*}
+    p(1): &F_1 = \frac{L_{1-1} + L_{1+1}}{5} \\
+    &F_1 = \frac{L_{0} + L_{2}}{5} \\
+    &F_1 = \frac{2+3}{5} \\
+    &F_1 = 1 \\
+\end{align*}
+Por enunciado, $ F_1 = 1 $ luego $p(1)$ es verdadero.
+
+p(2)
+\begin{align*}
+    p(2): &F_2 = \frac{L_{2-1} + L_{2+1}}{5} \\
+    &F_2 = \frac{L_{1} + L_{3}}{5} \\
+    &F_2 = \frac{1+4}{5} \\
+    &F_2 = 1 \\
+\end{align*}
+
+Por enunciado, $ F_2 = F_0 + F_1 = 1 $, luego $ p(2) $ es verdadero.
+
+\textbf{Paso inductivo}
+
+Busco probar que dado $h \geq 1: (p(h) \wedge p(h+1)) \implies p(h+2) $
+
+HI: \\ 
+$ F_h = \frac{L_{h-1} + L_{h+1}}{5} $ \\
+$ F_{h+1} = \frac{L_{h} + L_{h+2}}{5} $ 
+
+Qpq: $ F_{h+2} = \frac{L_{h+1} + L_{h+3}}{5} $
+
+Pero,
+\begin{align*}
+    F_{h+2} &= F_h + F_{h+1} \\
+    &= \frac{L_{h-1} + L_{h+1}}{5} + \frac{L_{h} + L_{h+2}}{5} \\
+    &= \frac{L_{h-1} + L_{h+1} + L_{h} + L_{h+2}}{5} \\
+    &= \frac{L_{h+1} + L_{h+3}}{5} \\
+\end{align*}
+Como se quería probar, luego vale el paso inductivo.
+
+Así, $ p(n) $ es verdadero, $ \forall n \in \mathbb{N}_{\geq 1} $
+
+\subsection{Ejercicio 3}
+
+Busco determinar todos los $ (a,b) \in \mathbb{N}^2 $ tales que:
+\begin{align*}
+    (a:b) = -2a+b \wedge [a:b] = 83a
+\end{align*}
+
+Rdo.: $ (a:b)[a:b] = ab $
+
+Usnado esto,
+\begin{align*}
+    (a:b)[a:b] = ab &\iff (-2a+b)(83a) = ab \\
+    &\iff (-2a+b)83 = b \\
+    &\iff -166a + 83b = b \\
+    &\iff -166a + 82b = 0 \\
+\end{align*}
+Entonces, busco los $ (a,b) \in \mathbb{N}^2 $ que cumplen la ecuación diofácntica $ -166a + 82b = 0 $
+
+\textbf{Verifico que existe solución}
+
+Existe solución, pues $ MCD(166, 82) = 2|0 $
+
+\textbf{Coprimizo la ecuación}
+
+$ -166a+82b = -83a + 41b = 0 $
+
+\textbf{Armo el conjunto solución}
+
+$ s = \{ (a,b) \in \mathbb{N}^2: a = 41k \wedge b = 83k \wedge k \in \mathbb{Z} \} $
+
+Para los valores hallados de $a$ y $b$ busco aquellos que cumplen con el MCD y el MCM 
+
+$ (a,b) = (41k, 83k) \implies \begin{cases}
+    (a:b) = (41k:83k) = k(41:83) = k \\
+    [a:b] = [41k:83k] = k[41:83] = k.41.83
+\end{cases} $
+
+Luego,
+\begin{align*}
+    -2a + b = k &\iff -2(41k) + 83k = k \\
+    &\iff -82k + 83k = k \\
+    &\iff k = k \\
+\end{align*}
+Y,
+\begin{align*}
+    83a = k.41.83 \iff a = 41k
+\end{align*}
+Por lo tanto $ \{ (a,b): a = 41k \wedge b = 83k \wedge k \in \mathbb{Z} \} $ son todos los que cumplen lo pedido
+
+\subsection{Ejercicio 4}
+
+Se que $ (x-a)^3 | f $ y que $ (x-a)^2 | f' \iff f'=(x-a)^2.q $ con $ q(a) \neq 0 $
+
+Luego $ q = (x-a)k +r $ y por algoritmo de división se que $ r = 0 $ o $ gr(r) < 1 $
+
+Por lo tanto,
+\begin{align*}
+    f' = (x-a)^2 \cdot \left[ (x-a)k + r \right]
+    f' = (x-a)^3k + (x-a)^2r
+\end{align*}
+Luego $ (x-a)^2r $ es el resto de dividir a $f'$ por $(x-a)^3 $ y $ r \in \mathbb{C} $
+
+\end{document}
