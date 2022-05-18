@@ -4,9 +4,6 @@
 Lic. en ciencias de la computación \
 Universidad de Buenos Aires
 
-Actualización 19/04/2022 | Hice el repo público mientras termino de pasar las resoluciones de prácticas, parciales y finales a laTex \
-Actualización 10/05/2022 | Ya están todas las prácticas subidas 
-
 ## Programa y bibliografía
 
 * [Programa álgebra I](https://cms.dm.uba.ar/academico/programas/algebraI)
