@@ -49,7 +49,7 @@ Si estas buscando un ejercicio en particular, primero revisa los [ejercicios fal
 * [Final 28/07/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20210728%20-%20enunciado.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020210728.pdf)
 * [Final 04/08/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20210821%20-%20enunciado.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020210804.pdf)
 * [Final 21/10/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20211021%20-%20enunciado.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020211021.pdf)
-* [Final 10/12/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20211210%20-%20enunciado.pdf) <!-- | [solución]() -->
+* [Final 10/12/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20211210%20-%20enunciado.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020211210.pdf)
   
 ## Contribución
 
