@@ -4,11 +4,7 @@
 Lic. en ciencias de la computación \
 Universidad de Buenos Aires
 
-## Programa y bibliografía
-
-* [Programa álgebra I](https://cms.dm.uba.ar/academico/programas/algebraI)
-* [Fascículo 9 - Teresa Krick](https://cms.dm.uba.ar/academico/materias/2docuat2021/Algebra%20I/depto/public/grado/fascgrado9.pdf)
-* [Página de la materia](https://cms.dm.uba.ar/academico/materias/2docuat2021/Algebra%20I/)
+[![Invitame un café en cafecito.app](https://cdn.cafecito.app/imgs/buttons/button_1.svg)](https://cafecito.app/yagopajarino)
 
 ## Prácticas
 
@@ -47,7 +43,13 @@ Si estas buscando un ejercicio en particular, primero revisa los [ejercicios fal
 * [Final 04/08/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20210821%20-%20enunciado.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020210804.pdf)
 * [Final 21/10/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20211021%20-%20enunciado.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020211021.pdf)
 * [Final 10/12/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20211210%20-%20enunciado.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020211210.pdf)
-  
+
+## Programa y bibliografía
+
+* [Programa álgebra I](https://cms.dm.uba.ar/academico/programas/algebraI)
+* [Fascículo 9 - Teresa Krick](https://cms.dm.uba.ar/academico/materias/2docuat2021/Algebra%20I/depto/public/grado/fascgrado9.pdf)
+* [Página de la materia](https://cms.dm.uba.ar/academico/materias/2docuat2021/Algebra%20I/)
+
 ## Contribución
 
 Si tenés alguna consulta, corrección o la solución de alguno de los ejercicios faltantes, podés abrir un [issue](https://github.com/yagopajarino/uba-algebraI/issues) o directamente abrir un [pull request](https://github.com/yagopajarino/uba-algebraI/pulls).
