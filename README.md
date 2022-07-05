@@ -10,13 +10,15 @@ Universidad de Buenos Aires
 
 Si estas buscando un ejercicio en particular, primero revisa los [ejercicios faltantes](https://github.com/yagopajarino/uba-algebraI/issues).
 
-* [Práctica 1](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia1.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/soluciones/Pr%C3%A1ctica%201.pdf)
-* [Práctica 2](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia2.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/soluciones/Pr%C3%A1ctica%202.pdf)
-* [Práctica 3](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia3.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/soluciones/Pr%C3%A1ctica%203.pdf)
-* [Práctica 4](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia4.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/soluciones/Pr%C3%A1ctica%204.pdf)
-* [Práctica 5](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia5.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/soluciones/Pr%C3%A1ctica%205.pdf)
-* [Práctica 6](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia6.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/soluciones/Pr%C3%A1ctica%206.pdf)
-* [Práctica 7](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia7.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/soluciones/Pr%C3%A1ctica%207.pdf)
+| Nro | Enunciado                                                                                          | Solución                                                                                                      |
+|-----|----------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| 1   | [Enunciado](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia1.pdf) | [Solución](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/soluciones/Pr%C3%A1ctica%201.pdf) |
+| 2   | [Enunciado](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia2.pdf) | [Solución](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/soluciones/Pr%C3%A1ctica%202.pdf) |
+| 3   | [Enunciado](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia3.pdf) | [Solución](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/soluciones/Pr%C3%A1ctica%203.pdf) |
+| 4   | [Enunciado](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia4.pdf) | [Solución](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/soluciones/Pr%C3%A1ctica%204.pdf) |
+| 5   | [Enunciado](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia5.pdf) | [Solución](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/soluciones/Pr%C3%A1ctica%205.pdf) |
+| 6   | [Enunciado](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia6.pdf) | [Solución](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/soluciones/Pr%C3%A1ctica%206.pdf) |
+| 7   | [Enunciado](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/enunciados/Guia7.pdf) | [Solución](https://github.com/yagopajarino/uba-algebraI/blob/main/practicas/soluciones/Pr%C3%A1ctica%207.pdf) |
 
 
 ## Parciales
@@ -35,14 +37,16 @@ Si estas buscando un ejercicio en particular, primero revisa los [ejercicios fal
   * [Video ejercicio 4](https://youtu.be/Z1DQkTT_HvM)
 
 ## Finales
-  
-* [Final 14/05/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20210514%20-%20enunciado.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020210514.pdf) 
-* [Final 11/06/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20210611%20-%20enunciado.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020210611.pdf)
-* [Final 20/07/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20210720%20-%20enunciado.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020210720.pdf)
-* [Final 28/07/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20210728%20-%20enunciado.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020210728.pdf)
-* [Final 04/08/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20210821%20-%20enunciado.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020210804.pdf)
-* [Final 21/10/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20211021%20-%20enunciado.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020211021.pdf)
-* [Final 10/12/2021](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20211210%20-%20enunciado.pdf) | [solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020211210.pdf)
+
+| Fecha      | Enunciado                                                                                                            | Solución                                                                                                     |
+|------------|----------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| 14/05/2021 | [Enunciado](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20210514%20-%20enunciado.pdf)  | [Solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020210514.pdf) |
+| 11/06/2021 | [Enunciado](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20210611%20-%20enunciado.pdf)  | [Solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020210611.pdf) |
+| 20/07/2021 | [Enunciado](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20210720%20-%20enunciado.pdf)  | [Solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020210720.pdf) |
+| 28/07/2021 | [Enunciado](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20210728%20-%20enunciado.jpeg) | [Solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020210728.pdf) |
+| 04/08/2021 | [Enunciado](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20210821%20-%20enunciado.jpeg) | [Solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020210804.pdf) |
+| 21/10/2021 | [Enunciado](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20211021%20-%20enunciado.pdf)  | [Solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020211021.pdf) |
+| 10/12/2021 | [Enunciado](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/enunciados/20211210%20-%20enunciado.pdf)  | [Solución](https://github.com/yagopajarino/uba-algebraI/blob/main/finales/resoluciones/Final%2020211210.pdf) |
 
 ## Programa y bibliografía
 
