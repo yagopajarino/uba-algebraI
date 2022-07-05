@@ -50,4 +50,4 @@ Si estas buscando un ejercicio en particular, primero revisa los [ejercicios fal
   
 ## Contribución
 
-Para consultas de ejercicios o para agregar los que falten, abrir un [issue](https://github.com/yagopajarino/uba-algebraI/issues).
+Si tenés alguna consulta, corrección o la solución de alguno de los ejercicios faltantes, podés abrir un [issue](https://github.com/yagopajarino/uba-algebraI/issues) o directamente abrir un [pull request](https://github.com/yagopajarino/uba-algebraI/pulls).
