@@ -4,7 +4,7 @@
 Lic. en ciencias de la computación \
 Universidad de Buenos Aires
 
-[![Invitame un café en cafecito.app](https://cdn.cafecito.app/imgs/buttons/button_1.svg)](https://cafecito.app/yagopajarino)
+[![Invitame un café en cafecito.app](https://cdn.cafecito.app/imgs/buttons/button_3.svg)](https://cafecito.app/yagopajarino)
 
 ## Prácticas
 
