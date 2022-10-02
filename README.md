@@ -4,8 +4,6 @@
 Lic. en ciencias de la computación \
 Universidad de Buenos Aires
 
-[![Invitame un café en cafecito.app](https://cdn.cafecito.app/imgs/buttons/button_3.svg)](https://cafecito.app/yagopajarino)
-
 ## Prácticas
 
 Si estas buscando un ejercicio en particular, primero revisa los [ejercicios faltantes](https://github.com/yagopajarino/uba-algebraI/issues).
