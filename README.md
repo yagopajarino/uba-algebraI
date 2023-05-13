@@ -4,8 +4,6 @@
 Lic. en ciencias de la computación \
 Universidad de Buenos Aires
 
-[![Invitame un café en cafecito.app](https://cdn.cafecito.app/imgs/buttons/button_1.svg)](https://cafecito.app/yagopajarino)
-
 ## Prácticas
 
 Si estas buscando un ejercicio en particular, primero revisa los [ejercicios faltantes](https://github.com/yagopajarino/uba-algebraI/issues).
@@ -57,3 +55,9 @@ Si estas buscando un ejercicio en particular, primero revisa los [ejercicios fal
 ## Contribución
 
 Si tenés alguna consulta, corrección o la solución de alguno de los ejercicios faltantes, podés abrir un [issue](https://github.com/yagopajarino/uba-algebraI/issues) o directamente abrir un [pull request](https://github.com/yagopajarino/uba-algebraI/pulls).
+
+## Contributors
+
+- [yagopajarino](https://github.com/yagopajarino/)
+- [f7olivera](https://github.com/f7olivera)
+- [E-Liq](https://github.com/E-Liq)
