@@ -58,13 +58,25 @@ Defino el conjunto $ T = \{ n \in \mathbb{N}: n \bmod 3 = 0 \} $
 
 Defino el conjunto $ C = \{ n \in \mathbb{N}: n \bmod 5 = 0 \} $
 
-Luego busco $ \#(T^c \cup C^c) = \#(T \cup C)^c $
+Se que un número no es múltiplo de 3 si no pertenece a $T$ y no es multiplo de 5 si no pertenece a $C$
 
-Entonces $ (T \cup C) = \{ n \in \mathbb{N}: n \bmod 15 = 0 \} $ pues 3 y 5 son primos.
+Luego $ \#T = \lfloor \frac{1000}{3} \rfloor = 333 $ y $ \#C = \lfloor \frac{1000}{5} \rfloor = 200 $
 
-Por lo tanto $ \#(T \cup C) = \lfloor \frac{1000}{15} \rfloor = 66$
+Pero existen números que son múltiplos de 3 y 5 a la vez. Los múltiplos de 15.
 
-Y así, $ \#(T \cup C)^c = 1000 - 66 = 934 $
+Sea $ Q = \{ n \in \mathbb{N}: n \bmod 15 = 0 \} $
+
+Luego, $\#Q = \lfloor \frac{1000}{15} \rfloor = 66 $
+
+Por lo tanto la cantidad de números menores a 1000 que no son multiplos ni de 3 ni de 5 son:
+
+\begin{align*}
+    & res = \#V - \#T - \#C + \#Q \\
+    & res = 1000 - 333 - 200 + 66 \\
+    & res = 533
+\end{align*}
+
+Luego existen 533 números naturales menores a 1000 que no son múltiplos de 3 ni de 5.
 
 \subsection{Ejercicio 3}
 
