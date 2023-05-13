@@ -102,7 +102,51 @@ Luego,
 \end{align*}
 
 \subsubsection{Pregunta ii}
-TODO
+
+Total de elementos en A = elementos sólo en A + elementos en la intersección A y B + elementos en la intersección A y C + elementos en la intersección A, B y C
+63 = 30 + x + z + 7
+
+Total de elementos en B = elementos sólo en B + elementos en la intersección A y B + elementos en la intersección B y C + elementos en la intersección A, B y C
+30 = 13 + x + y + 7
+
+Total de elementos en C = elementos sólo en C + elementos en la intersección A y C + elementos en la intersección B y C + elementos en la intersección A, B y C
+50 = 25 + y + z + 7
+
+Resolviendo las ecuaciones:
+
+Desde la ecuación 2, despejamos y en función de x:
+
+y = 10 - x
+
+Desde la ecuación 3, despejamos z en función de y:
+
+z = 18 - y
+z = 18 - (10 - x)
+z = 8 + x
+
+Luego, reemplazamos los valores de y y z en la ecuación 1:
+
+63 = 30 + x + (8 + x) + 7
+
+Resolviendo para x:
+
+x = 9
+
+Luego, reemplazando en las ecuaciones 2 y 3:
+
+y = 10 - 9 = 1
+z = 8 + 9 = 17
+
+Por lo tanto, el número de elementos en la intersección A y B es 9, en la intersección A y C es 17, en la intersección B y C es 1, y en la intersección A, B y C es 7.
+
+En resumen:
+\begin{enumerate}
+    \item Cuántos alumnos estudian exactamente dos idiomas? $9+17+1=27$
+    \item ¿Cuántos inglés y alemán pero no francés? $9$
+    \item ¿Cuántos no estudian ninguno de esos idiomas? $110-102 = 8$
+\end{enumerate}
+
+Resoución de \href{https://github.com/E-Liq}{E-Liq}
 
 \subsection{Ejercicio 5}
 
