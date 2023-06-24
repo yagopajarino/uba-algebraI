@@ -60,5 +60,7 @@ Si tenés alguna consulta, corrección o la solución de alguno de los ejercicio
 
 - [yagopajarino](https://github.com/yagopajarino/)
 - [f7olivera](https://github.com/f7olivera)
+- [luciasuter](https://github.com/luciasuter)
 - [E-Liq](https://github.com/E-Liq)
 - [faustomartinez](https://github.com/faustomartinez)
+
