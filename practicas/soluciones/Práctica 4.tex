@@ -1,4 +1,55 @@
-\input{macrosAlgebra}
+% \input{macrosAlgebra}
+\usepackage{ifthen}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage[absolute]{textpos}
+\usepackage{amsmath, amscd, amssymb, amsthm, latexsym}
+\usepackage{xspace,rotating,dsfont,ifthen}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{pgfpages}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,xspace,dsfont}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{todonotes}
+\usepackage{url}
+\usepackage{float}
+\usepackage{framed,mdframed}
+\usepackage{cancel}
+
+\usepackage[strict]{changepage}
+
+
+\makeatletter
+
+
+\newcommand\hfrac[2]{\genfrac{}{}{0pt}{}{#1}{#2}} %\hfrac{}{} es un \frac sin la linea del medio
+
+\newcommand\Wider[2][3em]{% \Wider[3em]{} reduce los m\'argenes
+\makebox[\linewidth][c]{%
+  \begin{minipage}{\dimexpr\textwidth+#1\relax}
+  \raggedright#2
+  \end{minipage}%
+  }%
+}
+
+
+\@ifclassloaded{beamer}{%
+  \newcommand{\tocarEspacios}{%
+    \addtolength{\leftskip}{4em}%
+    \addtolength{\parindent}{-3em}%
+  }%
+}
+{%
+  \usepackage[top=1cm,bottom=2cm,left=1cm,right=1cm]{geometry}%
+  \usepackage{color}%
+  \newcommand{\tocarEspacios}{%
+    \addtolength{\leftskip}{3em}%
+    \setlength{\parindent}{0em}%
+  }%
+}
+
 \usepackage{caratula}
 \usepackage{enumerate}
 \usepackage{hyperref}
@@ -87,18 +138,20 @@ Rta.: $ n \in \{ 1,4 \} $
 \begin{align*}
     3n-2 | 5n-8 &\implies 3n-2 | 5n-8 \wedge 3n-2 | 3n-2 \\
     &\implies 3n-2 | -3(5n-8) + 5(3n-2) \\
-    &\implies 3n-2 | 4
+    &\implies 3n-2 | -15n + 24 + 15n - 10 \\
+    &\implies 3n-2 | 14
 \end{align*}
 
-Luego $ 3n-2 \in Div_+(4) \iff 3n-2 \in \{ 1,2,4 \} $
+Luego $ 3n-2 \in Div_+(14) \iff 3n-2 \in \{ 1,2,7,14 \} $
 
 \begin{enumerate}[label=(\alph*)]
-    \item $ 3n-2 = 1 \implies n = \frac{-1}{3} \not \in \mathbb{N}$
+    \item $ 3n-2 = 1 \implies n = 1 \in \mathbb{N}$ y además $3n-2 | 5n-8 \iff 1|3$ OK
     \item $ 3n-2 = 2 \implies n = \frac{4}{3} \not \in \mathbb{N}$
-    \item $ 3n-2 = 4 \implies n = 4 $ y además $ 3.2-2|5.2-8 \iff 4|12 $
+    \item $ 3n-2 = 7 \implies n = 3 \in \mathbb{N}$ y además $3n-2 | 5n-8 \iff 7|7$ OK
+    \item $ 3n-2 = 14 \implies n = \frac{16}{3} \not \in \mathbb{N}$
 \end{enumerate}
 
-Rta.: $n = 2$
+Rta.: $n = 1$ y $n = 3$
 
 \subsubsection{Pregunta iii}
 \begin{align*}
