@@ -1379,4 +1379,31 @@ Así, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
 \subsection{Ejercicio 23}
 TODO
 
+\subsection{Ejercicio 24}
+$p(n): \sum_{n=1}^{r}2^{a_i} = n \quad \forall n \in \mathbb N$
+
+Por inducción global
+
+Caso base: $2^0 = 1$  V
+
+HI: Si $k\leqslant n$. "k" se puede escribir como suma de potencias $\neq$ de 2
+
+Veamos que n+1 también se puede
+
+Si n es par $n=\sum_{n=1}^{r}2^{a_i}  \quad  a_i \neq0  \quad \forall i$
+
+Por lo tanto: n par $\implies m=n+1$ impar
+
+$m=n+1=\sum_{n=1}^{r}2^{a_i}  + 2^0$
+
+Si n es impar n+1 es par $\implies \exists \alpha \in\mathbb N$ tal que  $\frac{n+1}{2^\alpha}$ es impar.
+\begin{align*}
+& \frac{n+1}{2^\alpha} \leqslant n \\
+& n+1\leqslant 2^\alpha n \\
+& 1\leqslant  (2^\alpha -1)n  \quad \text{como} \quad (2^\alpha -1)\geqslant 1 \quad \text {esto es verdadero siempre} \\
+& \implies \frac{n+1}{2^\alpha}  = \sum_{n=1}^{r}2^{a_i} \quad \text{con} \quad a_i \quad \text{todos}  \neq \\
+& \implies n+1 = \sum_{n=1}^{r}2^{a_i+\alpha} 
+\end{align*}
+
+Por lo tanto como p(1) V y [$p(k) V \quad \text{con}\quad k\leqslant n \implies n+1 \quad \text{V}$]  entonces por el principio de inducción $p(n) V \quad \forall  n \in \mathbb N$
 \end{document}
