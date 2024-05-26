@@ -34,6 +34,9 @@
 \tableofcontents
 \newpage
 
+%Un comando que puede ser útil en este documento
+\newcommand\eqHI{\mathrel{\overset{\makebox[0pt]{\mbox{\normalfont\tiny\sffamily HI}}}{=}}}
+
 % Aca empieza lo propio del documento
 \section{Práctica 2}
 
@@ -394,7 +397,7 @@ HI:  $ \prod_{i=1}^{ h}\frac{ h+i}{2i-3} = 2^ h(1-2 h) = \color{blue} \frac{(h+1
 
 qpq:
 $\prod_{i=1}^{  h+1}\frac{  h+1+i}{2i-3} = 2^{h+1}(1-2.(h+1))=2^{h+1}(-2h-1)$
-\newcommand\eqHI{\mathrel{\overset{\makebox[0pt]{\mbox{\normalfont\tiny\sffamily HI}}}{=}}}
+
 
 Pero $\prod_{i=1}^{  h+1}\frac{  h+1+i}{2i-3} = \frac{\textcolor{blue}{(h+1)(h+2)(h+3)(h+4)\ldots2h}(2h+1)(2h+2)}{(h+1).\textcolor{blue}{-1.1.3\ldots(2h-3)}(2h-1)} \eqHI$
 $2^h(1-2h)\frac{(2h+1)(2h+2)}{(h+1)(2h-1)} = 2^{2h+1}(-2h-1)$ como queríamos probar
@@ -424,8 +427,23 @@ HI: $a^k - b^k = (a-b).\sum_{i=1}^{k}a^{i-1}.b^{k-i}$
 QpQ: $a^{k+1} - b^{k+1} = (a-b).\sum_{i=1}^{k+1}a^{i-1}.b^{k+1-i}$
 
 Pero,
+$(a-b)\sum_{i=1}^{k+1}a^{i-1}.b^{k+1-i}=(a-b).[\sum_{i=1}^{k}a^{i-1}.b^{k+1-i}+a^k.b^0]$
 
-TODO
+$(a-b).[\sum_{i=1}^{k}(a^{i-1}.b^{k-i}.b)+a^k]$
+
+$b.(a-b).\sum_{i=1}^{k}(a^{i-1}.b^{k-i})+(a-b).a^h \eqHI b.(a^k-b^k)+(a-b).a^k$
+
+Entonces tengo que probar:
+
+$b.(a^k-b^k)+(a-b).a^k=a^{k+1}-b^{k+1}$
+
+$ba^k-b^{k+1}+a^{k+1}-ba^k = a^{k+1}-b^{k+1}$
+
+$a^{k+1}-b^{k+1}=a^{k+1}-b^{k+1}$ como quería probar
+
+Como p(1)V y [p(h)V $\implies$ p(h+1)V] por el principio de inducción p(n) V $\forall n \in \mathbb{N}$
+
+
 \subsection{Ejercicio 9}
 
 \subsubsection{Pregunta i}
