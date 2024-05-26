@@ -768,6 +768,55 @@ $\frac{2}{7}=0,2857...>\frac{1}{4}$ V $\implies \sum_{i=1}^{2^{h+1}}\frac{1}{2i-
 
 Como p(1) V y [p(h) V $\implies$ p(h+1) V ] por el principio de inducción p(n) V $\forall n \in \mathbb N$
 
+\subsubsection{Pregunta vi}
+
+p(n): $\sum_{1}^{n}\frac{1}{i!} \leqslant 2-\frac{1}{2^{n-1}}$
+
+Caso base: ¿p(1)V? 
+
+$\sum_{1}^{1}\frac{1}{i!} \leqslant 2-\frac{1}{2^{0}}$
+
+Paso inductivo: ¿p(h)V $\implies$ p(h+1)V?
+
+HI: $\sum_{1}^{h}\frac{1}{i!} \leqslant 2-\frac{1}{2^{h-1}}$
+
+qpq: $\sum_{1}^{h+1}\frac{1}{i!} \leqslant 2-\frac{1}{2^{h}}$
+
+Pero $\sum_{1}^{h+1}\frac{1}{i!} = \sum_{1}^{h}\frac{1}{i!} + \frac{1}{(h+1)!}
+\leqslant 2-\frac{1}{2^{h-1}} + \frac{1}{(h+1)!}$
+
+Me alcanza con probar que:
+
+$2-\frac{1}{2^{h-1}} + \frac{1}{(h+1)!} \leqslant 2-\frac{1}{2^{h}}$
+
+$\frac{1}{(h+1)!} \leqslant -\frac{1}{2^{h}} + \frac{1}{2^{h-1}}$
+
+$\frac{1}{(h+1)!} \leqslant -\frac{1}{2^{h}} + \frac{2}{2^h}$
+
+$\frac{1}{(h+1)!} \leqslant \frac{1}{2^h}$
+
+$2^h \leqslant (h+1)!$
+
+Uso inducción:
+
+Q(n): $2^n \leqslant (n+1)!$
+
+Caso base: $2 \leqslant 2!$ V
+
+Paso inductivo: 
+
+HI: $2^h \leqslant (h+1)!$, qpq: $2^{h+1} \leqslant (h+2)!$
+
+Pero $2^{h+1}=2^h.2 \leqslant (h+1)!.2$
+
+Me alcanza con probar que: 
+
+$(h+1)!.2 \leqslant (h+2)!$
+
+$2 \leqslant (h+2)$ V $\forall h \in \mathbb{N}$
+
+$\implies$ Q(n) V $\forall n \in \mathbb{N}.$ Como p(1) V y [p(h) V $\implies$ p(h+1) V ] por el principio de inducción p(n) V $\forall n \in \mathbb N$
+
 \subsection{Ejercicio 11}
 
 Defino $ p(n): \prod_{i=1}^{n}(1+a_i)\geq 1+\sum_{i=1}^{n}a_i $
