@@ -179,17 +179,20 @@ Se prueban con tablas de verdad. Van los primeros cuatro.
 \subsection{Ejercicio 16}
 Pruebo la doble implicación. 
 \begin{enumerate}[label=(\alph*)]
-    \item TODO
-    \item TODO
-    \item \begin{enumerate}
-        \item $(A \cup B) \times C \implies (A \times C) \cup (B \times C)$\\
-                $(x, y) \in (A\cup B) \times C \iff (x \in (A\cup B) \wedge y \in C) \iff ((x \in A \vee x \in B) \wedge y \in C)$\\
-                $\iff (x,y) \in (A\times C) \cup (B \times C)$
-        \item $(A \times C) \cup (B \times C) \implies (A \cup B) \times C$\\
-                $(x,y) \in (A \times C) \cup (B \times C) \iff ((x \in A \vee x \in B) \wedge y\in C) \implies (x\in (A \cup B) \wedge y \in C)$\\
-                $\implies (x, y) \in (A \cup B) \times C$ 
-    \item TODO
-    \end{enumerate}
+    \item
+        $(A \cup B) \times C \implies (A \times C) \cup (B \times C)$\\
+        $(x, y) \in (A\cup B) \times C \iff (x \in (A\cup B) \wedge y \in C) \iff ((x \in A \vee x \in B) \wedge y \in C)$\\
+        $\iff (x,y) \in (A\times C) \cup (B \times C)$
+        $(A \times C) \cup (B \times C) \implies (A \cup B) \times C$\\
+        
+        $(x,y) \in (A \times C) \cup (B \times C) \iff ((x \in A \vee x \in B) \wedge y\in C) \implies (x\in (A \cup B) \wedge y \in C)$\\
+        $\implies (x, y) \in (A \cup B) \times C$ 
+    \item
+		$(A \cap B) \times C = (A \times C) \cap (B \times C)$\\
+		$\subseteq) (x,y) \in (A \cap B) \times C \iff x \in (A \cap B) \wedge y \in C \iff (x \in A \wedge y \in C) \wedge (x \in B \wedge y\in C)$\\
+		$\iff ((x,y) \in A \times C) \wedge ((x,y)\in B \times C) \iff (x,y) \in (A \times C) \cap (B \times C)$\\
+		
+		$\supseteq)$ Como al probar $\subseteq$ ya ví que también vale la vuelta entonces esto también queda probado.
 \end{enumerate}
 
 \subsection{Ejercicio 17}
