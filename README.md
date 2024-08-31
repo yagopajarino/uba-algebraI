@@ -63,4 +63,5 @@ Si tenés alguna consulta, corrección o la solución de alguno de los ejercicio
 - [luciasuter](https://github.com/luciasuter)
 - [E-Liq](https://github.com/E-Liq)
 - [faustomartinez](https://github.com/faustomartinez)
+- [Sturm0](https://github.com/Sturm0)
 
