@@ -212,12 +212,26 @@ Pero,
 Luego $p(n)$ es verdadero, $ \forall n \in \mathbb{N} $
 
 \subsection{Ejercicio 5}
+\subsubsection{Pregunta i}
 Como n es compuesto: n=kq con $1<k<n, 1<q<n$ \\
 $2^{n}-1=2^{kq}-1=[2^{k}]^{q}-1$ \\
 Usando el resultado del ejercicio 3.i: $a-b | a^n-b^n$ \\
 $2^k-1 | (2^{k})^{q}-1^q$ O puesto de otra forma: $2^k-1 | 2^n-1$ \\
 $1 < 2^k-1 < 2^n-1$ \\
 Luego, como $2^{n}-1$ tiene un divisor no trivial (distinto de $\pm1, \pm(2^{n}-1)$) concluyo que es compuesto.
+\subsubsection{Pregunta ii}
+"Probar que si $2^{n}+1$ es primo, entonces n es una potencia de 2."
+
+Voy por el absurdo: supongo que n no es una potencia de 2 $\implies 2^{n}+1$ es compuesto
+
+Si n no es una potencia de 2 se puede escribir como:
+
+$n = 2^{j}k$ con k impar $\geq 1$, j$\geq 0$ \\
+$2^{n}+1=2^{2^jk}+1=(2^{2^j})^k+1^k=(2^{2^j})^k-(-1)^k$ porque k es impar \\
+Puedo volver a usar la propiedad: $a-b | a^n-b^n$ \\
+$2^{2^j}+1 | (2^{2^j})^k-(-1)^k$ \\
+$1 < 2^{2^j}+1 < 2^{n}+1 \implies 2^{n}+1$ es compuesto \\
+Luego $2^{n}+1$ es primo $\implies$ n es una potencia de 2.
 
 \subsection{Ejercicio 6}
 \subsubsection{Pregunta i}
