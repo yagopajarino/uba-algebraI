@@ -1500,7 +1500,22 @@ Luego $p(h) \implies p(h+1); \forall k \geq 1$, como se quería probar.
 Así, $p(n)$ es verdadero, $\forall n \in \mathbb{N}$.
 
 \subsection{Ejercicio 23}
-TODO
+Por inducción global
+
+HI: Si k $\leqslant n$. K se puede escribir como suma de potencias distintas de 2
+
+Veamos que n+1 también se puede. 
+
+n+1
+
+si n es par: $n=\sum_{i=1}^{r}2^{a_i} , a_i \neq 0 \forall i$ luego $n+1 = \sum_{i=1}^{r}2^{a_i} + 2^0$
+
+si n es impar, n+1 es par $\implies \exists \alpha \in \mathbb N \quad \text{tal que} \frac{n+1}{2^{\alpha}}$ es impar. \\
+$\frac{n+1}{2^{\alpha}} \leq n$ \\
+$n+1 \leq 2^{\alpha}n$ \\
+$1 \leq (2^{\alpha}-1)n$ como $2^{\alpha}-1 \geq 1$ esto vale siempre \\
+$\implies$ por HI $\frac{n+1}{2^{\alpha}} = \sum_{i=1}^{r}2^{a_i}$ con $a_{i}$ todos $\neq$ \\
+$\implies n+1 = \sum_{i=1}^{r}2^{a_i+\alpha}$
 
 \subsection{Ejercicio 24}
 $p(n): \sum_{n=1}^{r}2^{a_i} = n \quad \forall n \in \mathbb N$
