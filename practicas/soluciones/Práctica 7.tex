@@ -16,6 +16,9 @@
 \renewcommand{\thesubsubsection}{\thesubsection.\Alph{subsubsection}}
 \graphicspath{ {images/} }
 
+%Comandos que pueden ser útiles en este documento
+\newcommand\eqHI{\mathrel{\overset{\makebox[0pt]{\mbox{\normalfont\tiny\sffamily HI}}}{=}}}
+
 % End latex config
 
 \begin{document}
@@ -414,7 +417,35 @@ Según el ejercicio 4iii: $x^{5}-1=(x-1)(x^{4}+x^{3}+x^{2}+x+1) \implies x^{5} \
 $x^{3016}+2x^{1833}-x^{174}+x^{137}+2x^{4}-x^{3}+1 \equiv (x^{5})^{603}.x+2(x^{5})^{366}x^{3}-(x^{5})^{34}x^{4}+(x^{5})^{27}x^{2}+2x^{4}-x^{3}+1 \equiv x + 2x^{3}-x^{4}+x^{2}+2x^{4}-x^{3}+1 \equiv 0 (g)$
 
 \subsection{Ejercicio 8}
-TODO
+\subsubsection{Pregunta i}
+Probar que $x-a | x^{n}-a^{n}$ en K[x] \\
+$x-a | x^{n}-a^{n} \iff x^{n}-a^{n} \equiv 0 (x-a)$ \\
+Caso base:
+$x-a|x-a$ \\
+Paso inductivo:
+
+HI: $x-a|x^{n}-a^{n}$ qpq $x-a|x^{n+1}-a^{n+1}$ \\
+Pero
+
+$x^{n+1}-a^{n+1} = x.x^{n}-a.a^{n} = (x^{n}-a^{n}).x+a^{n}x-aa^{n} \eqHI (x-a)kx+a^{n}x-aa^{n} = (x-a)kx + (x-a)a^{n} = (x-a)(kx+a^{n})$ Entonces como $(kx+a^{n}) \in \mathbb{K}$ \\
+$\implies$ Por inducción queda probado que $x-a | x^{n}-a^{n} \forall n \in \mathbb{N}$
+
+\subsubsection{Pregunta ii}
+Probar que si n es impar entonces $x+a|x^{n}+a^{n}$ en K[X] \\
+$x+a = x-(-a) \implies$ por i: $x-(-a)|x^{n}-(-a^{n}) \implies $ ya que n es impar $x+a|x^{n}+a^{n} \forall n \in \mathbb{N}$ impar
+
+\subsubsection{Pregunta iii}
+Probar que si n es par entonces $x+a|x^{n}+a^{n}$ en K[X] \\
+$x+a=x-(-a) \implies x-(-a) | x^{n}-(-a)^{n} = x^{n}-a^{n} \implies x+a|x^{n}-a^{n}$ como quería probar \\
+Calcular los cocientes en cada caso:
+
+Caso i: $x-a|x^{n}-a^{n}$ \\
+Haciendo el algoritmo de división entre $x^{n}-a^{n}$ por $x-a$ termino conjeturando: $x^{n-1}+ax^{n-2}+a^{2}x^{n-3}+...+a^{n-2}x^{n-(n-1)}+a^{n-1}$ \\
+$\implies$ COCIENTE= $\sum_{k=0}^{n-1}a^{k}x^{n-(k+1)}$ \\
+Caso ii:
+Otra vez haces el algoritmo de división pero entre $x^{n}+a^{n}$ y $x+a$, de donde sale que es lo mismo que antes pero va variando con + y -
+$\implies$ COCIENTE= $\sum_{k=0}^{n-1}a^{k}x^{n-(k+1)}.(-1)^{k}$
+
 
 \subsection{Ejercicio 9}
 
