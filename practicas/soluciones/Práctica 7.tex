@@ -874,7 +874,25 @@ Luego $ p(h) \implies p(h+1); \forall h \geq 1 $
 Por lo tanto $ p(n) $ es verdadero, $ \forall n \in \mathbb{N} $
 
 \subsection{Ejercicio 25}
-TODO
+\subsubsection{Pregunta i}
+$gr(f_n) = 2^{n+1}-1$ \\
+Caso base:
+
+$gr(f_1) = 3 = 2^{2}-1$ \\
+Paso inductivo:
+
+HI: $gr(f_n) = 2^{n+1}-1$ qpq $gr(f_{n+1}) = 2^{n+2}-1$ \\
+Pero:
+$f_{n+1} = xf_{n}^{2}+x^{2}f'_n \forall n \in \mathbb{N}$ \\
+$gr(xf_{n}^{2}+x^{2}f'_n):$ \\
+Hay dos casos: si $gr(xf_n^2)=gr(x^{2}f'_n)$ y $-cp(xf_n^2)=cp(x^{2}f'_n)$ \\
+$\implies$ se cancelan los terminos de mayor grado y tendria que fijarme que terminos sobreviven \\
+Pero si $gr(f_n)=m \implies gr(xf_n^2)=2m+1$ \\
+$gr(x^{2}f'_n) = m-1+2=m+1 \neq 2m+1$ \\
+Solo queda el otro caso donde: \\
+$gr(xf_{n}^{2}+x^{2}f'_n) = max\{gr(xf_n^2),gr(x^{2}f'_n)\}$ \\
+Pero por lo escrito arriba se da que $gr(xf_n^2) > gr(x^{2}f'_n) \implies$ \\
+$gr(f_{n+1})=gr(xf_{n}^{2}+x^{2}f'_n)=gr(xf_{n}^{2})=2gr(f_n)+1 \eqHI 2.(2^{n+1}-1)+1=2^{n+2}-2+1=2^{n+2}-1$ como quería probar
 
 \subsection{Ejercicio 26}
 TODO
