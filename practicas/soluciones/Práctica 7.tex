@@ -16,6 +16,9 @@
 \renewcommand{\thesubsubsection}{\thesubsection.\Alph{subsubsection}}
 \graphicspath{ {images/} }
 
+%Comandos que pueden ser útiles en este documento
+\newcommand\eqHI{\mathrel{\overset{\makebox[0pt]{\mbox{\normalfont\tiny\sffamily HI}}}{=}}}
+
 % End latex config
 
 \begin{document}
@@ -395,7 +398,7 @@ Luego,
 \end{align*}
 Rta.: $ r_{x^6 + 1}(x^{1000} + x^{40} + x^{20} + 1) = 2x^4 - x^2 + 1 $
 
-\subsubsection{Pregunta ii}
+\subsubsection{Pregunta iii}
 
 Se que $ x^{100} - x + 1 \equiv 0 (x^{100} - x + 1) \iff x^{100} \equiv x-1(x^{100} -x + 1) $
 
@@ -408,8 +411,41 @@ Luego,
 \end{align*}
 Rta.: $ r_{x^{100} -x + 1}(x^{200} - 3x^{101} + 2) = -2x^2 + x + 3 $
 
+\subsubsection{Pregunta iv}
+$f=x^{3016}+2x^{1833}-x^{174}+x^{137}+2x^{4}-x^{3}+1$ \\
+Según el ejercicio 4iii: $x^{5}-1=(x-1)(x^{4}+x^{3}+x^{2}+x+1) \implies x^{5} \equiv 1 (g)$ \\ \\
+$x^{3016}+2x^{1833}-x^{174}+x^{137}+2x^{4}-x^{3}+1 \equiv (x^{5})^{603}.x+2(x^{5})^{366}x^{3}-(x^{5})^{34}x^{4}+(x^{5})^{27}x^{2}+2x^{4}-x^{3}+1 \equiv x + 2x^{3}-x^{4}+x^{2}+2x^{4}-x^{3}+1 \equiv 0 (g)$
+
 \subsection{Ejercicio 8}
-TODO
+\subsubsection{Pregunta i}
+Probar que $x-a | x^{n}-a^{n}$ en K[x] \\
+$x-a | x^{n}-a^{n} \iff x^{n}-a^{n} \equiv 0 (x-a)$ \\
+Caso base:
+$x-a|x-a$ \\
+Paso inductivo:
+
+HI: $x-a|x^{n}-a^{n}$ qpq $x-a|x^{n+1}-a^{n+1}$ \\
+Pero
+
+$x^{n+1}-a^{n+1} = x.x^{n}-a.a^{n} = (x^{n}-a^{n}).x+a^{n}x-aa^{n} \eqHI (x-a)kx+a^{n}x-aa^{n} = (x-a)kx + (x-a)a^{n} = (x-a)(kx+a^{n})$ Entonces como $(kx+a^{n}) \in \mathbb{K}$ \\
+$\implies$ Por inducción queda probado que $x-a | x^{n}-a^{n} \forall n \in \mathbb{N}$
+
+\subsubsection{Pregunta ii}
+Probar que si n es impar entonces $x+a|x^{n}+a^{n}$ en K[X] \\
+$x+a = x-(-a) \implies$ por i: $x-(-a)|x^{n}-(-a^{n}) \implies $ ya que n es impar $x+a|x^{n}+a^{n} \forall n \in \mathbb{N}$ impar
+
+\subsubsection{Pregunta iii}
+Probar que si n es par entonces $x+a|x^{n}+a^{n}$ en K[X] \\
+$x+a=x-(-a) \implies x-(-a) | x^{n}-(-a)^{n} = x^{n}-a^{n} \implies x+a|x^{n}-a^{n}$ como quería probar \\
+Calcular los cocientes en cada caso:
+
+Caso i: $x-a|x^{n}-a^{n}$ \\
+Haciendo el algoritmo de división entre $x^{n}-a^{n}$ por $x-a$ termino conjeturando: $x^{n-1}+ax^{n-2}+a^{2}x^{n-3}+...+a^{n-2}x^{n-(n-1)}+a^{n-1}$ \\
+$\implies$ COCIENTE= $\sum_{k=0}^{n-1}a^{k}x^{n-(k+1)}$ \\
+Caso ii:
+Otra vez haces el algoritmo de división pero entre $x^{n}+a^{n}$ y $x+a$, de donde sale que es lo mismo que antes pero va variando con + y -
+$\implies$ COCIENTE= $\sum_{k=0}^{n-1}a^{k}x^{n-(k+1)}.(-1)^{k}$
+
 
 \subsection{Ejercicio 9}
 
@@ -586,7 +622,15 @@ Luego sea $ B = \cos{(\frac{4}{5} \pi)} + \cos{(-\frac{4}{5} \pi)} \implies f(B)
 Así, $ (w^2 + w^{-2}) $ es raíz de f.
 
 \subsubsection{Pregunta ii}
-TODO
+Calcular, justificando cuidadosamente, el valor exacto de $cos(\frac{2\pi}{5})$ \\ \\
+Se que (por i) $2.cos(\frac{2\pi}{5})$ es raiz de $x^{2}+x-1$ y la otra raíz es $2.cos(\frac{4}{5}\pi)$ \\ \\
+Alternativamente puedo obtener las raices de dicho polinomio utilizando la formula resolvente. Se que las raices obtenidas de esa forma se tienen que corresponder con $2.cos(\frac{2\pi}{5})$ y $2.cos(\frac{4}{5}\pi)$ \\ \\
+Sabiendo que $2.cos(\frac{2\pi}{5}) > 0$ y $2.cos(\frac{4}{5}\pi) < 0$ \\
+$x^{2}+x-10 = 0$ \\
+$\frac{-1+\sqrt{5}}{2} > 0$ \\
+$\frac{-1-\sqrt{5}}{2} < 0 $ \\
+$\implies 2cos(\frac{2\pi}{5}) = \frac{-1+\sqrt{5}}{2} \implies $ RTA: $cos(\frac{2\pi}{5}) = \frac{-1+\sqrt{5}}{4}$
+
 
 \subsection{Ejercicio 15}
 \subsubsection{Pregunta i}
@@ -830,7 +874,38 @@ Luego $ p(h) \implies p(h+1); \forall h \geq 1 $
 Por lo tanto $ p(n) $ es verdadero, $ \forall n \in \mathbb{N} $
 
 \subsection{Ejercicio 25}
-TODO
+\subsubsection{Pregunta i}
+$gr(f_n) = 2^{n+1}-1$ \\
+Caso base:
+
+$gr(f_1) = 3 = 2^{2}-1$ \\
+Paso inductivo:
+
+HI: $gr(f_n) = 2^{n+1}-1$ qpq $gr(f_{n+1}) = 2^{n+2}-1$ \\
+Pero:
+$f_{n+1} = xf_{n}^{2}+x^{2}f'_n \forall n \in \mathbb{N}$ \\
+$gr(xf_{n}^{2}+x^{2}f'_n):$ \\
+Hay dos casos: si $gr(xf_n^2)=gr(x^{2}f'_n)$ y $-cp(xf_n^2)=cp(x^{2}f'_n)$ \\
+$\implies$ se cancelan los terminos de mayor grado y tendria que fijarme que terminos sobreviven \\
+Pero si $gr(f_n)=m \implies gr(xf_n^2)=2m+1$ \\
+$gr(x^{2}f'_n) = m-1+2=m+1 \neq 2m+1$ \\
+Solo queda el otro caso donde: \\
+$gr(xf_{n}^{2}+x^{2}f'_n) = max\{gr(xf_n^2),gr(x^{2}f'_n)\}$ \\
+Pero por lo escrito arriba se da que $gr(xf_n^2) > gr(x^{2}f'_n) \implies$ \\
+$gr(f_{n+1})=gr(xf_{n}^{2}+x^{2}f'_n)=gr(xf_{n}^{2})=2gr(f_n)+1 \eqHI 2.(2^{n+1}-1)+1=2^{n+2}-2+1=2^{n+2}-1$ como quería probar
+
+\subsubsection{Pregunta ii}
+0 es raíz de multiplicidad n de $f_n$ \\
+Caso base: ¿0 es raíz de multiplicidad 1 de $f_1$ ? \\
+$f_1 = x^3+2x f_1(0)=0$ \\
+$f'_1=3x^2+2 f'_1(0)=2 \neq 0 \implies mult(0,f_1)=1$ \\
+Paso inductivo: ¿$p(1)V....p(n)V \implies p(n+1)V$? \\
+HI: 0 es raíz de multiplicidad n de $f_n$ qpq 0 es raíz de multiplicidad n+1 de $f_{n+1}$ \\
+Pero $f_{n+1}=xf_n^2+x^2f'_n \eqHI x.(x^nQ)^2+x^2(x^nQ)'$ donde Q es un polinomio tal que $x\cancel{|}Q$ osea 0 no es raíz de Q \\
+$=x.x^{2n}.Q^{2}+x^2[(x^n)'Q+x^n.Q']= x^{2n+1}.Q^2+x^{2}[nx^{n-1}Q+x^n.Q'] =$ \\
+$=x^{2n+1}.Q^2+x^2.nx^{n-1}Q+x^{n+2}.Q' =$ \\
+$=x^{2n+1}.Q^2+nx^{n+1}Q+x^{n+2}.Q'= x^{n+1}(x^nQ^2+nQ+xQ')$ Como 0 no es raíz de Q entonces p(0)=$0^nQ^2+nQ+0.Q' \neq 0$ \\
+Luego 0 es raíz de multiplicidad n+1 de $f_{n+1}$ como quería probar.
 
 \subsection{Ejercicio 26}
 TODO
